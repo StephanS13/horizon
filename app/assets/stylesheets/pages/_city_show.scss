@@ -1,0 +1,53 @@
+.container-city-show {
+  
+}
+
+.card-title-city-show h1 {
+  font-size: 50px;
+}
+
+.icon-city-show {
+  height: 50px;
+  width: 100px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  height: 70px;
+  width: 200px;
+  border: solid 1px grey;
+  background-color: rgb(247, 244, 244);
+  justify-content: center;
+  align-items: center;
+}
+.photos-city-show {
+  display: flex;
+  height: 400px;
+  
+  object-fit: cover;
+  border-radius: 50px 20px;
+}
+
+.main-img-show {
+  border-radius: 10px 0 0 10px;
+  width: 750px;
+}
+.photos-city-show2 {
+  
+}
+.img1 {
+  height: 49%;
+  width: 100%;
+  border-radius: 0 10px 0 0;
+}
+.img2 {
+  height: 49%;
+  width: 100%;
+  border-radius: 0 0 10px 0;
+}
+.city-show-btn {
+  display: block;
+  margin: 25px auto;
+}
+.city-show-btn :hover {
+  // color: red;
+}
