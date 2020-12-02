@@ -1,3 +1,7 @@
+body {
+  padding-top: 40px;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -7,6 +11,35 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-lewagon .navbar-brand i {
+  color: $green;
+  font-size: 2em;
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+// .search {
+//   width: 118%;
+//   position: relative;
+//   display: flex;
+// }
+
+// .searchTerm {
+//   width: 100%;
+//   border: 1px solid gray;
+//   border-right: none;
+//   padding: 10px;
+//   height: 30px;
+//   border-radius: 5px 0 0 5px;
+//   outline: none;
+//   color: #9DBFAF;
+// }
+
+// .searchTerm:focus{
+//   color: $blue;
+// }
