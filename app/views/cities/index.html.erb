@@ -1,3 +1,25 @@
-<% @cities.each do |city| %>
-  <%= city.name %>
-<% end %>
+
+<div class="background-page p-3 background-light">
+
+  <div class="container text-center">
+
+    <h2 class="my-5">Tes destinations idéales</h2>
+
+    <div class="cards d-flex justify-content-between">
+      <% @cities.each do |city| %>
+        <div class="card-large p-4">
+          <div class="content">
+            <h3><%= city.name %></h3>
+            <p>Découvre cette ville incroyable</p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <p class="my-5">Voici les 3 destinations qui, on l'espère, répondent à tes attentes !</p>
+
+  </div>
+</div>
+
+
+
