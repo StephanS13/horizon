@@ -11,3 +11,16 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// Style général
+.background-page {
+  width: 100vw;
+}
+
+.background-light {
+  background-color: $light-blue;
+}
+
+body {
+  color: $blue;
+}
