@@ -1,11 +1,14 @@
+<div class="background-page p-5 background-light">
 
-<div class="background-page p-3 background-light">
+  <div class="py-4 px-4">
+
+  </div>
 
   <div class="container text-center">
 
-    <h2 class="my-5">Tes destinations idéales</h2>
+    <h2 class="my-3">Voici tes 3 destinations idéales !</h2>
 
-    <div class="cards d-flex justify-content-between">
+    <div class="cards d-flex justify-content-between pt-4">
       <% @cities.each do |city| %>
         <div class="card-large p-4">
           <div class="content">
@@ -16,8 +19,8 @@
       <% end %>
     </div>
 
-    <p class="my-5">Voici les 3 destinations qui, on l'espère, répondent à tes attentes !</p>
-
+    <p class="mt-5 mb-4">Tu n'as pas trouvé ton bonheur ?</p>
+    <%= link_to "C'est reparti pour un tour", root_path, class: "btn-primary" %>
   </div>
 </div>
 
