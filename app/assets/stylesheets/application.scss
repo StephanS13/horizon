@@ -21,5 +21,6 @@
   background-color: $light-blue;
 }
 
-$body-font: $blue;
-$headers-font: $blue;
+body {
+  color: $blue;
+}
