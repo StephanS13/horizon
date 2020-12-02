@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :favorite_cities
   has_many :favorite_pois
+  has_many :reviews
+  has_one_attached :avatar
 end
