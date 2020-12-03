@@ -1,1 +1,126 @@
 // Specific CSS for your home-page
+.homepage {
+  width: 100vw;
+
+  .container {
+
+    text-align: center;
+  }
+  .banner {
+    height: 720px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner h1 {
+
+    // position: absolute;
+    // width: 1440px;
+    // height: 66px;
+    // left: calc(50% - 1440px/2 + 3px);
+    // top: 255px;
+    padding-top: 4em;
+    font-family: Lora;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    // line-height: 82.03%;
+    // /* or 52px */
+
+    // // display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFAFA;
+  }
+
+  .banner p {
+    // position: absolute;
+    // width: 716px;
+    // height: 96px;
+    // left: calc(50% - 716px/2 + 19px);
+    // top: 368px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 140.62%;
+    // /* or 34px */
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.43);
+  }
+
+  .banner .btn-primary {
+    text-align :center;
+    align-items: center;
+  }
+
+  .btn-home{
+    margin-top: 30px;
+  }
+
+
+  .city-home-page {
+    font-family: Lora;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    color: #00296B;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+
+  .cards-city-home {
+   padding: 6px;
+   display: flex;
+   justify-content: center;
+
+   gap: 50px;
+
+  }
+
+  .card-city-home {
+   height: 400px;
+   width: 300px;
+   position: relative;
+}
+
+  .card-image-homepage {
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    border-radius: 5px;
+
+  }
+
+  .card-infos {
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+  }
+
+  .title {
+
+    margin-left: 228px;
+  }
+
+  .comments {
+    background-color: white;
+    padding-top: 1px;
+
+  }
+  .comment {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .fa-circle {
+    color: #00296B
+  }
+
+}
+
+
