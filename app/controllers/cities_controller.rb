@@ -16,7 +16,7 @@ class CitiesController < ApplicationController
     SQL
     @cities = City.select(query_select).order('score DESC').limit(3)
   end
-  
+
   def show
     # @city = City.find(params[:id])
   end

@@ -60,7 +60,7 @@ londres.save!
 
 lisbonne  = City.new(
   name:"Lisbonne",
-  title: "La cité aux mille couleurs",
+  title: "La cité aux milles couleurs",
   description: "Nichée au milieu de sept collines, cette immense ville piétonne offre une alternative enchanteresse aux capitales les plus populaires d’Europe. Avec une vie nocturne animée, des marchés festifs et des musées dynamiques, Lisbonne offre de nombreuses options pour prendre quelques verres de porto, une généreuse portion de bacalhau et une bonne quantité de pastéis de nata.",
   country: "Portugal ",
   price_range: 1,
