@@ -50,7 +50,7 @@ londres = City.new(
   country: "Angleterre",
   price_range: 3,
   activity: "Divertir",
-  wheather: "Modéré",
+  weather: "Modéré",
   environment: "Ville",
   )
 file = File.open(Rails.root.join('db/seeds/images/cities/londres_profil.jpg'))
@@ -65,7 +65,7 @@ lisbonne  = City.new(
   country: "Portugal ",
   price_range: 1,
   activity: "Détendre",
-  wheather: "Chaud",
+  weather: "Chaud",
   environment: "Ville",
   )
 file = File.open(Rails.root.join('db/seeds/images/cities/lisbonne_profil.jpg'))
@@ -89,7 +89,7 @@ amsterdam  = City.new(
   country: "Pays-Bas",
   price_range: 3,
   activity: "Divertir",
-  wheather: "Modéré",
+  weather: "Modéré",
   environment: "Ville",
   )
 file = File.open(Rails.root.join('db/seeds/images/cities/amsterdam_profil.jpg'))
@@ -116,7 +116,7 @@ marseille  = City.new(
   country: "France",
   price_range: 2,
   activity: "Detendre",
-  wheather: "Chaud",
+  weather: "Chaud",
   environment: "Plage",
   )
 file = File.open(Rails.root.join('db/seeds/images/cities/marseille_profil.jpg'))
@@ -130,7 +130,7 @@ seville  = City.new(
   country: "Espagne",
   price_range: 2,
   activity: "Detendre",
-  wheather: "Chaud",
+  weather: "Chaud",
   environment: "Plage",
   )
 file = File.open(Rails.root.join('db/seeds/images/cities/seville_profil.jpg'))
@@ -145,7 +145,7 @@ marrakech  = City.new(
   country: "Maroc",
   price_range: 1,
   activity: "Divertir",
-  wheather: "Chaud",
+  weather: "Chaud",
   environment: "Ville",
   )
 file = File.open(Rails.root.join('db/seeds/images/cities/marrakech_profil.jpg'))
@@ -159,7 +159,7 @@ paris  = City.new(
   country: "France",
   price_range: 3,
   activity: "Culture",
-  wheather: "Modéré",
+  weather: "Modéré",
   environment: "Ville",
   )
 file = File.open(Rails.root.join('db/seeds/images/cities/paris_profil.jpg'))
@@ -174,7 +174,7 @@ palerme  = City.new(
   country: "Italie",
   price_range: 2,
   activity: "Detendre",
-  wheather: "Chaud",
+  weather: "Chaud",
   environment: "Plage",
   )
 
@@ -186,7 +186,7 @@ bonifacio  = City.new(
   country: "France",
   price_range: 2,
   activity: "Défouler",
-  wheather: "Chaud",
+  weather: "Chaud",
   environment: "Nature",
   )
 
@@ -198,7 +198,7 @@ annecy  = City.new(
   country: "France",
   price_range: 3,
   activity: "Défouler",
-  wheather: "Froid",
+  weather: "Froid",
   environment: "Nature",
   )
 
@@ -209,7 +209,7 @@ briancon  = City.new(
   country: "France",
   price_range: 2,
   activity: "Défouler",
-  wheather: "Froid",
+  weather: "Froid",
   environment: "Nature",
   )
 
@@ -221,8 +221,8 @@ budapest  = City.new(
   country: "Hongrie",
   price_range: 1,
   activity: "Divertir",
-  wheather: "Froid",
-  environment: "Modéré",
+  weather: "Froid",
+  environment: "Ville",
   )
 
 
@@ -233,7 +233,7 @@ olso  = City.new(
   country: "Norvège",
   price_range: 3,
   activity: "Culture",
-  wheather: "Froid",
+  weather: "Froid",
   environment: "Ville",
   )
 
@@ -245,7 +245,7 @@ andorre  = City.new(
   country: "Andorre",
   price_range: 2,
   activity: "Défouler",
-  wheather: "Froid",
+  weather: "Froid",
   environment: "Nature",
   )
 
@@ -257,7 +257,7 @@ sarajevo  = City.new(
   country: "Bosnie",
   price_range: 1,
   activity: "Culture",
-  wheather: "Modéré",
+  weather: "Modéré",
   environment: "Nature",
   )
 
