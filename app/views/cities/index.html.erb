@@ -10,10 +10,12 @@
 
     <div class="cards d-flex justify-content-between pt-4">
       <% @cities.each do |city| %>
-        <div class="card-large p-4">
-          <div class="content">
+      <!-- est ce que j'aurais du faire un if plusieurs photos alors .first.key si y'ena qu'1 seulement .key? -->
+        <div class="card-large p-4" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path city.photos.first.key, height: 440, width: 280, crop: :fill %>')">
+          <div class="content pb-4">
             <h3><%= city.name %></h3>
-            <p>Découvre cette ville incroyable</p>
+            <h1><%= city.title %></h1>
+          <!--   <p><%= city.title %></p> -->
           </div>
         </div>
       <% end %>
