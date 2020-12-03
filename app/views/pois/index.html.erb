@@ -1,0 +1,35 @@
+<!-- Afficher le name de la ville -->
+<div class="background-page background-light">
+  <div class="container navbar-margin">
+    <h2><%= @city.name %></h2>
+  <!-- Temps 1 : afficher l'ensemble des pois de la ville -->
+    <div class="row mt-4">
+      <div class="col-lg-7">
+        <% @pois.each do |poi| %>
+          <div class="card-poi d-flex align-items-center">
+            <%= cl_image_tag poi.photos.first.key, class: "card-image-poi" %>
+            <div class="card-infos-poi">
+              <h4><%= poi.name %></h4>
+              <% if poi.reviews.average(:rating) %>
+                <p><%= poi.reviews.average(:rating).floor(1) %>/5</p>
+              <% else %>
+                <p>Pas de notes diponibles pour le moment</p>
+              <% end %>
+              <p><%= poi.title %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+  <!-- Afficher le bouton "partage ton coup de coeur" -->
+  <!-- Afficher la map -->
+      <div class="col-lg-5 pois-map">
+        <div  id="map"
+              style="width: 100%; height: 780px;"
+              data-markers="<%= @markers.to_json %>"
+              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      </div>
+    </div>
+  <!-- Temps 2 : afficher les pois par catégorie -->
+  <!-- Afficher les pois en fonction de la catégorie sélectionnée  -->
+  </div>
+</div>

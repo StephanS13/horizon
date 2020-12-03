@@ -1,3 +1,4 @@
+/*card result 3 cities*/
 .card-large {
 height: 440px;
 width: 280px;
@@ -30,11 +31,23 @@ filter: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.17));
   text-align: left;
 }
 
-.card-city-home {
-  // grid-template-columns: 1fr 1fr 1fr;
-  // grid-gap: 16px;
-  // justify-content: space-evenly;
-  // display: flex;
+.card-poi {
+  margin: 15px 0;
+  background-color: white;
+  box-shadow: 0 4px 34px rgba(0,0,0,0.07);
+  border-radius: 10px;
+  border: 1px solid #B3BFD3;
+
 }
 
+.card-image-poi {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.card-infos-poi {
+  margin-left: 15px;
+}
 
