@@ -5,12 +5,17 @@ background-color: red;
 position: relative;
 border-radius: 10px;
 box-shadow: 0 4px 34px rgba(0,0,0,0.17);
-background: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url(image.png);
+// background-image: ;
 filter: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.17));
   h3 {
     //font-family: "lora";
     font-size: 40px;
     color: $white;
+  }
+  h1 {
+    font-size: 26px;
+    color: $white;
+    font-weight: lighter;
   }
   p {
     font-size: 16px;
