@@ -20,4 +20,8 @@ class CitiesController < ApplicationController
   def show
     # @city = City.find(params[:id])
   end
+
+  def search
+    @cities = City.all
+  end
 end
