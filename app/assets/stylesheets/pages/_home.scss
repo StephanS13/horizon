@@ -14,22 +14,19 @@
 
   .banner h1 {
 
-    // position: absolute;
-    // width: 1440px;
-    // height: 66px;
-    // left: calc(50% - 1440px/2 + 3px);
-    // top: 255px;
     padding-top: 4em;
     font-family: Lora;
     font-style: normal;
     font-weight: bold;
     font-size: 64px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.43);
     // line-height: 82.03%;
     // /* or 52px */
 
     // // display: flex;
     align-items: center;
     text-align: center;
+
 
     color: #FFFAFA;
   }
@@ -42,7 +39,7 @@
     // top: 368px;
     font-family: Inter;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 24px;
     line-height: 140.62%;
     // /* or 34px */
@@ -71,6 +68,11 @@
     color: #00296B;
     padding-top: 40px;
     padding-bottom: 10px;
+    margin-top: 60px;
+  }
+
+  .city-home-page p {
+    font-size: 18px;
   }
 
   .cards-city-home {
@@ -86,6 +88,7 @@
    height: 400px;
    width: 300px;
    position: relative;
+   overflow:hidden;
 }
 
   .card-image-homepage {
@@ -93,7 +96,14 @@
     width: 100%;
     background-position: center;
     border-radius: 5px;
+    object-fit:cover;
+    transition:.8s;
+  }
 
+  .card-image-homepage:hover background-image{
+    transform:scale(1.1);
+    transition:.8s;
+    cursor:pointer;
   }
 
   .card-infos {
@@ -103,7 +113,6 @@
   }
 
   .title {
-
     margin-left: 228px;
   }
 
