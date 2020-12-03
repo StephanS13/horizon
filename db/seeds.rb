@@ -274,6 +274,10 @@ churrasqueira =Poi.new(
     price_range:"€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/churrasqueira.jpg'))
+churrasqueira.photos.attach(io: file, filename: 'churrasqueira.jpg', content_type: 'image/jpg')
+churrasqueira.save!
+
 
 cilantro =Poi.new(
     name:"Cilantro & Limon",
@@ -284,6 +288,9 @@ cilantro =Poi.new(
     price_range:"€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/cilantro.jpg'))
+cilantro.photos.attach(io: file, filename: 'cilantro.jpg', content_type: 'image/jpg')
+cilantro.save!
 
 frango =Poi.new(
     name:"El Rei D.Frango",
@@ -294,6 +301,10 @@ frango =Poi.new(
     price_range:"€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/frango.jpg'))
+frango.photos.attach(io: file, filename: 'frango.jpg', content_type: 'image/jpg')
+frango.save!
+
 
 lisboa =Poi.new(
     name:"Sr. Lisboa",
@@ -304,6 +315,9 @@ lisboa =Poi.new(
     price_range:"€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/lisboa.jpg'))
+lisboa.photos.attach(io: file, filename: 'lisboa.jpg', content_type: 'image/jpg')
+lisboa.save!
 
 daprata52 =Poi.new(
     name:"DaPrata52",
@@ -314,6 +328,9 @@ daprata52 =Poi.new(
     price_range:"€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/daPrata52.jpg'))
+daprata52.photos.attach(io: file, filename: 'daPrata52.jpg', content_type: 'image/jpg')
+daprata52.save!
 
 alma =Poi.new(
     name:"Alma",
@@ -324,6 +341,9 @@ alma =Poi.new(
     price_range:"€€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/alma.jpg'))
+alma.photos.attach(io: file, filename: 'alma.jpg', content_type: 'image/jpg')
+alma.save!
 
 alma =Poi.new(
     name:"Alma",
@@ -334,6 +354,9 @@ alma =Poi.new(
     price_range:"€€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/alma.jpg'))
+alma.photos.attach(io: file, filename: 'alma.jpg', content_type: 'image/jpg')
+alma.save!
 
 forno =Poi.new(
     name:"Forno d'Oro",
@@ -344,6 +367,9 @@ forno =Poi.new(
     price_range:"€€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/forno.jpg'))
+forno.photos.attach(io: file, filename: 'forno.jpg', content_type: 'image/jpg')
+forno.save!
 
 cave =Poi.new(
     name:"Cave Real",
@@ -354,6 +380,9 @@ cave =Poi.new(
     price_range:"€€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/cave.jpg'))
+cave.photos.attach(io: file, filename: 'cave.jpg', content_type: 'image/jpg')
+cave.save!
 
 cervejaria =Poi.new(
     name:"Cave Real",
@@ -364,6 +393,9 @@ cervejaria =Poi.new(
     price_range:"€€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/cervejaria.jpg'))
+cervejaria.photos.attach(io: file, filename: 'cervejaria.jpg', content_type: 'image/jpg')
+cervejaria.save!
 
 park =Poi.new(
     name:"PARK",
@@ -374,6 +406,10 @@ park =Poi.new(
     price_range:"€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/park.jpg'))
+park.photos.attach(io: file, filename: 'park.jpg', content_type: 'image/jpg')
+park.save!
+
 
 pensão =Poi.new(
     name:"Pensão Amor",
@@ -384,6 +420,9 @@ pensão =Poi.new(
     price_range:"€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/pensão_amor.jpg'))
+pensão.photos.attach(io: file, filename: 'pensão_amor.jpg', content_type: 'image/jpg')
+pensão.save!
 
 taberna =Poi.new(
     name:"Taberna Do Conde Wine & Tapas",
@@ -394,6 +433,9 @@ taberna =Poi.new(
     price_range:"€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/taberna.jpg'))
+taberna.photos.attach(io: file, filename: 'taberna.jpg', content_type: 'image/jpg')
+taberna.save!
 
 cinco =Poi.new(
     name:"Taberna Do Conde Wine & Tapas",
@@ -404,6 +446,9 @@ cinco =Poi.new(
     price_range:"€€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/cinco.jpg'))
+cinco.photos.attach(io: file, filename: 'cinco.jpg', content_type: 'image/jpg')
+cinco.save!
 
 urban =Poi.new(
     name:"Urban Beach",
@@ -414,6 +459,9 @@ urban =Poi.new(
     price_range:"€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/lux.jpg'))
+urban.photos.attach(io: file, filename: 'urban_beach.jpg', content_type: 'image/jpg')
+urban.save!
 
 lux =Poi.new(
     name:"LUX ",
@@ -424,6 +472,9 @@ lux =Poi.new(
     price_range:"€€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/lux.jpg'))
+lux.photos.attach(io: file, filename: 'lux.jpg', content_type: 'image/jpg')
+lux.save!
 
 
 alfama  =Poi.new(
@@ -435,6 +486,9 @@ alfama  =Poi.new(
     price_range:"Gratuit",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/alfama.jpg'))
+alfama.photos.attach(io: file, filename: 'alfama.jpg', content_type: 'image/jpg')
+alfama.save!
 
 mosteiro  =Poi.new(
     name:"Mosteiro dos Jerónimo",
@@ -445,6 +499,9 @@ mosteiro  =Poi.new(
     price_range:"Gratuit",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/Mosteiro.jpg'))
+mosteiro.photos.attach(io: file, filename: 'Mosteiro.jpg', content_type: 'image/jpg')
+mosteiro.save!
 
 praca  =Poi.new(
     name:"Praca",
@@ -455,6 +512,9 @@ praca  =Poi.new(
     price_range:"Gratuit",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/praca.jpg'))
+praca.photos.attach(io: file, filename: 'praca.jpg', content_type: 'image/jpg')
+praca.save!
 
 bairro  =Poi.new(
     name:"Bairro Alto",
@@ -465,6 +525,9 @@ bairro  =Poi.new(
     price_range:"Gratuit",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/bairro_alto.jpg'))
+bairro.photos.attach(io: file, filename: 'bairro_alto.jpg', content_type: 'image/jpg')
+bairro.save!
 
 belem  =Poi.new(
     name:"Belém",
@@ -475,6 +538,9 @@ belem  =Poi.new(
     price_range:"Gratuit",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/belem.jpg'))
+belem.photos.attach(io: file, filename: 'belem.jpg', content_type: 'image/jpg')
+belem.save!
 
 miradouro  =Poi.new(
     name:"Miradouro da Graca",
@@ -485,6 +551,9 @@ miradouro  =Poi.new(
     price_range:"Gratuit",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/miradouro.jpg'))
+miradouro.photos.attach(io: file, filename: 'miradouro.jpg', content_type: 'image/jpg')
+miradouro.save!
 
 calouste  =Poi.new(
     name:"Musée Calouste-Gulbenkian",
@@ -495,6 +564,9 @@ calouste  =Poi.new(
     price_range:"€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/calouste.jpg'))
+calouste.photos.attach(io: file, filename: 'calouste.jpg', content_type: 'image/jpg')
+calouste.save!
 
 medeiros  =Poi.new(
     name:"Medeiros e Almeida Museum",
@@ -505,6 +577,9 @@ medeiros  =Poi.new(
     price_range:"€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/almeida.jpg'))
+medeiros.photos.attach(io: file, filename: 'almeida.jpg', content_type: 'image/jpg')
+medeiros.save!
 
 benfica  =Poi.new(
     name:"Museu Benfica - Cosme Damiao",
@@ -515,6 +590,9 @@ benfica  =Poi.new(
     price_range:"€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/benfica.jpg'))
+benfica.photos.attach(io: file, filename: 'benfica.jpg', content_type: 'image/jpg')
+benfica.save!
 
 militar  =Poi.new(
     name:"Museu Militar de Lisboa",
@@ -525,6 +603,9 @@ militar  =Poi.new(
     price_range:"€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/militar.jpg'))
+militar.photos.attach(io: file, filename: 'militar.jpg', content_type: 'image/jpg')
+militar.save!
 
 oceanario  =Poi.new(
     name:"Oceanário de Lisboa",
@@ -535,6 +616,9 @@ oceanario  =Poi.new(
     price_range:"€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/oceanario.jpg'))
+oceanario.photos.attach(io: file, filename: 'oceanario.jpg', content_type: 'image/jpg')
+oceanario.save!
 
 colombo  =Poi.new(
     name:"Centro Colombo",
@@ -545,6 +629,9 @@ colombo  =Poi.new(
     price_range:"€€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/colombo.jpg'))
+colombo.photos.attach(io: file, filename: 'colombo.jpg', content_type: 'image/jpg')
+colombo.save!
 
 eduardo  =Poi.new(
     name:"Parque Eduardo VII",
@@ -555,6 +642,9 @@ eduardo  =Poi.new(
     price_range:"Gratuit",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/eduardo.jpg'))
+eduardo.photos.attach(io: file, filename: 'eduardo.jpg', content_type: 'image/jpg')
+eduardo.save!
 
 estufa  =Poi.new(
     name:"Estufa Fria",
@@ -565,6 +655,9 @@ estufa  =Poi.new(
     price_range:"€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/estufa.jpg'))
+estufa.photos.attach(io: file, filename: 'estufa.jpg', content_type: 'image/jpg')
+estufa.save!
 
 tram  =Poi.new(
     name:"Tram 28",
@@ -575,6 +668,9 @@ tram  =Poi.new(
     price_range:"€",
     city: lisbonne,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/tram_28.jpg'))
+tram.photos.attach(io: file, filename: 'tram_28.jpg', content_type: 'image/jpg')
+tram.save!
 
 puts "created poi amsterdam"
 
@@ -587,6 +683,9 @@ leeman  =Poi.new(
     price_range:"€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/leeman.jpg'))
+leeman.photos.attach(io: file, filename: 'leeman.jpg', content_type: 'image/jpg')
+leeman.save!
 
 soup  =Poi.new(
     name: "Soup en Zo",
@@ -597,6 +696,9 @@ soup  =Poi.new(
     price_range:"€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/soup.jpg'))
+soup.photos.attach(io: file, filename: 'soup.jpg', content_type: 'image/jpg')
+soup.save!
 
 frens  =Poi.new(
     name: "Frens Haringhandel",
@@ -607,6 +709,9 @@ frens  =Poi.new(
     price_range:"€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/frens.jpg'))
+frens.photos.attach(io: file, filename: 'frens.jpg', content_type: 'image/jpg')
+frens.save!
 
 omelegg  =Poi.new(
     name: "Omelegg De Pijp",
@@ -617,6 +722,9 @@ omelegg  =Poi.new(
     price_range:"€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/omelegg.jpg'))
+omelegg.photos.attach(io: file, filename: 'omelegg.jpg', content_type: 'image/jpg')
+omelegg.save!
 
 moeders  =Poi.new(
     name: "Moeders",
@@ -627,6 +735,9 @@ moeders  =Poi.new(
     price_range:"€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/moeders.jpg'))
+moeders.photos.attach(io: file, filename: 'moeders.jpg', content_type: 'image/jpg')
+moeders.save!
 
 kantjil  =Poi.new(
     name: "Kantjil & de Tijger",
@@ -637,6 +748,9 @@ kantjil  =Poi.new(
     price_range:"€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/kantjil.jpg'))
+kantjil.photos.attach(io: file, filename: 'kantjil.jpg', content_type: 'image/jpg')
+kantjil.save!
 
 seafood   =Poi.new(
     name: "The Seafood Bar",
@@ -647,6 +761,9 @@ seafood   =Poi.new(
     price_range:"€€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/seafood.jpg'))
+seafood.photos.attach(io: file, filename: 'seafood.jpg', content_type: 'image/jpg')
+seafood.save!
 
 kerkwijk   =Poi.new(
     name: "Van Kerkwijk",
@@ -657,6 +774,9 @@ kerkwijk   =Poi.new(
     price_range:"€€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/kerkwijk.jpg'))
+kerkwijk.photos.attach(io: file, filename: 'kerkwijk.jpg', content_type: 'image/jpg')
+kerkwijk.save!
 
 cau =Poi.new(
     name: "Van Kerkwijk",
@@ -667,6 +787,9 @@ cau =Poi.new(
     price_range:"€€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/cau.jpg'))
+cau.photos.attach(io: file, filename: 'cau.jpg', content_type: 'image/jpg')
+cau.save!
 
 flying  =Poi.new(
     name: "Flying Dutchmen Cocktails",
@@ -677,6 +800,9 @@ flying  =Poi.new(
     price_range:"€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/flying.jpg'))
+flying.photos.attach(io: file, filename: 'flying.jpg', content_type: 'image/jpg')
+flying.save!
 
 cannibale  =Poi.new(
     name: "Flying Dutchmen Cocktails",
@@ -687,6 +813,9 @@ cannibale  =Poi.new(
     price_range:"€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/cannibale.jpg'))
+cannibale.photos.attach(io: file, filename: 'cannibale.jpg', content_type: 'image/jpg')
+cannibale.save!
 
 proeflokaal =Poi.new(
     name: "Proeflokaal Arendsnest",
@@ -697,6 +826,9 @@ proeflokaal =Poi.new(
     price_range:"€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/proeflokaal.jpg'))
+proeflokaal.photos.attach(io: file, filename: 'proeflokaal.jpg', content_type: 'image/jpg')
+proeflokaal.save!
 
 door =Poi.new(
     name: "Door 74",
@@ -707,6 +839,9 @@ door =Poi.new(
     price_range:"€€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/door.jpg'))
+door.photos.attach(io: file, filename: 'door.jpg', content_type: 'image/jpg')
+door.save!
 
 winston =Poi.new(
     name: "Winston Kingdom",
@@ -717,6 +852,9 @@ winston =Poi.new(
     price_range:"€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/winston.jpg'))
+winston.photos.attach(io: file, filename: 'winston.jpg', content_type: 'image/jpg')
+winston.save!
 
 smokey =Poi.new(
     name: "Smokey Amsterdam",
@@ -727,6 +865,9 @@ smokey =Poi.new(
     price_range:"€€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/smokey.jpg'))
+smokey.photos.attach(io: file, filename: 'smokey.jpg', content_type: 'image/jpg')
+smokey.save!
 
 puts "created pois musées dam"
 
@@ -739,6 +880,9 @@ rijksmuseum =Poi.new(
     price_range:"€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/rijksmuseum.jpg'))
+rijksmuseum.photos.attach(io: file, filename: 'rijksmuseum.jpg', content_type: 'image/jpg')
+rijksmuseum.save!
 
 frank =Poi.new(
     name: "Maison Anne Frank",
@@ -749,6 +893,9 @@ frank =Poi.new(
     price_range:"€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/frank.jpg'))
+frank.photos.attach(io: file, filename: 'frank.jpg', content_type: 'image/jpg')
+frank.save!
 
 gogh =Poi.new(
     name: "Musée van Gogh",
@@ -759,6 +906,9 @@ gogh =Poi.new(
     price_range:"€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/gogh.jpg'))
+gogh.photos.attach(io: file, filename: 'gogh.jpg', content_type: 'image/jpg')
+gogh.save!
 
 jordaan =Poi.new(
     name: "Jordaan",
@@ -769,6 +919,9 @@ jordaan =Poi.new(
     price_range:"Gratuit",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/jordaan.jpg'))
+jordaan.photos.attach(io: file, filename: 'jordaan.jpg', content_type: 'image/jpg')
+jordaan.save!
 
 lookout =Poi.new(
     name: "Lookout",
@@ -779,6 +932,9 @@ lookout =Poi.new(
     price_range:"€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/lookout.jpg'))
+lookout.photos.attach(io: file, filename: 'lookout.jpg', content_type: 'image/jpg')
+lookout.save!
 
 
 rembrandt =Poi.new(
@@ -790,6 +946,9 @@ rembrandt =Poi.new(
     price_range:"€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/rembrandt.jpg'))
+rembrandt.photos.attach(io: file, filename: 'rembrandt.jpg', content_type: 'image/jpg')
+rembrandt.save!
 
 schans =Poi.new(
     name: "Zaanse Schans",
@@ -800,6 +959,9 @@ schans =Poi.new(
     price_range:"€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/schans.jpg'))
+schans.photos.attach(io: file, filename: 'schans.jpg', content_type: 'image/jpg')
+schans.save!
 
 royal =Poi.new(
     name: "Palais Royal",
@@ -810,6 +972,9 @@ royal =Poi.new(
     price_range:"€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/royal.jpg'))
+royal.photos.attach(io: file, filename: 'royal.jpg', content_type: 'image/jpg')
+royal.save!
 
 dam =Poi.new(
     name: "Place Dam",
@@ -820,6 +985,9 @@ dam =Poi.new(
     price_range:"€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/dam.jpg'))
+dam.photos.attach(io: file, filename: 'dam.jpg', content_type: 'image/jpg')
+dam.save!
 
 beguinage =Poi.new(
     name: "Béguinage",
@@ -830,6 +998,9 @@ beguinage =Poi.new(
     price_range:"€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/beguinage.jpg'))
+beguinage.photos.attach(io: file, filename: 'beguinage.jpg', content_type: 'image/jpg')
+beguinage.save!
 
 artis =Poi.new(
     name: "ARTIS Amsterdam Royal Zoo",
@@ -840,6 +1011,9 @@ artis =Poi.new(
     price_range:"€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/artis.jpg'))
+artis.photos.attach(io: file, filename: 'artis.jpg', content_type: 'image/jpg')
+artis.save!
 
 heineken =Poi.new(
     name: "Heineken Experience",
@@ -850,6 +1024,9 @@ heineken =Poi.new(
     price_range:"€€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/heineken.jpg'))
+heineken.photos.attach(io: file, filename: 'heineken.jpg', content_type: 'image/jpg')
+heineken.save!
 
 vondelpark =Poi.new(
     name: "Vondelpark",
@@ -860,6 +1037,9 @@ vondelpark =Poi.new(
     price_range:"Gratuit",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/vondelpark.jpg'))
+vondelpark.photos.attach(io: file, filename: 'vondelpark.jpg', content_type: 'image/jpg')
+vondelpark.save!
 
 albert =Poi.new(
     name: "Albert Cuyp Market",
@@ -870,9 +1050,12 @@ albert =Poi.new(
     price_range:"€",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/albert.jpg'))
+albert.photos.attach(io: file, filename: 'albert.jpg', content_type: 'image/jpg')
+albert.save!
 
-albert =Poi.new(
-    name: "Albert Cuyp Market",
+amstel =Poi.new(
+    name: "Amstel",
     category:"Activités",
     title: "Parcs",
     description: "C'est très intéressant de découvrir la ville ainsi et de voir de magnifiques maisons, et d'écouter les explications sur la ville, surtout à la grande époque des échanges commerciaux, de la richesse des commerçants.",
@@ -880,6 +1063,9 @@ albert =Poi.new(
     price_range:"Gratuit",
     city: amsterdam,
   )
+file = File.open(Rails.root.join('db/seeds/images/pois/dam/amstel.jpg'))
+amstel.photos.attach(io: file, filename: 'amstel.jpg', content_type: 'image/jpg')
+amstel.save!
 
 
 puts "created reviews Alfama"
@@ -1065,7 +1251,6 @@ pois_2 = FavoritePoi.new(
   user: gab,
   poi: jordaan,
   )
-
 
 puts "finish"
 
