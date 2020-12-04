@@ -60,11 +60,11 @@ londres.save!
 
 lisbonne  = City.new(
   name:"Lisbonne",
-  title: "La cité aux milles couleurs",
+  title: "La cité aux mille couleurs",
   description: "Nichée au milieu de sept collines, cette immense ville piétonne offre une alternative enchanteresse aux capitales les plus populaires d’Europe. Avec une vie nocturne animée, des marchés festifs et des musées dynamiques, Lisbonne offre de nombreuses options pour prendre quelques verres de porto, une généreuse portion de bacalhau et une bonne quantité de pastéis de nata.",
   country: "Portugal ",
   price_range: 1,
-  activity: "Détendre",
+  activity: "Detendre",
   weather: "Chaud",
   environment: "Ville",
   )
@@ -411,8 +411,8 @@ park.photos.attach(io: file, filename: 'park.jpg', content_type: 'image/jpg')
 park.save!
 
 
-pensão =Poi.new(
-    name:"Pensão Amor",
+pensao =Poi.new(
+    name:"Pensao Amor",
     category:"Bars / Vie Nocturne ",
     title: "Bars Lounge",
     description:"",
@@ -420,9 +420,9 @@ pensão =Poi.new(
     price_range:"€€",
     city: lisbonne,
   )
-file = File.open(Rails.root.join('db/seeds/images/pois/pensão_amor.jpg'))
-pensão.photos.attach(io: file, filename: 'pensão_amor.jpg', content_type: 'image/jpg')
-pensão.save!
+file = File.open(Rails.root.join('db/seeds/images/pois/pensao_amor.jpg'))
+pensao.photos.attach(io: file, filename: 'pensao_amor.jpg', content_type: 'image/jpg')
+pensao.save!
 
 taberna =Poi.new(
     name:"Taberna Do Conde Wine & Tapas",
