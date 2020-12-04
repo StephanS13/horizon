@@ -9,7 +9,9 @@ Review.destroy_all
 FavoritePoi.destroy_all
 FavoriteCity.destroy_all
 Poi.destroy_all
-City.destroy_all
+puts "poi destroyed"
+City.destroy_all if City.any?
+puts "city destroyed"
 User.destroy_all
 
 puts "created users"

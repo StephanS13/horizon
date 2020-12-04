@@ -1,14 +1,10 @@
-.container-city-show {
-  
-}
+
 
 .card-title-city-show h1 {
   font-size: 50px;
 }
 
 .icon-city-show {
-  height: 50px;
-  width: 100px;
   margin-top: 10px;
   margin-bottom: 25px;
   border-radius: 10px;
@@ -22,24 +18,29 @@
 .photos-city-show {
   display: flex;
   height: 400px;
-  
+  background-position: center;
   object-fit: cover;
   border-radius: 50px 20px;
 }
 
 .main-img-show {
+  background-position: center;
   border-radius: 10px 0 0 10px;
   width: 750px;
 }
 .photos-city-show2 {
   
+  height: 400px;
+  width: 49%;
 }
 .img1 {
+  background-position: center;
   height: 49%;
   width: 100%;
   border-radius: 0 10px 0 0;
 }
 .img2 {
+  background-position: center;
   height: 49%;
   width: 100%;
   border-radius: 0 0 10px 0;
