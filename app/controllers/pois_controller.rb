@@ -13,7 +13,7 @@ class PoisController < ApplicationController
     end
   end
 
-  def show
-    @poi = Poi.find(params[:id])
-  end
+  # def show
+  #   @poi = Poi.find(params[:id])
+  # end
 end
