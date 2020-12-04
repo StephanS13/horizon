@@ -1,5 +1,5 @@
 class PoisController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index ]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @city = City.find(params[:city_id])
@@ -14,7 +14,6 @@ class PoisController < ApplicationController
   end
 
   def show
-    # @pois = Poi.find(params[:id])
-    # @reviews = @poi.review
+    @poi = Poi.find(params[:id])
   end
 end
