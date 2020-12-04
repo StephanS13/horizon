@@ -4,14 +4,20 @@
     <h2><%= @city.name %></h2>
 
   <!-- Temps 2 : afficher les pois par catégorie -->
+  <div class="categories-pois row col-lg-7 d-flex justify-content-between mt-5">
+    <%= link_to "Restaurants", city_pois_path(category: "Restaurants") %>
+    <%= link_to "Bars / Vie nocturne", city_pois_path(category: "Bars / Vie Nocturne") %>
+    <%= link_to "Activités", city_pois_path(category: "Activités") %>
+    <%= link_to "Incoutournables", city_pois_path(category: "Incoutournables") %>
+  </div>
 
   <!-- Afficher le bouton "partage ton coup de coeur" -->
-  <div class="share-button d-flex flex-row-reverse">
+  <div class="share-button d-flex flex-row-reverse pb-4">
   <%= link_to "Partage ton coup de coeur", root_path, class: "btn-primary" %>
   </div>
 
   <!-- Temps 1 : afficher l'ensemble des pois de la ville -->
-    <div class="row mt-4">
+    <div class="row">
       <div class="col-lg-7">
         <% @pois.each do |poi| %>
           <div class="card-poi d-flex align-items-center">
@@ -21,9 +27,10 @@
               <% if poi.reviews.average(:rating) %>
                 <p><%= poi.reviews.average(:rating).floor(1) %>/5</p>
               <% else %>
-                <p>Pas de notes diponibles pour le moment</p>
+                <p>Pas encore de notes, à toi de jouer !</p>
               <% end %>
               <p><%= poi.title %></p>
+              <i class="fas fa-heart btn-heart"></i>
             </div>
           </div>
         <% end %>
