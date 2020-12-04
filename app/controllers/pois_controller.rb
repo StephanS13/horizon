@@ -12,4 +12,9 @@ class PoisController < ApplicationController
   #     }
   #   end
   end
+
+  def show
+    # @pois = Poi.find(params[:id])
+    # @reviews = @poi.review
+  end
 end
