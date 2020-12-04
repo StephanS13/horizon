@@ -5,6 +5,10 @@ class PoisController < ApplicationController
     @city = City.find(params[:city_id])
     @pois = @city.pois
 
+    if params[:category].present?
+      @pois = @pois.where(category: params[:category])
+    end
+
     @markers = @pois.geocoded.map do |poi|
       {
         lat: poi.latitude,
