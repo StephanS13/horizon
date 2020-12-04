@@ -57,7 +57,6 @@
     margin-top: 30px;
   }
 
-
   .city-home-page {
     font-family: Lora;
     font-style: normal;
@@ -68,7 +67,7 @@
     color: #00296B;
     padding-top: 40px;
     padding-bottom: 10px;
-    margin-top: 60px;
+    margin-top: 40px;
   }
 
   .city-home-page p {
@@ -96,13 +95,13 @@
     width: 100%;
     background-position: center;
     border-radius: 5px;
-    object-fit:cover;
-    transition:.8s;
+    // object-fit:cover;
+    // transition:.8s;
   }
 
-  .card-image-homepage:hover background-image{
-    transform:scale(1.1);
-    transition:.8s;
+  .card-image-homepage:hover{
+    // transform:scale(1.1);
+    // transition:.8s;
     cursor:pointer;
   }
 
@@ -119,6 +118,7 @@
   .comments {
     background-color: white;
     padding-top: 1px;
+    padding-bottom: 10px;
 
   }
   .comment {
