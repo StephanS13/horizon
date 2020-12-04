@@ -2,6 +2,14 @@
 <div class="background-page background-light">
   <div class="container navbar-margin">
     <h2><%= @city.name %></h2>
+
+  <!-- Temps 2 : afficher les pois par catégorie -->
+
+  <!-- Afficher le bouton "partage ton coup de coeur" -->
+  <div class="share-button d-flex flex-row-reverse">
+  <%= link_to "Partage ton coup de coeur", root_path, class: "btn-primary" %>
+  </div>
+
   <!-- Temps 1 : afficher l'ensemble des pois de la ville -->
     <div class="row mt-4">
       <div class="col-lg-7">
@@ -20,7 +28,7 @@
           </div>
         <% end %>
       </div>
-  <!-- Afficher le bouton "partage ton coup de coeur" -->
+
   <!-- Afficher la map -->
       <div class="col-lg-5 pois-map">
         <div  id="map"
@@ -29,7 +37,5 @@
               data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
     </div>
-  <!-- Temps 2 : afficher les pois par catégorie -->
-  <!-- Afficher les pois en fonction de la catégorie sélectionnée  -->
   </div>
 </div>
