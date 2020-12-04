@@ -1,12 +1,41 @@
 
 <div class="homepage background-light">
+
+
   <!-- BANNER -->
-  <div class="banner" style="background-image: linear-gradient(352.72deg, rgba(39, 76, 119, 0.61) 41.07%, rgba(255, 255, 255, 0) 68.14%), url(    <%= cl_image_tag poi.photos.first.key, class: "card-image-poi-show" %>);">
+  <div class="banner" style="background-image: linear-gradient(352.72deg, rgba(39, 76, 119, 0.61) 41.07%, rgba(255, 255, 255, 0) 68.14%), url(<%= cl_image_tag poi.photos.first.key%>);">
     <!-- CONTAINER -->
-    <% @pois.each do |poi| %>
-    <div class="infos-pois">
-      <p> <%@poi.category %></p>
-      <h1> <%@poi.name %></h1>
-    </div>
+    <% @citiy.pois.each do |poi| %>
+      <div class="infos-banner">
+        <p> <%@poi.category %></p>
+        <h1> <%@poi.name %></h1>
+      </div>
   </div>
-  <% end %>
+    <% end %>
+
+  <div class="info-pois">
+    <% @city.pois.each do |poi| %>
+    <p> <%@poi.description %></p>
+    <% end %>
+      <div class="btn-primary">
+        <% link_to "Commentaires", "#" %>
+      </div>
+  </div>
+
+
+  <div class="cards-reviews">
+    <!-- CARD -->
+    <% @pois.reviews.each do |review| %>
+    <div class="cards-review">
+      <div class="card-image-homepage">
+        <div class="card-infos">
+          <h5>review.title</h5>
+          <p>review.rating</p>
+          <p>review.description</p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+</div>
