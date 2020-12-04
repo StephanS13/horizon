@@ -1,20 +1,51 @@
 .search-container {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 60px;
+
+ .progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #D3E1EB;
+ }
+ h2{
+  margin-top: 60px;
+  margin-bottom: 40px;
+ }
+
  label {
    width: 100%;
    font-size: 1rem;
  }
 
+
  .card-input-element+.card {
-   color: grey;
+   background: #FFFFFF !important;
+   border: 1px solid #CBD6E1 !important;
+   box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.05);
+   border-radius: 50px !important;
+   color: #00296B;
    box-shadow: none;
-   border: 2px solid transparent;
    border-radius: 4px;
    transition:.5s;
+   height: 280px;
+   padding: 40px;
+   font-size: 18px;
+   line-height: 32px;
  }
 
  .form--pictogram {
    margin: 0 auto;
-   width: 48px;
+   width: 110px;
+   height: 110px;
+   background-color: #F5F8FA;
+   border: 1px solid #CBD5E1;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 24px;
+   font-size: 40px;
  }
 
  /* Survol d'une card */
@@ -33,9 +64,9 @@
    color:tomato;
  }
 
- // .hidden {
- //   display:none;
- //   opacity:0;
- //   transition:1s;
- // }
+ .hidden {
+   display:none;
+   opacity:0;
+   transition:1s;
+ }
 }
