@@ -1,5 +1,5 @@
 class CitiesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:show, :index]
+  skip_before_action :authenticate_user!, only: [:show, :index, :search]
 
   def index
     price_range = params[:price_range]
