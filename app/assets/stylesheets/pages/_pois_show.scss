@@ -7,6 +7,7 @@
     background-size: cover;
     background-position: center;
     margin-top: 80px;
+
     }
 
  .infos-pois {
@@ -14,64 +15,81 @@
   }
 
   .banner  p {
-    font-family: Inter;
+    font-family: Lora;
     font-style: normal;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 17px;
     text-align: left;
     color: #FFFFFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.43);
-    padding-left: 60px;
   }
 
   .banner h1 {
     font-family: Lora;
     font-style: normal;
     font-weight: bold;
-    font-size: 44px;
+    font-size: 55px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.43);
     align-items: left;
     text-align: left;
-    padding-left: 60px;
     color: #FFFAFA;
   }
 
   .description_poi {
     margin-top: 30px;
     display: flex;
+    justify-content: space-between;
+  }
+
+  .description_poi p {
+    width: 60%;
   }
 
   .favorite_pois {
     display :flex
   }
 
-  .btn_review {
-    padding-left: 200px;
+  .rating_poi {
+    display: flex;
   }
 
-  .card_description {
-    height: 70px;
-    width: 750px;
-    padding-left: 160px;
-  }
+
 
   .cards_reviews {
     margin-top: 30px;
-    padding: 9px;
+    // padding: 9px;
     display: flex;
     justify-content: center;
     gap: 40px;
-
-
   }
 
   .cards_review {
-    height: 300px;
-    width: 350px;
+    height: 330px;
+    width: 400px;
     text-align: center;
     border-style: groove;
-    border-radius: 5px;
+    border-radius: 6px;
+    opacity: 100%;
+    box-shadow: 10px 5px 5px #f0efeb;
   }
 
+  .cards_review p {
+    font-size: 15px;
+  }
+
+  .btn-heart {
+    color: red;
+  }
 
 }
+
+  .favorite_pois .unlike {
+    color: white;
+  }
+
+  .favorite_pois .unlike:hover {
+    color: red;
+  }
+
+  .favorite_pois a {
+    color: red !important;
+  }
