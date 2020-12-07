@@ -4,8 +4,8 @@
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 25px;
   grid-row-gap: 0px;
-  }
-  
+
+
   .div1 { grid-area: 1 / 1 / 2 / 2; }
   .div2 { grid-area: 1 / 1 / 3 / 4; }
   .div3 { grid-area: 1 / 4 / 2 / 5; }
@@ -19,7 +19,7 @@
   .div11 { grid-area: 3 / 3 / 4 / 5; }
   .div12 { grid-area: 4 / 3 / 6 / 6; }
   .div13 { grid-area: 3 / 1 / 6 / 2; }
-
+}
 // .card-title-city-show h1 {
 //   font-size: 50px;
 // }
@@ -49,7 +49,7 @@
 //   width: 750px;
 // }
 // .photos-city-show2 {
-  
+
 //   height: 400px;
 //   width: 49%;
 // }
