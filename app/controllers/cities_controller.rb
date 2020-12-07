@@ -19,6 +19,9 @@ class CitiesController < ApplicationController
 
   def show
     @city = City.find(params[:id])
+    if user_signed_in?
+      @favorite_city = current_user.favorite_cities.find_by(city_id: @city.id)
+    end
   end
 
   def search
