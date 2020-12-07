@@ -24,8 +24,8 @@
     // /* or 52px */
 
     // // display: flex;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
 
 
     color: #FFFAFA;
@@ -43,18 +43,19 @@
     font-size: 24px;
     line-height: 140.62%;
     // /* or 34px */
-    text-align: center;
+    text-align: left;
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.43);
   }
 
   .banner .btn-primary {
-    text-align :center;
-    align-items: center;
+    text-align :left;
+    align-items: left;
   }
 
   .btn-home{
     margin-top: 30px;
+    text-align: left;
   }
 
   .city-home-page {
