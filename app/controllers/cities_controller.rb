@@ -9,8 +9,8 @@ class CitiesController < ApplicationController
     query_select = <<~SQL
       *,
       CASE WHEN price_range = #{price_range} THEN 10 ELSE 0 END +
-      CASE WHEN activity = '#{activity}' THEN 1 ELSE 0 END +
-      CASE WHEN weather = '#{weather}' THEN 1 ELSE 0 END +
+      CASE WHEN activity = '#{activity}' THEN 5 ELSE 0 END +
+      CASE WHEN weather = '#{weather}' THEN 5 ELSE 0 END +
       CASE WHEN environment = '#{environment}' THEN 10 ELSE 0 END
       AS score
     SQL
