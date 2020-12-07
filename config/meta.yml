@@ -1,0 +1,5 @@
+meta_product_name: "Horizon"
+meta_title: "Horizon - Trouve ta destination facilement"
+meta_description: "Un générateur d'idée pour votre prochain voyage, et un carnet de bord collaboratif pour répertorier les meilleurs endroits de chaque ville"
+meta_image: "meta-banner.jpg" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
