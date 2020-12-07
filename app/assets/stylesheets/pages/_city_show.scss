@@ -1,25 +1,22 @@
-.parent {
+.parent-city-show {
   display: grid;
-  grid-template-columns: 115px 201px repeat(3, 175px) 105px;
+  grid-template-columns: 122px 203px repeat(2, 181px) 175px 105px;
   grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 25px;
-  grid-row-gap: 0px;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
   }
   
-  .div1 { grid-area: 1 / 1 / 2 / 2; }
-  .div2 { grid-area: 1 / 1 / 3 / 4; }
-  .div3 { grid-area: 1 / 4 / 2 / 5; }
-  .div4 { grid-area: 1 / 4 / 3 / 5; }
-  .div5 { grid-area: 1 / 5 / 2 / 6; }
-  .div6 { grid-area: 2 / 5 / 4 / 6; }
-  .div7 { grid-area: 1 / 6 / 6 / 7; }
-  .div8 { grid-area: 3 / 2 / 4 / 3; }
+  .div1 { grid-area: 1 / 1 / 3 / 4; }
+  .div2 { grid-area: 1 / 4 / 3 / 5; }
+  .div3 { grid-area: 1 / 5 / 2 / 6; }
+  .div4 { grid-area: 2 / 5 / 4 / 6; }
+  .div5 { grid-area: 1 / 6 / 6 / 7; }
+  .div6 { grid-area: 3 / 1 / 6 / 2; }
+  .div7 { grid-area: 3 / 2 / 4 / 3; }
+  .div8 { grid-area: 3 / 3 / 4 / 5; }
   .div9 { grid-area: 4 / 2 / 5 / 3; }
-  .div10 { grid-area: 5 / 2 / 6 / 3; }
-  .div11 { grid-area: 3 / 3 / 4 / 5; }
-  .div12 { grid-area: 4 / 3 / 6 / 6; }
-  .div13 { grid-area: 3 / 1 / 6 / 2; }
-
+  .div10 { grid-area: 4 / 3 / 6 / 6; }
+  .div11 { grid-area: 5 / 2 / 6 / 3; }
 
 
 // .card-title-city-show h1 {
