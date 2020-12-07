@@ -1,0 +1,77 @@
+.homepage_show {
+  width: 100vw;
+  padding-bottom: 30px;
+
+  .banner {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 80px;
+    }
+
+ .infos-pois {
+    padding-top: 30px;
+  }
+
+  .banner  p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: left;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.43);
+    padding-left: 60px;
+  }
+
+  .banner h1 {
+    font-family: Lora;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.43);
+    align-items: left;
+    text-align: left;
+    padding-left: 60px;
+    color: #FFFAFA;
+  }
+
+  .description_poi {
+    margin-top: 30px;
+    display: flex;
+  }
+
+  .favorite_pois {
+    display :flex
+  }
+
+  .btn_review {
+    padding-left: 200px;
+  }
+
+  .card_description {
+    height: 70px;
+    width: 750px;
+    padding-left: 160px;
+  }
+
+  .cards_reviews {
+    margin-top: 30px;
+    padding: 9px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+
+  }
+
+  .cards_review {
+    height: 300px;
+    width: 350px;
+    text-align: center;
+    border-style: groove;
+    border-radius: 5px;
+  }
+
+
+}

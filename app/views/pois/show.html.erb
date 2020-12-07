@@ -1,12 +1,41 @@
 
-<div class="homepage background-light">
+
+
+<div class="homepage_show" >
   <!-- BANNER -->
-  <div class="banner" style="background-image: linear-gradient(352.72deg, rgba(39, 76, 119, 0.61) 41.07%, rgba(255, 255, 255, 0) 68.14%), url(    <%= cl_image_tag poi.photos.first.key, class: "card-image-poi-show" %>);">
+  <div class="banner card-image-poi-show" style="background-image: url('<%= cl_image_path(@poi.photos.first.key) %>')">
     <!-- CONTAINER -->
-    <% @pois.each do |poi| %>
     <div class="infos-pois">
-      <p> <%@poi.category %></p>
-      <h1> <%@poi.name %></h1>
+      <p> <%= @poi.category %></p>
+      <div class="favorite_pois">
+        <h1> <%= @poi.name %> </h1>
+        <i class="fas fa-heart btn-heart"></i>
+      </div>
+      <p> <%= @poi.address %></p>
+      <p> <%= @poi.price_range %> </p>
     </div>
+
   </div>
-  <% end %>
+
+  <div class="description_poi">
+    <div class="card_description">
+      <p> <%= @poi.description %> </p>
+    </div>
+      <div class="btn_review">
+      <%= link_to 'Ajoute un commentaire',  class: "btn-primary" %>
+      </div>
+  </div>
+
+  <div class="cards_reviews">
+    <% @reviews.each do |review| %>
+      <div class="cards_review">
+        <%= cl_image_tag review.user.avatar %>
+        <p><%= review.title %></p>
+        <p><%= review.rating %> </p>
+        <p><%= review.description %></p>
+      </div>
+    <% end %>
+  </div>
+
+</div>
+
