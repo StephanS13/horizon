@@ -48,7 +48,7 @@
           </div>
         </div>
       <div class="step-2 mt-5 hidden">
-        <h2> On va jusqu'où? </h2>
+        <h2> On va jusqu'où ? </h2>
           <div class="row">
             <div class="col-4">
               <label for="proche">
@@ -147,7 +147,7 @@
                 <input type="radio" name="activity" class="card-input-element d-none" id="culture" value="Culture">
                   <div class="card card-body text-center">
                     <%= image_tag("icone/culture.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
-                  <p> faites moi découvrir une nouvelle culture ! </p>
+                  <p> Faites moi découvrir une nouvelle culture ! </p>
                   </div>
               </label>
             </div>
@@ -172,7 +172,7 @@
                 <input type="radio" name="price_range" class="card-input-element d-none" id="economique" value= 1>
                   <div class="card card-body text-center">
                     <%= image_tag("icone/pauvre.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
-                  <p> Vive les minis prix!</p>
+                  <p> Vive les minis prix !</p>
                   </div>
               </label>
             </div>
@@ -196,7 +196,7 @@
                     <div class="d-flex">
                       <%= image_tag("icone/riche.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
                     </div>
-                      <p> Je casse la tirelire! </p>
+                      <p> Je casse la tirelire ! </p>
                   </div>
               </label>
             </div>
@@ -207,54 +207,6 @@
   </div>
 </div>
 
-<script>
-  const step1 = document.querySelector('.step-1');
-  const step1inputs = document.querySelector('.step-1').getElementsByTagName('input');
-  const step2 = document.querySelector('.step-2');
-  const step2inputs = document.querySelector('.step-2').getElementsByTagName('input');
-  const step3 = document.querySelector('.step-3');
-  const step3inputs = document.querySelector('.step-3').getElementsByTagName('input');
-  const step4 = document.querySelector('.step-4');
-  const step4inputs = document.querySelector('.step-4').getElementsByTagName('input');
-  const step5 = document.querySelector('.step-5');
-  const step5inputs = document.querySelector('.step-5').getElementsByTagName('input');
-
-  for (const input of step1inputs) {
-    input.addEventListener('click', function(event) {
-      setTimeout(function() {
-        step1.classList.add("hidden");
-        step2.classList.remove("hidden");
-      }, 300);
-    });
-  };
-
-  for (const input of step2inputs) {
-    input.addEventListener('click', function(event) {
-      setTimeout(function() {
-        step2.classList.add("hidden");
-        step3.classList.remove("hidden");
-      }, 300);
-    });
-  };
-
-  for (const input of step3inputs) {
-    input.addEventListener('click', function(event) {
-      setTimeout(function() {
-        step3.classList.add("hidden");
-        step4.classList.remove("hidden");
-      }, 300);
-    });
-  };
-
-  for (const input of step4inputs) {
-    input.addEventListener('click', function(event) {
-      setTimeout(function() {
-        step4.classList.add("hidden");
-        step5.classList.remove("hidden");
-      }, 300);
-    });
-  };
-</script>
 
 
 
