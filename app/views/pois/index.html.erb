@@ -1,26 +1,75 @@
 <div class="parent-city-pois">
 
   <div class="city-name">
+    <p>47 commentaires</p>
     <h2><%= @city.name %></h2>
-    <%= link_to "Partage ton coup de coeur", new_city_poi_path, class: "btn-primary" %>
+    <div class="dynamic-pictos">
+      <div class="meteo">
+        <% if @city.weather == "Chaud" %>
+        <%= image_tag("icone/soleil.png", style: "height: 30px;") %>
+        <% elsif @city.weather == "Froid" %>
+        <%= image_tag("icone/froid.png" , style: "height: 30px;") %>
+        <% elsif @city.weather == "Modéré" %>
+        <%= image_tag("icone/modere.png", style: "height: 30px;") %>
+        <% end %>
+      </div>
+      <div class="environment">
+        <% if @city.environment == "Ville" %>
+        <%= image_tag("icone/ville.png", style: "height: 30px;") %>
+        <% elsif @city.environment == "Nature" %>
+        <%= image_tag("icone/nature.png", style: "height: 30px;") %>
+        <% elsif @city.environment == "Plage" %>
+        <%= image_tag("icone/plage.png", style: "height: 30px;") %>
+        <% end %>
+      </div>
+      <div class="activite">
+        <% if @city.activity == "Detendre" %>
+        <%= image_tag("icone/detente.png", style: "height: 30px;") %>
+        <% elsif @city.activity == "Divertir" %>
+        <%= image_tag("icone/divertir.png", style: "height: 30px;") %>
+        <% elsif @city.activity == "Culture" %>
+        <%= image_tag("icone/culture.png", style: "height: 30px;") %>
+        <% elsif @city.activity == "Defouler" %>
+        <%= image_tag("icone/defouler.png", style: "height: 30px;") %>
+        <% end %>
+      </div>
+      <div class="price_range">
+        <% if @city.price_range == 1 %>
+        <%= image_tag("icone/pauvre.png", style: "height: 30px;") %>
+        <% elsif @city.price_range == 2 %>
+        <%= image_tag("icone/aise.png", style: "height: 30px;") %>
+        <% elsif @city.price_range == 3 %>
+        <%= image_tag("icone/riche.png", style: "height: 30px;") %>
+        <% end %>
+      </div>
+    </div>
   </div>
 
   <div class="unmissables">
     <h4>Incontournables</h4>
-    <div class="unmissables-container">
-    <% @unmissables.each do |unmissable| %>
-      <div class="unmissable" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path unmissable.photos.first.key, crop: :scale %>');">
-        <div class="unmissable-title"><h5><%= unmissable.name %></h5><i class="far fa-heart btn-heart"></i></div>
-        <% if unmissable.reviews.average(:rating) %>
-          <% unmissable.reviews.average(:rating).floor.times do %>
-            <i class="fas fa-star"></i>
+      <div class="unmissables-container">
+        <% @unmissables.each do |unmissable| %>
+          <%= link_to poi_path(unmissable) do %>
+            <div class="unmissable" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path unmissable.photos.first.key, crop: :scale %>');">
+              <div class="unmissable-title"><h5><%= unmissable.name %></h5>
+                <% if current_user && current_user.favorite_poi?(unmissable) %>
+                  <i class="fas fa-heart btn-heart"></i>
+                <% else %>
+                  <%= link_to poi_favorite_pois_path(unmissable, source: "pois_listing"), method: :post do %>
+                    <i class="far fa-heart btn-heart"></i>
+                  <% end %>
+                <% end %>
+              </div>
+              <% if unmissable.reviews.average(:rating) %>
+                <% unmissable.reviews.average(:rating).floor.times do %>
+                  <i class="fas fa-star"></i>
+                <% end %>
+              <% end %>
+              <p><%= unmissable.title %></p>
+            </div>
           <% end %>
-        <% else %>
-          <p>Pas encore de notes, à toi de jouer !</p>
         <% end %>
       </div>
-    <% end %>
-    </div>
   </div>
 
   <div class="map">
@@ -29,37 +78,59 @@
             data-markers="<%= @markers.to_json %>"
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
+  </div>
+
+  <div class="share-button">
+  <%= link_to "Partage ton coup de coeur", new_city_poi_path, class: "btn-primary" %>
+  </div>
+
   <div class="restaurants">
     <h4>Restaurants / bars</h4>
     <% @restaurants.each do |restaurant| %>
-      <div class="restaurant" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path restaurant.photos.first.key, crop: :scale %>');">
-        <div class="restaurant-title"><h5><%= restaurant.name %></h5><i class="far fa-heart btn-heart"></i></div>
-        <% if restaurant.reviews.average(:rating) %>
-          <% restaurant.reviews.average(:rating).floor.times do %>
-            <i class="fas fa-star"></i>
+      <%= link_to poi_path(restaurant) do %>
+        <div class="restaurant" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path restaurant.photos.first.key, crop: :scale %>');">
+          <div class="restaurant-title"><h5><%= restaurant.name %></h5>
+            <% if current_user && current_user.favorite_poi?(restaurant) %>
+              <i class="fas fa-heart btn-heart"></i>
+            <% else %>
+              <%= link_to poi_favorite_pois_path(restaurant, source: "pois_listing"), method: :post do %>
+                <i class="far fa-heart btn-heart"></i>
+              <% end %>
+            <% end %>
+          </div>
+          <% if restaurant.reviews.average(:rating) %>
+            <% restaurant.reviews.average(:rating).floor.times do %>
+              <i class="fas fa-star"></i>
+            <% end %>
           <% end %>
-        <% else %>
-          <p>Pas encore de notes, à toi de jouer !</p>
-        <% end %>
-        <p><%= restaurant.title %></p>
-      </div>
+          <p><%= restaurant.title %></p>
+        </div>
+      <% end %>
     <% end %>
   </div>
 
   <div class="activities">
     <h4>Activités</h4>
     <% @activities.each do |activity| %>
-      <div class="activity" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path activity.photos.first.key, crop: :scale %>');">
-        <div class="restaurant-title"><h5><%= activity.name %></h5><i class="far fa-heart btn-heart"></i></div>
-        <% if activity.reviews.average(:rating) %>
-          <% activity.reviews.average(:rating).floor.times do %>
-            <i class="fas fa-star"></i>
+      <%= link_to poi_path(activity) do %>
+        <div class="activity" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path activity.photos.first.key, crop: :scale %>');">
+          <div class="activity-title"><h5><%= activity.name %></h5>
+            <% if current_user && current_user.favorite_poi?(activity) %>
+              <i class="fas fa-heart btn-heart"></i>
+            <% else %>
+              <%= link_to poi_favorite_pois_path(activity, source: "pois_listing"), method: :post do %>
+                <i class="far fa-heart btn-heart"></i>
+              <% end %>
+            <% end %>
+          </div>
+          <% if activity.reviews.average(:rating) %>
+            <% activity.reviews.average(:rating).floor.times do %>
+              <i class="fas fa-star"></i>
+            <% end %>
           <% end %>
-        <% else %>
-          <p>Pas encore de notes, à toi de jouer !</p>
-        <% end %>
-        <p><%= activity.title %></p>
-      </div>
+          <p><%= activity.title %></p>
+        </div>
+      <% end %>
     <% end %>
   <div>
 </div>
