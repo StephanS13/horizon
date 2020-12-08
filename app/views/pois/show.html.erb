@@ -25,7 +25,7 @@
 
     <div class="description_poi">
       <p> <%= @poi.description %> </p>
-      <%= link_to 'Ajoute un commentaire', "#", class: "btn-primary"%>
+      <%= link_to 'Ajoute un commentaire', "#", class: "btn-primary", id:"open-modal-btn"%>
     </div>
 
     <div class="cards_reviews">
@@ -69,6 +69,39 @@
           <p class="my-3"><%= review.description %></p>
         </div>
       <% end %>
+    </div>
+  </div>
+
+  <div class="modal" id="poi-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"> Ecris un avis</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body ml-2">
+          <div>
+            <label for="name"> Titre </label>
+            <input type="text" id="titre" name="user_name">
+          </div>
+           <div>
+            <label for="name"> Notes </label>
+            <input type="integer" id="notes" name="user_name">
+          </div>
+          <div>
+            <label for="name"> Description </label>
+            <input type="text" id="description" name="user_name">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary">Sauvagarder</button>
+        </div>
+      </div>
     </div>
   </div>
 
