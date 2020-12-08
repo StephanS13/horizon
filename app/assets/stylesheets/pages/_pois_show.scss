@@ -80,6 +80,31 @@
     color: red;
   }
 
+  .modal-body {
+    justify-content: center;
+  }
+
+  #titre{
+    margin-left: 83px;
+    width: 300px;
+  }
+
+  #notes{
+    margin-left: 73px;
+    width: 300px;
+  }
+
+   #description{
+    margin-left: 35px;
+    height: 150px;
+    width: 300px;
+  }
+
+  .modal-header {
+    text-align: center;
+    justify-content: center;
+  }
+
 }
 
   .favorite_pois .unlike {

@@ -11,11 +11,12 @@
       </div>
     <%= form_tag cities_path, method: :get do %>
       <div class="step-1 mt-5">
-        <h2> Coté météo t'es plutôt quoi? </h2>
+        <h2> Coté météo t'es plutôt quoi ? </h2>
           <div class="row">
             <div class="col-4">
               <label for="chaud">
                 <input type="radio" name="weather" class="card-input-element d-none" id="chaud" value="Chaud">
+
                   <div class="card card-body text-center">
                         <%= image_tag("icone/soleil.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
                         <p>Je veux du soleil !</p>
@@ -36,9 +37,11 @@
             <div class="col-4">
               <label for="froid">
                 <input type="radio" name="weather" class="card-input-element d-none" id="froid" value="Froid">
+
                   <div class="card card-body text-center">
                     <%= image_tag("icone/froid.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
                   <p> Je suis pas frileux ! </p>
+
                   </div>
               </label>
             </div>
@@ -197,7 +200,7 @@
               </label>
             </div>
           </div>
-          <%= submit_tag "On part où?", class: "btn btn-primary mt-5" %>
+          <%= submit_tag "On part où ?", class: "btn btn-primary mt-5" %>
         </div>
     <% end %>
   </div>

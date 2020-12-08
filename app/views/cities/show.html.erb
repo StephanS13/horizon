@@ -17,12 +17,16 @@
 
     <div class="photo2"> <img style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.39) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.second.key %>')"> </div>
     <div class="photo3"> <img style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.first.key %>')"> </div>
-
-    <div class="pois">
-      <% @pois.first(3).each do |poi| %>
+    
+    <div class="pois"> 
+      <% @pois.sample(3).each do |poi| %>
         <%= link_to poi_path(poi) do %>
-          <div class="my-poi-cards p-3 mb-3" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path poi.photos.first.key, height: 440, width: 280, crop: :fill %>')" >
-            <h4><%= poi.name %></h4>
+          <div class="my-poi-cards p-3 mb-3 " style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path poi.photos.first.key, height: 440, width: 280, crop: :fill %>')" >
+            <div class="my-poi-info flex-column">
+              <h4><%= poi.name %></h4>
+              <p><%= poi.category %></p>
+            </div>
+            
           </div>
         <% end %>
       <% end %>
@@ -40,21 +44,29 @@
     </div>
 
     <div class="photo4 img-fluid"> <img style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.15) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.third.key %>')"> </div>
-
-    <div class="city-description card text-justify p-4">
-      <%= @city.description %>
-      <div class="favorite-city card">
-        <% if @favorite_city %>
-          <h5><i class="fas fa-heart" font-size="20px"></i> 420</h5>
+    
+    <div class="city-description card text-justify p-4"> 
+      <%= @city.description %> 
+      <div class="favorite-city card"> 
+        <% if @favorite_city %> 
+          <% if @city.name = "Lisbonne" %>
+            <h5><i class="fas fa-heart" font-size="20px"></i> <%= 392 %> </h5>
+          <% else %>
+            <%= 420 %> </h5>
+          <% end %>
         <% else %>
           <%= link_to city_favorite_cities_path(@city), method: :post do %>
-          <h5><i class="far fa-heart no-hover" font-size="20px"></i> 420</h5>
+            <% if @city.name = "Lisbonne" %>
+              <h5><i class="fas fa-heart" font-size="20px"></i> <%= 392 %> </h5>
+            <% else %>
+              <%= 421 %> </h5>
+            <% end %>
           <% end %>
         <% end %>
       </div>
     </div>
 
-    <%= button_to "Explore la ville !", city_pois_path(@city), class: "city-show-btn btn btn-success justify-content-center", method: :get %>
+    <%= button_to "Explore la ville !", city_pois_path(@city), class: "city-show-btn btn-primary", method: :get %>
   </div>
 </div>
 

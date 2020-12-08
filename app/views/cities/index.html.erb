@@ -19,20 +19,55 @@
             <!--   <p><%= city.title %></p> -->
             </div>
           </div>
-          <div class="details_city">
 
-            <div class="meteo">
+          <div class="details_city my-1">
+
+            <div class="meteo m-3 ml-2">
               <% if city.weather == "Chaud" %>
-              <%= image_tag("icone/soleil.png") %>
+              <%= image_tag("icone/soleil.png", style: "height: 30px;") %>
               <% elsif city.weather == "Froid" %>
-              <%= image_tag("icone/froid.png") %>
+              <%= image_tag("icone/froid.png" , style: "height: 30px;") %>
               <% elsif city.weather == "Modéré" %>
-              <%= image_tag("icone/modere.png") %>
+              <%= image_tag("icone/modere.png", style: "height: 30px;") %>
               <% end %>
             </div>
 
 
+
+            <div class="environment m-3 ml-2">
+              <% if city.environment == "Ville" %>
+              <%= image_tag("icone/ville.png", style: "height: 30px;") %>
+              <% elsif city.environment == "Nature" %>
+              <%= image_tag("icone/nature.png", style: "height: 30px;") %>
+              <% elsif city.environment == "Plage" %>
+              <%= image_tag("icone/plage.png", style: "height: 30px;") %>
+              <% end %>
+            </div>
+
+            <div class="activite  m-3 ml-2">
+              <% if city.activity == "Detendre" %>
+              <%= image_tag("icone/detente.png", style: "height: 30px;") %>
+              <% elsif city.activity == "Divertir" %>
+              <%= image_tag("icone/divertir.png", style: "height: 30px;") %>
+              <% elsif city.activity == "Culture" %>
+              <%= image_tag("icone/culture.png", style: "height: 30px;") %>
+              <% elsif city.activity == "Defouler" %>
+              <%= image_tag("icone/defouler.png", style: "height: 30px;") %>
+              <% end %>
+            </div>
+
+            <div class="price_range m-3 ml-2">
+              <% if city.price_range == 1 %>
+              <%= image_tag("icone/pauvre.png", style: "height: 30px;") %>
+              <% elsif city.price_range == 2 %>
+              <%= image_tag("icone/aise.png", style: "height: 30px;") %>
+              <% elsif city.price_range == 3 %>
+              <%= image_tag("icone/riche.png", style: "height: 30px;") %>
+              <% end %>
+            </div>
+
           </div>
+
         <% end %>
       <% end %>
     </div>
