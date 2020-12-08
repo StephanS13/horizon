@@ -67,10 +67,10 @@ body{
 }
 
 .searchButton {
-  width: 40px;
+  width: 37px;
   height: 30px;
   border: 1px solid $blue;
-  background: green;
+  background: #6AC05B;
   display: flex;
   align-content: center;
   color: #fff;
@@ -78,4 +78,10 @@ body{
   cursor: pointer;
   font-size: 18px;
 }
+
+
+// .fa .fa-search {
+// padding-top: 5px;
+// }
+
 
