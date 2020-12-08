@@ -2,6 +2,18 @@ class CitiesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index, :search]
 
   def index
+
+    if params[:query].present?
+      @city = City.where("name ILIKE ?", "%#{params[:query]}%").first
+      if @city
+        return redirect_to city_path(@city)
+      else
+        flash[:alert] = "Impossible de trouver ta ville"
+        return redirect_to root_path
+      end
+
+    end
+
     @price_range = params[:price_range]
     @activity    = params[:activity]
     @weather     = params[:weather]
@@ -18,11 +30,6 @@ class CitiesController < ApplicationController
     SQL
     @cities = City.select(query_select).order('score DESC').limit(3)
 
-    if params[:query].present?
-      @cities = City.where("name ILIKE ?", "%#{params[:query]}%")
-    else
-      @cities = City.all
-    end
   end
 
   def show
