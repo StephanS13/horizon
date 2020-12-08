@@ -31,6 +31,18 @@
               <% end %>
             </div>
 
+            <div class="activity">
+              <% if city.activity == "Detendre" %>
+              <%= image_tag("icone/detente.png") %>
+              <% elsif city.activity == "Divertir" %>
+              <%= image_tag("icone/froid.png") %>
+              <% elsif city.activity == "Culture" %>
+              <%= image_tag("icone/modere.png") %>
+              <% elsif city.activity == "Defouler" %>
+              <%= image_tag("icone/modere.png") %>
+              <% end %>
+            </div>
+
 
           </div>
         <% end %>
