@@ -23,8 +23,8 @@
 
 <div class="background-light favorites-cities-list">
   Viens voir les coups de coeurs de tes villes préférées!
-  <% @user.favorite_cities.each do |city| %>
-    <%= link_to city.name, city_path(city) %>
+  <% @user.favorite_cities.each do |favorite_city| %>
+    <%= link_to favorite_city.city.name, city_path(favorite_city.city) %>
   <% end %>
  </div>
 

@@ -1202,7 +1202,7 @@ jordaan_3 =Review.create!(
     title: "Apaisant",
     description: "Quartier où il est très agréable de flaner sans but....beaucoup plus agréable que les rues touristiques de la ville. De très belles ruelles qui feront la joie des adeptes de photographie.",
     poi: jordaan,
-    user: steph,
+    user: gab,
   )
 
 
@@ -1221,7 +1221,7 @@ rijksmuseum_2 =Review.create!(
     title: "Immanquable !",
     description: "Il y a des audio guides mais on (le site) vous conseille de télécharger l'appli (gratuite) du musée qui en contient un. Donc pensez à apporter vos écouteurs. Vous pouvez choisir différents parcours de visite en fonction de vos préférences. L'appli vous dirige vers certaines œuvres et propose des commentaires efficaces. ",
     poi: rijksmuseum,
-    user: david,
+    user: gab,
   )
 
 rijksmuseum_3 =Review.create!(
@@ -1234,22 +1234,22 @@ rijksmuseum_3 =Review.create!(
 
 puts "created favorite cities / pois"
 
-cities = FavoriteCity.new(
+cities = FavoriteCity.create!(
   user: gab,
   city: amsterdam,
   )
 
-pois = FavoritePoi.new(
+pois = FavoritePoi.create!(
   user: gab,
   poi: rijksmuseum,
   )
 
-pois_1 = FavoritePoi.new(
+pois_1 = FavoritePoi.create!(
   user: gab,
   poi: moeders,
   )
 
-pois_2 = FavoritePoi.new(
+pois_2 = FavoritePoi.create!(
   user: gab,
   poi: jordaan,
   )
