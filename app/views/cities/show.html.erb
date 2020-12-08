@@ -31,9 +31,10 @@
     <div class="photo3"> <img style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.first.key %>')"> </div>
     
     <div class="pois"> 
+      <%# <h6>Les incontourbales</h6> %>
       <% @pois.sample(3).each do |poi| %>
         <%= link_to poi_path(poi) do %>
-          <div class="my-poi-cards p-3 mb-3 " style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path poi.photos.first.key, height: 440, width: 280, crop: :fill %>')" >
+          <div class="my-poi-cards p-3 mb-3" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path poi.photos.first.key, height: 440, width: 280, crop: :fill %>')" >
             <div class="my-poi-info flex-column">
               <h4><%= poi.name %></h4>
               <p><%= poi.category %></p>
