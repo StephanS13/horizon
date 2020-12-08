@@ -1,48 +1,71 @@
-<!-- Afficher le name de la ville -->
-<div class="background-page background-light">
-  <div class="container navbar-margin">
+<div class="parent-city-pois">
+
+  <div class="city-name">
     <h2><%= @city.name %></h2>
-
-  <!-- Temps 2 : afficher les pois par catégorie -->
-  <div class="categories-pois row col-lg-7 d-flex justify-content-between mt-5">
-    <%= link_to "Restaurants", city_pois_path(category: "Restaurants") %>
-    <%= link_to "Bars / Vie nocturne", city_pois_path(category: "Bars/ Vie Nocturne") %>
-    <%= link_to "Activités", city_pois_path(category: "Activités") %>
-    <%= link_to "Incoutournables", city_pois_path(category: "Incoutournables") %>
+    <%= link_to "Partage ton coup de coeur", root_path, class: "btn-primary" %>
   </div>
 
-  <!-- Afficher le bouton "partage ton coup de coeur" -->
-  <div class="share-button d-flex flex-row-reverse pb-4">
-  <%= link_to "Partage ton coup de coeur", root_path, class: "btn-primary" %>
-  </div>
-
-  <!-- Temps 1 : afficher l'ensemble des pois de la ville -->
-    <div class="row">
-      <div class="col-lg-7">
-        <% @pois.each do |poi| %>
-          <div class="card-poi d-flex align-items-center">
-            <%= cl_image_tag poi.photos.first.key, class: "card-image-poi" %>
-            <div class="card-infos-poi">
-              <h4><%= poi.name %></h4>
-              <% if poi.reviews.average(:rating) %>
-                <p><%= poi.reviews.average(:rating).floor(1) %>/5</p>
-              <% else %>
-                <p>Pas encore de notes, à toi de jouer !</p>
-              <% end %>
-              <p><%= poi.title %></p>
-              <i class="fas fa-heart btn-heart"></i>
-            </div>
-          </div>
+  <div class="unmissables">
+    <h4>Incontournables</h4>
+    <div class="unmissables-container">
+    <% @unmissables.each do |unmissable| %>
+      <div class="unmissable" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path unmissable.photos.first.key, crop: :scale %>');">
+        <div class="unmissable-title"><h5><%= unmissable.name %></h5><i class="far fa-heart btn-heart"></i></div>
+        <% if unmissable.reviews.average(:rating) %>
+          <% unmissable.reviews.average(:rating).floor.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+        <% else %>
+          <p>Pas encore de notes, à toi de jouer !</p>
+        <% end %>
+        <% if unmissable.title %>
+          <p><%= unmissable.title %></p>
+        <% else %>
+          <p>Add pictures</p>
         <% end %>
       </div>
-
-  <!-- Afficher la map -->
-      <div class="col-lg-5 pois-map">
-        <div  id="map"
-              style="width: 100%; height: 780px;"
-              data-markers="<%= @markers.to_json %>"
-              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-      </div>
+    <% end %>
     </div>
   </div>
+
+  <div class="map">
+      <div  id="map"
+            style="width: 100%; height: 780px"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
+
+  <div class="restaurants">
+    <h4>Restaurants / bars</h4>
+    <% @restaurants.each do |restaurant| %>
+      <div class="restaurant" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path restaurant.photos.first.key, crop: :scale %>');">
+        <div class="restaurant-title"><h5><%= restaurant.name %></h5><i class="far fa-heart btn-heart"></i></div>
+        <% if restaurant.reviews.average(:rating) %>
+          <% restaurant.reviews.average(:rating).floor.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+        <% else %>
+          <p>Pas encore de notes, à toi de jouer !</p>
+        <% end %>
+        <p><%= restaurant.title %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="activities">
+    <h4>Activités</h4>
+    <% @activities.each do |activity| %>
+      <div class="activity" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path activity.photos.first.key, crop: :scale %>');">
+        <div class="restaurant-title"><h5><%= activity.name %></h5><i class="far fa-heart btn-heart"></i></div>
+        <% if activity.reviews.average(:rating) %>
+          <% activity.reviews.average(:rating).floor.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+        <% else %>
+          <p>Pas encore de notes, à toi de jouer !</p>
+        <% end %>
+        <p><%= activity.title %></p>
+      </div>
+    <% end %>
+  <div>
 </div>
