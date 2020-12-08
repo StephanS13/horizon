@@ -19,6 +19,20 @@
             <!--   <p><%= city.title %></p> -->
             </div>
           </div>
+          <div class="details_city">
+
+            <div class="meteo">
+              <% if city.weather == "Chaud" %>
+              <%= image_tag("icone/soleil.png") %>
+              <% elsif city.weather == "Froid" %>
+              <%= image_tag("icone/froid.png") %>
+              <% elsif city.weather == "Modéré" %>
+              <%= image_tag("icone/modere.png") %>
+              <% end %>
+            </div>
+
+
+          </div>
         <% end %>
       <% end %>
     </div>

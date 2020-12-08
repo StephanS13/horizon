@@ -1,23 +1,24 @@
+<div class="new_pois">
+  <h1 class="titre_new">Partage ton coup de coeur 🤩 </h1>
 
-<h1 class="titre_new">Partage ton coup de coeur 🤩 </h1>
+  <div class="container p-5">
+    <%= simple_form_for([@city, @poi]) do |f| %>
 
-<div class="container p-5">
-  <%= simple_form_for([@city, @poi]) do |f| %>
+      <label for=""> Nom </label>
+      <%= f.input :name, label: false %>
+      <label for="">Catégorie </label>
+      <%= f.input :category, label: false, collection: @category %>
+      <label for=""> Titre </label>
+      <%= f.input :title, label: false %>
+      <label for=""> Description </label>
+      <%= f.input :description, label: false %>
+      <label for=""> Adresse </label>
+      <%= f.input :address, label: false %>
+      <label for=""> Prix-moyen </label>
+      <%= f.input :price_range, label: false, collection: @price_range %>
+      <%= f.input :photo, as: :file %>
+     <%= f.button :submit,  class: "btn btn-primary" %>
+    <% end %>
 
-    <label for=""> Nom </label>
-    <%= f.input :name, label: false %>
-    <label for="">Catégorie </label>
-    <%= f.input :category, label: false, collection: @category %>
-    <label for=""> Titre </label>
-    <%= f.input :title, label: false %>
-    <label for=""> Description </label>
-    <%= f.input :description, label: false %>
-    <label for=""> Adresse </label>
-    <%= f.input :address, label: false %>
-    <label for=""> Prix-moyen </label>
-    <%= f.input :price_range, label: false, collection: @price_range %>
-    <%= f.input :photo, as: :file %>
-   <%= f.button :submit,  class: "btn btn-primary" %>
-  <% end %>
-
+  </div>
 </div>
