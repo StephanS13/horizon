@@ -5,13 +5,25 @@
 
     <div class="picto-argent card">
       <div class="mx-auto my-auto">
-        <%= tag.i class: @price_range_icon %>
+        <% if @city.price_range == 1 %>
+          <%= image_tag("icone/pauvre.png", style: "height: 60px; width: 60px;") %>
+        <% elsif @city.price_range == 2  %>
+          <%= image_tag("icone/aise.png", style: "height: 60px; width: 60px;") %>
+        <% elsif @city.price_range == 3  %>
+         <%= image_tag("icone/riche.png", style: "height: 60px; width: 60px;") %>
+        <% end %>
       </div>
     </div>
 
     <div class="picto-meteo card">
       <div class="mx-auto my-auto">
-        <%= tag.i class: @weather_icon %>
+        <% if @city.weather == "Chaud" %>
+          <%= image_tag("icone/soleil.png", style: "height: 60px; width: 60px;") %>
+        <% elsif @city.weather == "Modéré"  %>
+          <%= image_tag("icone/modere.png", style: "height: 60px; width: 60px;") %>
+        <% elsif @city.weather == "Froid"  %>
+         <%= image_tag("icone/froid.png", style: "height: 60px; width: 60px;") %>
+        <% end %>
       </div>
     </div>
 
@@ -19,9 +31,10 @@
     <div class="photo3"> <img style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.first.key %>')"> </div>
     
     <div class="pois"> 
+      <%# <h6>Les incontourbales</h6> %>
       <% @pois.sample(3).each do |poi| %>
         <%= link_to poi_path(poi) do %>
-          <div class="my-poi-cards p-3 mb-3 " style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path poi.photos.first.key, height: 440, width: 280, crop: :fill %>')" >
+          <div class="my-poi-cards p-3 mb-3" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path poi.photos.first.key, height: 440, width: 280, crop: :fill %>')" >
             <div class="my-poi-info flex-column">
               <h4><%= poi.name %></h4>
               <p><%= poi.category %></p>
@@ -33,13 +46,22 @@
     </div>
 
     <div class="picto-environement card">
-      <div class="mx-auto my-auto"><%= tag.i class: @environment_icon %>
+      <div class="mx-auto my-auto">
+        <% if @city.environment == "Plage" %>
+          <%= image_tag("icone/plage.png", style: "height: 60px; width: 60px;") %>
+        <% elsif @city.environment == "Nature"  %>
+          <%= image_tag("icone/nature.png", style: "height: 60px; width: 60px;") %>
+        <% elsif @city.environment == "Ville"  %>
+          <%= image_tag("icone/ville.png", style: "height: 60px; width: 60px;") %>
+        <% end %>
       </div>
     </div>
 
-    <div class="city-name card">
-      <div class="m-5 my-auto">
-        <%= @city.name %>
+    <div class="city-name">
+      <div class="p-0">
+        <%= link_to city_pois_path(@city) do %>
+          <h1><%= @city.name %></h1> 
+        <% end %>
       </div>
     </div>
 

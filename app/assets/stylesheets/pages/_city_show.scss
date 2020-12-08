@@ -1,4 +1,3 @@
-
 .parent-city-show {
   display: grid;
   grid-template-columns: 14% 17% 18% 18% 16% 12%;
@@ -7,6 +6,7 @@
   grid-row-gap: 20px;
   margin: 40px auto 64px;
   width: 95%;
+  
   
   .photo1 { 
     grid-area: 1 / 1 / 3 / 4; 
@@ -17,11 +17,15 @@
       background-size: cover;
     }
   }
-  .picto-argent { grid-area: 1 / 4 / 3 / 5;
-    background-color: $blue;
+  .picto-argent {
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: #faedcd;
+    // background-color: $blue;
     color: white;
   }
-  .picto-meteo { grid-area: 1 / 5 / 2 / 6;
+  .picto-meteo {
+    grid-area: 1 / 5 / 2 / 6;
+    font-size: 30px;
    }
   .photo2 { grid-area: 2 / 5 / 4 / 6; 
     img {
@@ -29,6 +33,7 @@
       width: 100%;
       background-position: center;
       background-size: cover;
+      border-radius: 5%;
     }
   }
   .photo3 { grid-area: 1 / 6 / 6 / 7;
@@ -39,24 +44,28 @@
       background-size: cover;
     }
   }
-  .pois { 
-    grid-area: 3 / 1 / 6 / 2;
 
-    a:hover {
-      text-decoration: none;
-    }
-  }
-
-  .picto-environement { grid-area: 3 / 2 / 4 / 3;
-    background-color: #99d5c9;
+  .picto-environement {
+    grid-area: 1 / 4 / 3 / 5;
+    // background-color: #99d5c9;
+    background-color: $blue;
     color: black;
   }
 
-  .city-name { grid-area: 3 / 3 / 4 / 5;
-    font-size: 50px;
-    font-weight: bold;
+  .city-name { 
+    grid-area: 3 / 3 / 4 / 5;
     background-color: $blue;
     color: white;
+    
+    :hover {
+      text-decoration: none;
+      // text-transform: full-width;
+    }
+    h1 {
+      color: white;
+      font-size: 50px;
+      margin-right: 260px;
+    }
   }
   .photo4 { grid-area: 4 / 2 / 5 / 3;
     img {
@@ -70,11 +79,20 @@
   .city-description { grid-area: 4 / 3 / 6 / 6;
     font-size: 18px;
   }
+  
+  .pois { 
+    grid-area: 3 / 1 / 6 / 2;
+    background-size: cover;
+    a:hover {
+      text-decoration: none;
+    }
+  }
   .my-poi-cards {
     height: 122px;
     background-size: cover;
     background-position: center;
     color: white;
+    border-radius: 5%;
     // display: flex;
     // align-items: flex-end;
     transition: transform 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
