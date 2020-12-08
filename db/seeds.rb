@@ -481,7 +481,7 @@ lux.save!
 
 alfama  =Poi.new(
     name:"Alfama ",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Sites Touristiques",
     description:"Alfama, le quartier le plus ancien de Lisbonne, vous invite à flâner dans ses petites ruelles. Explorez-le avec un guide local qui vous révèlera des coins secrets et des histoires inattendues.",
     address:"Lisbonne Portugal",
@@ -494,7 +494,7 @@ alfama.save!
 
 mosteiro  =Poi.new(
     name:"Mosteiro dos Jerónimo",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Sites Touristiques",
     description: "Le monastère de Jeronimos à Belém est impressionnant par son échelle, sans parler de ses sculptures. Participez à une visite guidée pour découvrir l'histoire de ce bâtiment de plus de 500 ans. Vous y trouverez le tombeau du navigateur Vasco de Gama, sculpté en style manuélin.",
     address:"Praca do Imperio Belém, Lisbonne 1400-206 Portugal",
@@ -507,7 +507,7 @@ mosteiro.save!
 
 praca  =Poi.new(
     name:"Praca",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Sites Touristiques",
     description: "Ancien site du palais de la famille royale portugaise, Praça do Comercio est populaire avec les photographes et les amateurs du shopping. De là, vous pouvez faire un tour en bateau, sauter dans un tuk-tuk pour explorer les sept collines de la ville, ou descendre la célèbre Rua Augusta.",
     address:"Praca do Imperio Belém, Lisbonne 1400-206 Portugal",
@@ -520,7 +520,7 @@ praca.save!
 
 bairro  =Poi.new(
     name:"Bairro Alto",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Sites Touristiques",
     description: "Le quartier de Bairro Alto abrite un grand nombre de bars et de restaurants. Les bâtiments en azulejos sont typiques de la ville. Apprenez-en plus sur le quartier lors d'une visite guidée à pied. Sinon, inscrivez-vous à une tournée des bars pour goûter à la vie nocturne légendaire.",
     address:"Bairro Alto Lisbonne - Portugal ",
@@ -533,7 +533,7 @@ bairro.save!
 
 belem  =Poi.new(
     name:"Belém",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Sites Touristiques",
     description: "Belém est un quartier de Lisbonne situé à 6 km à l'ouest du centre actuel de la ville et à 2 km à l'ouest du pont du 25 avril. Son nom vient d'une déformation au cours du temps de « Bethléem ». Belém correspond à deux paroisses de Lisbonne, la paroisse de Santa Maria de Belém et de São Francisco Xavier.",
     address:"Santa Maria de Belém, 1300-598 Lisbonne, Portugal",
@@ -546,7 +546,7 @@ belem.save!
 
 miradouro  =Poi.new(
     name:"Miradouro da Graca",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Sites Touristiques",
     description: "Cette terrasse populaire offre une vue panoramique spectaculaire sur les toits de la ville et le fleuve au loin.",
     address:"Calçada da Graça, 1100-265 Lisboa, Portugal",
@@ -559,7 +559,7 @@ miradouro.save!
 
 calouste  =Poi.new(
     name:"Musée Calouste-Gulbenkian",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Musées",
     description: "La collection du fondateur du Musée Calouste Gulbenkian réunit une grande variété d'œuvres d'art, de l'antiquité à nos jours. Vous y trouverez entre autres des peintures de Rembrandt et Degas et des bijoux de Lalique. Réservez vos billets coupe-file en avance. Son jardin vaut également le détour.",
     address:"Avenida de Berna 45A, Lisbonne 1067-001 Portugal",
@@ -572,7 +572,7 @@ calouste.save!
 
 medeiros  =Poi.new(
     name:"Medeiros e Almeida Museum",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Musées",
     description: "La Casa-Museu Medeiros e Almeida est une maison-musée à Lisbonne, au Portugal, fondée en 1970. Elle est située dans l'ancienne résidence de son fondateur António de Medeiros e Almeida.",
     address:"Rue Rosa Araújo 41, 1250-165 Lisboa, Portugal",
@@ -585,7 +585,7 @@ medeiros.save!
 
 benfica  =Poi.new(
     name:"Museu Benfica - Cosme Damiao",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Musées",
     description: "Damião est le musée du club de sport portugais S.L. Benfica. Nommé d'après Cosme Damião, l'un des fondateurs du club en 1904",
     address:"Av. Eusébio da Silva Ferreira Porta 9, 1500-313 Lisboa, Portugal",
@@ -598,7 +598,7 @@ benfica.save!
 
 militar  =Poi.new(
     name:"Museu Militar de Lisboa",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Musées",
     description: "Découvrez l'histoire militaire du pays ainsi que les oeuvres d'art majeures du richissime patrimoine des institutions.",
     address:"Rue Museu da Artilharia 51, 1100-366 Lisboa, Portugal",
@@ -875,7 +875,7 @@ puts "created pois musées dam"
 
 rijksmuseum =Poi.new(
     name: "Rijksmuseum Amsterdam",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Musées",
     description: "Ce musée national néerlandais est le plus important de la région, situé au coeur de la place du Musée. Perdez-vous dans les plus de 200 salles d’exposition, mais ne ratez pas les oeuvres de Rembrandt, Vermeer, et Frans Hals.",
     address:"Museumstraat 1, 1071 XX Amsterdam Pays-Bas",
@@ -888,7 +888,7 @@ rijksmuseum.save!
 
 frank =Poi.new(
     name: "Maison Anne Frank",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Musées",
     description: "Un hommage à notre histoire commune qui vaut d’être visité et revisité, la maison d’Anne Frank sera toujours une destination importante. Ce musée raconte l'histoire des juifs y cachés des Nazi, présente des témoignages des gens touchés par elle.",
     address:"Prinsengracht 263 - 267 museum entrance Westermarkt 20, 1016 DK Amsterdam Pays-Bas",
@@ -901,7 +901,7 @@ frank.save!
 
 gogh =Poi.new(
     name: "Musée van Gogh",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Musées",
     description: "Le musée Van Gogh, victime de son succès, est ouvert tous les jours pour accueillir des visiteurs du monde entier. Retrouvez la collection la plus importante des oeuvres de l’artiste, ainsi qu’une curation importante de lettres et dessins",
     address:"Museumplein 6, 1071 DJ Amsterdam Pays-Bas",
@@ -914,7 +914,7 @@ gogh.save!
 
 jordaan =Poi.new(
     name: "Jordaan",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Sites Touristiques ",
     description: "Les petites ruelles et canaux du quartier Jordaan sont emblématiques du charme de la ville—une atmosphère authentique et chaleureuse règne. Vous y trouverez maintes boutiques, cafés et restaurants branchés.",
     address:"Amsterdam Pays-Bas",
@@ -927,7 +927,7 @@ jordaan.save!
 
 lookout =Poi.new(
     name: "Lookout",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Sites Touristiques ",
     description: "Un ascenseur (avec son et lumière) vous propulse au 20e étage pour profiter d’une panorama de 360°, la meilleure vue de la ville. Pour les accros à l’adrénaline, osez osciller sur la balançoire qui dandine du toit, à plus de 100m du sol.",
     address:"Overhoeksplein 5, 1031 KS Amsterdam Pays-Bas",
@@ -941,7 +941,7 @@ lookout.save!
 
 rembrandt =Poi.new(
     name: "Musée de la maison de Rembrandt",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Musées",
     description: "Le peintre Rembrandt a vécu et travaillé dans cette maison, aujourd’hui un hommage à l’artiste, contenant beaucoup de ses oeuvres ainsi que celles de ses contemporains. Assistez à une démonstration des techniques utilisées par Rembrandt",
     address:"Jodenbreestraat 4, 1011 NK Amsterdam Pays-Bas",
@@ -954,7 +954,7 @@ rembrandt.save!
 
 schans =Poi.new(
     name: "Zaanse Schans",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Musées",
     description: "Dépaysant, reposant, situé au bord de l'eau avec, aux alentours, des petites maisons magnifiques, un musée, des boutiques, des restaurants, une boutique qui débute par la démonstration de la fabrication des sabots en bois.",
     address:"Zaanse Schans, Schansend 1, 1509 AW Zaandam Pays-Bas",
@@ -967,7 +967,7 @@ schans.save!
 
 royal =Poi.new(
     name: "Palais Royal",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Sites Touristiques ",
     description: "Le Palais se situe sur la Place du Dam, Vous serez impressionnés par la richesse des sculptures, des tableaux, des tissus. Une visite spectaculaire.",
     address:"Jodenbreestraat 4, 1011 NK Amsterdam Pays-Bas",
@@ -980,7 +980,7 @@ royal.save!
 
 dam =Poi.new(
     name: "Place Dam",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Sites Touristiques ",
     description: "Cette place est immense et toujours remplie de touristes. Les grandes artères partent toutes de la place du Dam ainsi que beaucoup de visites guidées, le palais royal et toutes les grandes attractions se situent sur cette place (accès 10 minutes à pieds depuis la gare centrale).",
     address:"Amsterdam Pays-Bas",
@@ -993,7 +993,7 @@ dam.save!
 
 beguinage =Poi.new(
     name: "Béguinage",
-    category:"Incoutournables",
+    category:"Incontournables",
     title: "Sites Touristiques ",
     description: "Il faut rentrer sous un porche, et l'on découvre un immense jardin entouré de petites maisons (et d'une chapelle magnifique) c'est à cet endroit qu officiaient autrefois des femmes dévouées aux faibles et qui prodigaient en ces lieux leur sacerdoce. Le lieux est chargé de bonté et d'une tres grande beauté",
     address:"Gedempte Begijnensloot, 1012 RM Amsterdam Pays-Bas",
@@ -1202,7 +1202,7 @@ jordaan_3 =Review.create!(
     title: "Apaisant",
     description: "Quartier où il est très agréable de flaner sans but....beaucoup plus agréable que les rues touristiques de la ville. De très belles ruelles qui feront la joie des adeptes de photographie.",
     poi: jordaan,
-    user: steph,
+    user: gab,
   )
 
 
@@ -1221,7 +1221,7 @@ rijksmuseum_2 =Review.create!(
     title: "Immanquable !",
     description: "Il y a des audio guides mais on (le site) vous conseille de télécharger l'appli (gratuite) du musée qui en contient un. Donc pensez à apporter vos écouteurs. Vous pouvez choisir différents parcours de visite en fonction de vos préférences. L'appli vous dirige vers certaines œuvres et propose des commentaires efficaces. ",
     poi: rijksmuseum,
-    user: david,
+    user: gab,
   )
 
 rijksmuseum_3 =Review.create!(
@@ -1234,22 +1234,22 @@ rijksmuseum_3 =Review.create!(
 
 puts "created favorite cities / pois"
 
-cities = FavoriteCity.new(
+cities = FavoriteCity.create!(
   user: gab,
   city: amsterdam,
   )
 
-pois = FavoritePoi.new(
+pois = FavoritePoi.create!(
   user: gab,
   poi: rijksmuseum,
   )
 
-pois_1 = FavoritePoi.new(
+pois_1 = FavoritePoi.create!(
   user: gab,
   poi: moeders,
   )
 
-pois_2 = FavoritePoi.new(
+pois_2 = FavoritePoi.create!(
   user: gab,
   poi: jordaan,
   )

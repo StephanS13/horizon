@@ -2,19 +2,19 @@
 <div class="background-light">
   <div class="parent-city-show">
     <div class="photo1"> <img style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.25) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('https://static1.mclcm.net/iod/images/v2/114/citytheque/localite_101_3712/1200x630_100_300_000000x30x0.jpg')"> </div>
-    
-    <div class="picto-argent card"> 
+
+    <div class="picto-argent card">
       <div class="mx-auto my-auto">
         <%= tag.i class: @price_range_icon %>
       </div>
     </div>
-    
+
     <div class="picto-meteo card">
       <div class="mx-auto my-auto">
         <%= tag.i class: @weather_icon %>
       </div>
     </div>
-    
+
     <div class="photo2"> <img style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.39) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.second.key %>')"> </div>
     <div class="photo3"> <img style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.first.key %>')"> </div>
     
@@ -31,15 +31,15 @@
         <% end %>
       <% end %>
     </div>
-    
+
     <div class="picto-environement card">
       <div class="mx-auto my-auto"><%= tag.i class: @environment_icon %>
       </div>
     </div>
-    
-    <div class="city-name card"> 
+
+    <div class="city-name card">
       <div class="m-5 my-auto">
-        <%= @city.name %> 
+        <%= @city.name %>
       </div>
     </div>
 
@@ -62,7 +62,7 @@
               <%= 421 %> </h5>
             <% end %>
           <% end %>
-        <% end %> 
+        <% end %>
       </div>
     </div>
 

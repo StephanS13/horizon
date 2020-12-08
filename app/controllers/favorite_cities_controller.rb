@@ -1,5 +1,4 @@
 class FavoriteCitiesController < ApplicationController
-
   def create
     @city = City.find(params[:city_id])
     @favorite_city = FavoriteCity.new
