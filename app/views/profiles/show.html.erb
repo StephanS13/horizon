@@ -1,6 +1,7 @@
 <div class="parent-profile">
-  <div class="background-light my-favorite-city-photo" style="background-image: url('<%= cl_image_path @favorite_cities.last.city.photos.last.key %>');">
+  <div class="background-light my-favorite-city-photo" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.50) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @favorite_cities.last.city.photos.last.key %>');">
   <!-- photo de la ville pref avec le nom de la ville au milieu -->
+    <h3 class="testh3">VILLE PREFEREE</h3>
     <h1 class="testh1"><%= @favorite_cities.last.city.name %></h1> 
   </div>
 
@@ -22,11 +23,9 @@
   <% end %> -->
   </div>
 
-  <div class="background-light statistic-1">
+  <div class="background-light statistic-1 d-flex align-items-center justify-content-center">
     <!-- nombre de poi liké -->
-    <div class="mx-auto my-auto">
-      <h3> Plus de <%= @favorites_pois.count %> endroits te font rever! </h3>
-    </div>
+    <h3> Plus de <%= @favorites_pois.count %> endroits te font rever! </h3>
   </div>
 
   <div class="background-light favorites-cities-list">
@@ -36,7 +35,7 @@
     <% end %>
   </div>
 
-  <div class="background-light statistics-2">
+  <div class="background-light statistics-2 d-flex align-items-center justify-content-center">
     <!-- nb de review laissé -->
     <div class="mx-auto my-auto">
       <h3> Déjà <%= @user.reviews.count %> reviews laissés! </h3>
