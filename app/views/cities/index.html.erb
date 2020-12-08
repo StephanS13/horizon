@@ -19,6 +19,7 @@
             <!--   <p><%= city.title %></p> -->
             </div>
           </div>
+
           <div class="details_city my-1">
 
             <div class="meteo m-3 ml-2">
@@ -31,17 +32,6 @@
               <% end %>
             </div>
 
-            <div class="activity m-3 ml-2">
-              <% if city.activity == "Detendre" %>
-              <%= image_tag("icone/detente.png", style: "height: 30px;") %>
-              <% elsif city.activity == "Divertir" %>
-              <%= image_tag("icone/divertir.png", style: "height: 30px;") %>
-              <% elsif city.activity == "Culture" %>
-              <%= image_tag("icone/culture.png", style: "height: 30px;") %>
-              <% elsif city.activity == "Defouler" %>
-              <%= image_tag("icone/defouler.png", style: "height: 30px;") %>
-              <% end %>
-            </div>
 
 
             <div class="environment m-3 ml-2">
@@ -54,6 +44,17 @@
               <% end %>
             </div>
 
+            <div class="activite  m-3 ml-2">
+              <% if city.activity == "Detendre" %>
+              <%= image_tag("icone/detente.png", style: "height: 30px;") %>
+              <% elsif city.activity == "Divertir" %>
+              <%= image_tag("icone/divertir.png", style: "height: 30px;") %>
+              <% elsif city.activity == "Culture" %>
+              <%= image_tag("icone/culture.png", style: "height: 30px;") %>
+              <% elsif city.activity == "Defouler" %>
+              <%= image_tag("icone/defouler.png", style: "height: 30px;") %>
+              <% end %>
+            </div>
 
             <div class="price_range m-3 ml-2">
               <% if city.price_range == 1 %>
@@ -64,6 +65,7 @@
               <%= image_tag("icone/riche.png", style: "height: 30px;") %>
               <% end %>
             </div>
+
           </div>
 
         <% end %>
