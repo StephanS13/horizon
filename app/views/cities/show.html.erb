@@ -1,60 +1,60 @@
-<div class="parent">
-<div class="div1"> </div>
-<div class="div2"> </div>
-<div class="div3"> </div>
-<div class="div4"> </div>
-<div class="div5"> </div>
-<div class="div6"> </div>
-<div class="div7"> </div>
-<div class="div8"> </div>
-<div class="div9"> </div>
-<div class="div10"> </div>
-<div class="div11"> </div>
-<div class="div12"> </div>
-<div class="div13"> </div>
-</div>
 
-
-<% if @favorite_city %> 
-  <h1>favorite</h1> 
-<% else %>
-  <%= link_to city_favorite_cities_path(@city), method: :post do %>
-  Add to favorite
-  <% end %>
-<% end %>
-
-
-
-
-
-
-<%#
-<div class="container-city-show container">
-  <div class="cards-city-show pt-5">
-    <div class="card-title-city-show">
-      <h1 class="">Explore <%= @city.name %>
-    <%# </div> %>
+<div class="background-light">
+  <div class="parent-city-show">
+    <div class="photo1"> <img style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.25) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('https://static1.mclcm.net/iod/images/v2/114/citytheque/localite_101_3712/1200x630_100_300_000000x30x0.jpg')"> </div>
     
-    <%# <div class="d-flex justify-content-between">
-      <div class="icon-city-show card"><i class="fas fa-cloud-sun" style='font-size:30px'></i></div>
-      <div class="icon-city-show card"><i class="fas fa-city" style='font-size:30px'></i></div>
-      <div class="icon-city-show card"><i class="fas fa-theater-masks" style='font-size:30px'></i></div>
-      <div class="icon-city-show card d-flex flex-row"><i class="fas fa-euro-sign" style='font-size:30px'></i><i class="fas fa-euro-sign" style='font-size:30px'></i><i class="fas fa-euro-sign" style='font-size:30px'></i></div>
-      <div class="icon-city-show card"><i class="fas fa-map-marker" style='font-size:30px'></i></div>
+    <div class="picto-argent card"> 
+      <div class="mx-auto my-auto">
+        <%= tag.i class: @price_range_icon %>
+      </div>
+    </div>
+    
+    <div class="picto-meteo card">
+      <div class="mx-auto my-auto">
+        <%= tag.i class: @weather_icon %>
+      </div>
+    </div>
+    
+    <div class="photo2"> <img style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.39) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.second.key %>')"> </div>
+    <div class="photo3"> <img style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.first.key %>')"> </div>
+    
+    <div class="pois"> 
+      <% @pois.first(3).each do |poi| %>
+        <%= link_to poi_path(poi) do %>
+          <div class="my-poi-cards p-3 mb-3" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path poi.photos.first.key, height: 440, width: 280, crop: :fill %>')" >
+            <h4><%= poi.name %></h4>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    
+    <div class="picto-environement card">
+      <div class="mx-auto my-auto"><%= tag.i class: @environment_icon %>
+      </div>
+    </div>
+    
+    <div class="city-name card"> 
+      <div class="m-5 my-auto">
+        <%= @city.name %> 
+      </div>
     </div>
 
-    <div class="photos-city-show">
-      <img style="background-image: url('<%= cl_image_path @city.photos.first.key, crop: :scale %>
-      <%# <div class="photos-city-show2">
-        <img style="background-image: url('<%= cl_image_path @city.photos.second.key, crop: :scale %>
-        <%# <img style="background-image: url('<%= cl_image_path @city.photos.third.key, crop: :scale %>
-      <%# </div>
-    </div> 
+    <div class="photo4 img-fluid"> <img style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.15) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.third.key %>')"> </div>
+    
+    <div class="city-description card text-justify p-4"> 
+      <%= @city.description %> 
+      <div class="favorite-city card"> 
+        <% if @favorite_city %> 
+          <h5><i class="fas fa-heart" font-size="20px"></i> 420</h5> 
+        <% else %>
+          <%= link_to city_favorite_cities_path(@city), method: :post do %>
+          <h5><i class="far fa-heart no-hover" font-size="20px"></i> 420</h5>
+          <% end %>
+        <% end %> 
+      </div>
+    </div>
 
-    <%= button_to "Découvre les secrets de la ville", city_pois_path(@city), class: "city-show-btn btn btn-success", method: :get %>
+    <%= button_to "Explore la ville !", city_pois_path(@city), class: "city-show-btn btn btn-success justify-content-center", method: :get %>
+  </div>
+</div>
 
-    <%# <h1> <%= @city.title %>
-    <%# <p>  <%= @city.description %> 
-
-  <%# </div>
-</div>  %> 
