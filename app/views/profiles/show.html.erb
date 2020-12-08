@@ -6,7 +6,7 @@
   </div>
 
   <div class="background-light user-details card">
-    
+
       <div class="mx-auto my-auto">
         <%=  cl_image_tag @user.avatar.key, width: 150, height: 150, crop: :fill, style: "border-radius: 50%;" %>
       </div>
@@ -18,9 +18,11 @@
   <div class="illustration-memphis" style="background-image: url('<%= image_path("profile-banner.png") %>');"> </div>
 
   <div class="background-light last-pois">
-  <!-- les 3 derniers Pois sur lesquels il a laissé une review -->
- <!--  <% @my_pois.last(3).each do |poi| %>
-  <% end %> -->
+    <% @my_pois.last(3).each do |poi| %>
+      <div class="card-poi-profile" style="background-image: url('<%= cl_image_path poi.photos.first %>');">
+
+      </div>
+    <% end %>
   </div>
 
   <div class="background-light statistic-1 d-flex align-items-center justify-content-center">

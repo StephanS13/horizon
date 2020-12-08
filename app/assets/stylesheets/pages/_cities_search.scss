@@ -1,13 +1,31 @@
+.background-search{
+  height: 90vh;
+  background-image: asset-url('map.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
 .search-container {
   width: 70%;
   margin: 0 auto;
   padding-top: 60px;
 
- .progress-bar {
-  width: 100%;
-  height: 10px;
-  background-color: #D3E1EB;
+ .progress-icon {
+   display:flex;
+  justify-content:space-around;
  }
+
+ .progress-bar {
+   width:100%;
+
+ }
+
+ .progress-content {
+   display:flex;
+   justify-content:space-around;
+ }
+
  h2{
   margin-top: 60px;
   margin-bottom: 40px;
@@ -18,26 +36,53 @@
    font-size: 1rem;
  }
 
+ img {
+    margin: 0 auto;
+ }
+
 
  .card-input-element+.card {
-   background: #FFFFFF !important;
-   border: 1px solid #CBD6E1 !important;
-   box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.05);
+   background: transparent !important;
+   border: none !important;
    border-radius: 50px !important;
    color: #00296B;
    box-shadow: none;
    border-radius: 4px;
    transition:.5s;
    height: 280px;
-   padding: 40px;
+   padding: 16px;
    font-size: 18px;
    line-height: 32px;
  }
 
+  .form--pictogram--progress {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    background-color: #F5F8FA;
+    border: 1px solid #CBD5E1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    box-shadow:0px 2px 20px rgba(0,0,0,0.15);
+    transition:1s;
+  }
+
+  .form--pictogram--progress:hover{
+    cursor: pointer;
+    box-shadow:0px 2px 30px rgba(0,0,0,0.15);
+    transition:1s;
+    transform: rotate(360deg);
+    transition-timing-function: cubic-bezier(.24, .69, 1, .39);
+  }
+
  .form--pictogram {
+  padding: 15px;
    margin: 0 auto;
-   width: 110px;
-   height: 110px;
+   width: 150px;
+   height: 150px;
    background-color: #F5F8FA;
    border: 1px solid #CBD5E1;
    border-radius: 50%;
@@ -46,13 +91,16 @@
    justify-content: center;
    margin-bottom: 24px;
    font-size: 40px;
+   box-shadow:0px 2px 20px rgba(0,0,0,0.15);
+   transition:1s;
  }
 
- /* Survol d'une card */
- .card-input-element+.card:hover {
-   cursor: pointer;
-   box-shadow:0px 2px 20px rgba(0,0,0,0.15);
-   transition:.5s;
+  .form--pictogram:hover{
+    cursor: pointer;
+    box-shadow:0px 2px 30px rgba(0,0,0,0.15);
+    transition:1s;
+    transform: rotate(360deg);
+    transition-timing-function: cubic-bezier(.24, .69, 1, .39);
  }
 
  /* Quand la card est selectionée */
@@ -69,4 +117,14 @@
    opacity:0;
    transition:1s;
  }
+}
+
+.card-body {
+  p {
+    padding: 16px 20px;
+    background-color: white;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    font-weight: bold;
+  }
 }
