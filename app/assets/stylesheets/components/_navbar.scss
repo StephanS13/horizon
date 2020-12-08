@@ -47,9 +47,8 @@ body{
 
 .search {
   width: 118%;
-  // position: relative;
+  position: relative;
   display: flex;
-  justify-content: right;
 }
 
 .searchTerm {
@@ -64,16 +63,16 @@ body{
 }
 
 .searchTerm:focus{
-  color: #blue;
+  color: $blue;
 }
 
 .searchButton {
-  // width: 10px;
-  height: 20px;
-  border: 1px solid #blue;
-  background: #blue;
+  width: 40px;
+  height: 30px;
+  border: 1px solid $blue;
+  background: green;
   display: flex;
-  align-content: right;
+  align-content: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
