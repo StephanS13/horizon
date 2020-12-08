@@ -1,8 +1,14 @@
-<div class="backgroud-page background-light">
+<div class="backgroud-page background-light background-search">
   <div class="search-container text-center mt-5">
-    <div class="progress-bar">
-
-    </div>
+    <div class="progress-icon">
+        <%= image_tag("icone/suitcases.png", style: "height: 50px; width: 50px;", class:"form--pictogram--progress") %>
+        <%= image_tag("icone/passport.png", style: "height: 50px; width: 50px;", class:"form--pictogram--progress") %>
+        <%= image_tag("icone/train.png", style: "height: 50px; width: 50px;", class:"form--pictogram--progress") %>
+        <%= image_tag("icone/tourist.png", style: "height: 50px; width: 50px;", class:"form--pictogram--progress") %>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 12.5%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
     <%= form_tag cities_path, method: :get do %>
       <div class="step-1 mt-5">
         <h2> Coté météo t'es plutôt quoi ? </h2>
@@ -10,9 +16,10 @@
             <div class="col-4">
               <label for="chaud">
                 <input type="radio" name="weather" class="card-input-element d-none" id="chaud" value="Chaud">
-                  <div class="card card-body bg-light text-center">
-                       <%= image_tag("icone/soleil.png", style: "height: 100px; width: 100px;") %>
-                      Je veux du soleil !
+
+                  <div class="card card-body text-center">
+                        <%= image_tag("icone/soleil.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                        <p>Je veux du soleil !</p>
                   </div>
               </label>
             </div>
@@ -20,9 +27,9 @@
             <div class="col-4">
               <label for="modéré">
                 <input type="radio" name="weather" class="card-input-element d-none" id="modéré" value="Modéré">
-                  <div class="card card-body bg-light text-center">
-                    <%= image_tag("icone/modere.png", style: "height: 100px; width: 100px;") %>
-                    Ni chaud ni froid
+                  <div class="card card-body text-center">
+                    <%= image_tag("icone/modere.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                  <p>Je m'adapte à tout !</p>
                   </div>
               </label>
             </div>
@@ -30,9 +37,11 @@
             <div class="col-4">
               <label for="froid">
                 <input type="radio" name="weather" class="card-input-element d-none" id="froid" value="Froid">
-                  <div class="card card-body bg-light text-center">
-                    <%= image_tag("icone/froid.png", style: "height: 100px; width: 100px;") %>
-                    Je suis pas frileux !
+
+                  <div class="card card-body text-center">
+                    <%= image_tag("icone/froid.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                  <p> Je suis pas frileux ! </p>
+
                   </div>
               </label>
             </div>
@@ -44,9 +53,9 @@
             <div class="col-4">
               <label for="proche">
                 <input type="radio" name="distance" class="card-input-element d-none" id="proche">
-                  <div class="card card-body bg-light text-center">
-                    <%= image_tag("icone/pas_loin.png", style: "height: 100px; width: 100px;") %>
-                    Je suis casanier, pas trop loin !
+                  <div class="card card-body text-center">
+                    <%= image_tag("icone/pas_loin.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                  <p> Je suis casanier, pas trop loin ! </p>
                   </div>
               </label>
             </div>
@@ -54,9 +63,9 @@
             <div class="col-4">
               <label for="France">
                 <input type="radio" name="distance" class="card-input-element d-none" id="France">
-                  <div class="card card-body bg-light text-center">
-                    <%= image_tag("icone/france.png", style: "height: 100px; width: 100px;") %>
-                    On reste dans le plus beau des pays !
+                  <div class="card card-body text-center">
+                    <%= image_tag("icone/france.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                  <p> On reste dans le plus beau des pays ! </p>
                   </div>
               </label>
             </div>
@@ -64,9 +73,9 @@
             <div class="col-4">
               <label for="Europe">
                 <input type="radio" name="distance" class="card-input-element d-none" id="Europe">
-                  <div class="card card-body bg-light text-center">
-                    <%= image_tag("icone/europe.png", style: "height: 100px; width: 100px;") %>
-                    Vers l'infini et au-delà, ou tout près de chez moi, peu m'importe !
+                  <div class="card card-body text-center">
+                    <%= image_tag("icone/europe.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                  <p> Jusqu'à l'infini et l'au delà ou tout prés de chez moi, peu m'importe ! </p>
                   </div>
               </label>
             </div>
@@ -78,9 +87,9 @@
             <div class="col-4">
               <label for="plage">
                 <input type="radio" name="environment" class="card-input-element d-none" id="plage" value="Plage">
-                  <div class="card card-body bg-light text-center">
-                     <%= image_tag("icone/plage.png", style: "height: 100px; width: 100px;") %>
-                    Coquillages et crustacés
+                  <div class="card card-body text-center">
+                    <%= image_tag("icone/plage.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                  <p> Coquillages et crustacés </p>
                   </div>
               </label>
             </div>
@@ -88,9 +97,9 @@
             <div class="col-4">
               <label for="nature">
                 <input type="radio" name="environment" class="card-input-element d-none" id="nature" value="Nature">
-                  <div class="card card-body bg-light text-center">
-                     <%= image_tag("icone/nature.png", style: "height: 100px; width: 100px;") %>
-                    Je veux aussi des grands espaces !
+                  <div class="card card-body text-center">
+                    <%= image_tag("icone/nature.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                  <p> Je veux aussi des grands espaces ! </p>
                   </div>
               </label>
             </div>
@@ -98,9 +107,9 @@
             <div class="col-4">
               <label for="ville">
                 <input type="radio" name="environment" class="card-input-element d-none" id="ville" value="Ville">
-                  <div class="card card-body bg-light text-center">
-                     <%= image_tag("icone/ville.png", style: "height: 100px; width: 100px;") %>
-                    L'effervence des grandes villes !
+                  <div class="card card-body text-center">
+                    <%= image_tag("icone/ville.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                  <p> L'effervence des grandes mégalopoles!</p>
                   </div>
               </label>
             </div>
@@ -109,51 +118,50 @@
       <div class="step-4 mt-5 hidden">
         <h2> Ce que tu préfères faire pendant les vacances... </h2>
           <div class="row">
-            <div class="col-4">
+            <div class="col-3">
               <label for="défouler">
                 <input type="radio" name="activity" class="card-input-element d-none" id="défouler" value="Défouler">
-                  <div class="card card-body bg-light text-center">
-                    <%= image_tag("icone/defouler.png", style: "height: 100px; width: 100px;") %>
-                    Je veux me surpasser !
+                  <div class="card card-body text-center">
+                    <%= image_tag("icone/defouler.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                  <p> Je veux me surpasser ! </p>
                   </div>
               </label>
             </div>
 
-            <div class="col-4">
+            <div class="col-3">
               <label for="détendre">
                 <input type="radio" name="activity" class="card-input-element d-none" id="détendre" value="Detendre">
-                  <div class="card card-body bg-light text-center">
-                     <%= image_tag("icone/detente.png", style: "height: 100px; width: 100px;") %>
-                     Plutôt farniente
+                  <div class="card card-body text-center">
+                     <%= image_tag("icone/detente.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                  <p> Plutôt farniente </p>
                   </div>
               </label>
             </div>
 
-          </div>
 
-          <div class="row">
 
-            <div class="col-4">
+
+            <div class="col-3">
               <label for="culture">
                 <input type="radio" name="activity" class="card-input-element d-none" id="culture" value="Culture">
-                  <div class="card card-body bg-light text-center">
-                    <%= image_tag("icone/froid.png", style: "height: 100px; width: 100px;") %>
-                    Faites moi découvrir une culture !
+                  <div class="card card-body text-center">
+                    <%= image_tag("icone/culture.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                  <p> faites moi découvrir une nouvelle culture ! </p>
                   </div>
               </label>
             </div>
 
-            <div class="col-4">
+            <div class="col-3">
               <label for="divertir">
                 <input type="radio" name="activity" class="card-input-element d-none" id="divertir" value="divertir">
-                  <div class="card card-body bg-light text-center">
-                    <%= image_tag("icone/divertir.png", style: "height: 100px; width: 100px;") %>
-                    Je veux m'amuser jusqu'aux aurores !
+                  <div class="card card-body text-center">
+                    <%= image_tag("icone/divertir.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                  <p> Je veux m'amuser jusqu'aux aurores ! </p>
                   </div>
               </label>
             </div>
-
           </div>
+
         </div>
       <div class="step-5 mt-5 hidden">
         <h2> Une idée du budget ? </h2>
@@ -161,9 +169,9 @@
             <div class="col-4">
               <label for="economique">
                 <input type="radio" name="price_range" class="card-input-element d-none" id="economique" value= 1>
-                  <div class="card card-body bg-light text-center">
-                    <%= image_tag("icone/pauvre.png", style: "height: 100px; width: 100px;") %>
-                    Vive les minis prix !
+                  <div class="card card-body text-center">
+                    <%= image_tag("icone/pauvre.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
+                  <p> Vive les minis prix!</p>
                   </div>
               </label>
             </div>
@@ -171,11 +179,11 @@
             <div class="col-4">
               <label for="normal">
                 <input type="radio" name="price_range" class="card-input-element d-none" id="normal" value= 2>
-                  <div class="card card-body bg-light text-center">
+                  <div class="card card-body text-center">
                     <div class="d-flex">
-                      <%= image_tag("icone/aise.png", style: "height: 100px; width: 100px;") %>
+                      <%= image_tag("icone/aise.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
                     </div>
-                    Je fais attention, sans me priver
+                    <p> Je fais attention, sans me priver </p>
                   </div>
               </label>
             </div>
@@ -183,11 +191,11 @@
             <div class="col-4">
               <label for="cher">
                 <input type="radio" name="price_range" class="card-input-element d-none" id="cher" value= 3>
-                  <div class="card card-body bg-light text-center">
+                  <div class="card card-body text-center">
                     <div class="d-flex">
-                      <%= image_tag("icone/riche.png", style: "height: 100px; width: 100px;") %>
+                      <%= image_tag("icone/riche.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
                     </div>
-                    Je casse la tirelire !
+                    <p> Je casse la tirelire! </p>
                   </div>
               </label>
             </div>
