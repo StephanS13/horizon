@@ -17,6 +17,12 @@ class CitiesController < ApplicationController
       AS score
     SQL
     @cities = City.select(query_select).order('score DESC').limit(3)
+
+    if params[:query].present?
+      @cities = City.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @cities = City.all
+    end
   end
 
   def show
@@ -33,7 +39,11 @@ class CitiesController < ApplicationController
   end
 
   def search
+    # if params[:query].present?
+    #   @cities = City.where("name ILIKE ?", "%#{params[:query]}%")
+    # else
     @cities = City.all
+    # end
   end
 
   private
