@@ -1,0 +1,41 @@
+<div class="parent-profile">
+<div class="background-light favorite-city-photo">
+  <!-- photo de la ville pref avec le nom de la ville au milieu -->
+ </div>
+
+<div class="background-light user-details text-align-center">
+  <%=  cl_image_tag @user.avatar.key, alt: "alttext", width: 100, height: 100, crop: :fill, style: "border-radius: 50%;" %>
+  <h3> <%= @user.nickname %> l'aventurier! </h3>
+ </div>
+
+<div class="illustration-memphis" style="background-image: url('<%= image_path("profile-banner.png") %>');"> </div>
+
+<div class="background-light last-pois">
+  <!-- les 3 derniers Pois sur lesquels il a laissé une review -->
+ <!--  <% @my_pois.last(3).each do |poi| %>
+  <% end %> -->
+ </div>
+
+<div class="background-light statistic-1">
+  <!-- nombre de poi liké -->
+  <h3> Plus de <%= @favorites_pois.count %> endroits te font rever! </h3>
+ </div>
+
+<div class="background-light favorites-cities-list">
+  Viens voir les coups de coeurs de tes villes préférées!
+  <% @user.favorite_cities.each do |favorite_city| %>
+    <%= link_to favorite_city.city.name, city_path(favorite_city.city) %>
+  <% end %>
+ </div>
+
+<div class="background-light statistics-2">
+  <!-- nb de review laissé -->
+  <h3> Déjà <%= @user.reviews.count %> reviews laissés! </h3>
+ </div>
+
+<div class="background-light city-form">
+  Ajoute ... à tes favoris
+  <!-- ... = collection des villes qu'on peut rajouter -->
+ </div>
+
+</div>

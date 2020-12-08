@@ -1,12 +1,12 @@
 <!-- Homepage -->
 <div class="homepage background-light">
   <!-- BANNER -->
-  <div class="banner" style="background-image: linear-gradient(352.72deg, rgba(39, 76, 119, 0.61) 41.07%, rgba(255, 255, 255, 0) 68.14%), url(https://s3-alpha-sig.figma.com/img/419b/1255/054bfd88cfc92e70142cfd7c3ef81903?Expires=1607904000&Signature=f93sprW-CiXeTyTSmL3s9dvDiM8VsIS~MrvxoOn5jk1OOT4OebMMEKNnx~hHrucw-O2XIOjOJ~OYDR-Gci-Puj3jvybhUlzUq4yRotMIvpt4WWGx-wZAxFT5B21LwxxjN6gfvHDWIfERjkGtW4JstJE4YXkGkPYP2M5QgB3G86-6PckE4ChPn831RHEBfoqDC4DlWd7smbUnZzhYHr18Cj3aGDs-MVfeZAwKCrZE-SY~w1hcCwmpA5pEeOFdg2~91WaA1b3dnX48mUAJwl9Gm5HNBG2IMBv5n-MJKgirwZpKvYw1Z7CuNmkyXHQMZuMBIACT3VteMnDmNH3QcrZC7Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);">
+  <div class="banner" style="background-image: url('<%= image_path("home.png") %>');">
     <!-- CONTAINER -->
     <div class="container">
       <h1>Horizon</h1>
-      <p>Les vacances approchent et tu ne sais pas où partir ? <br>
-          Horizon t’aide à trouver la destination de tes rêves en quelques clics </p>
+      <p class="my-3">Les vacances approchent et tu ne sais pas où partir ? <br>
+          Horizon t’aide à trouver la destination de <br> tes rêves en quelques clics </p>
         <div class="btn-home">
         <%= link_to 'C\'est parti !', search_cities_path, class: "btn-primary" %>
         </div>

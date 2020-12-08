@@ -3,58 +3,53 @@
   width: 100vw;
 
   .container {
-
-    text-align: center;
+    padding-top: 150px;
   }
   .banner {
-    height: 720px;
+    height: 620px;
     background-size: cover;
     background-position: center;
   }
 
   .banner h1 {
 
-    padding-top: 4em;
     font-family: Lora;
     font-style: normal;
     font-weight: bold;
     font-size: 64px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.43);
-    // line-height: 82.03%;
-    // /* or 52px */
+    line-height: 82.03%;
+    /* or 52px */
 
-    // // display: flex;
+    display: flex;
     align-items: center;
-    text-align: center;
 
-
-    color: #FFFAFA;
+    color: #00296B;
+    padding-bottom: 10px;
   }
 
   .banner p {
-    // position: absolute;
-    // width: 716px;
-    // height: 96px;
-    // left: calc(50% - 716px/2 + 19px);
-    // top: 368px;
+
+
     font-family: Inter;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 24px;
     line-height: 140.62%;
-    // /* or 34px */
-    text-align: center;
-    color: #FFFFFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.43);
+    /* or 34px */
+
+
+    color: rgba(0, 41, 107, 0.5);
   }
 
   .banner .btn-primary {
-    text-align :center;
-    align-items: center;
+    text-align :left;
+    align-items: left;
+    margin-top: 3px;
   }
 
   .btn-home{
-    margin-top: 30px;
+    margin-top: 3px;
+    padding-top: 15px;
   }
 
   .city-home-page {

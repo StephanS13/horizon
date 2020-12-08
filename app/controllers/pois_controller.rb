@@ -21,7 +21,32 @@ class PoisController < ApplicationController
     end
   end
 
-  # def show
-  #   @poi = Poi.find(params[:id])
-  # end
+  def show
+    @poi = Poi.find(params[:id])
+    @reviews = @poi.reviews
+  end
+
+  def new
+    @poi = Poi.new
+    @city = City.find(params[:city_id])
+    @category = ["Restaurants", "Bars / Vie Nocturne", "Incoutournables", "Activités"]
+    @price_range = ["€", "€€", "€€€"]
+  end
+
+  def create
+    @city = City.find(params[:city_id])
+    @category = ["Restaurants", "Bars / Vie Nocturne", "Incoutournables", "Activités"]
+    @price_range = ["€", "€€", "€€€"]
+    @poi = Poi.new(poi_params)
+    @poi.city = @city
+    @poi.user = current_user
+    @poi.save!
+    redirect_to city_pois_path(@city)
+  end
+
+  private
+
+  def poi_params
+    params.require(:poi).permit(:title, :category, :description, :price_range, :address, photos: [])
+  end
 end

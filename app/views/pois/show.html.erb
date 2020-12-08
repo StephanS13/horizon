@@ -1,12 +1,76 @@
-
-<div class="homepage background-light">
-  <!-- BANNER -->
-  <div class="banner" style="background-image: linear-gradient(352.72deg, rgba(39, 76, 119, 0.61) 41.07%, rgba(255, 255, 255, 0) 68.14%), url(    <%= cl_image_tag poi.photos.first.key, class: "card-image-poi-show" %>);">
-    <!-- CONTAINER -->
-    <% @pois.each do |poi| %>
-    <div class="infos-pois">
-      <p> <%@poi.category %></p>
-      <h1> <%@poi.name %></h1>
+<div class="homepage_show" >
+  <div class="banner card-image-poi-show" style="background-image: url('<%= cl_image_path(@poi.photos.first.key) %>')">
+    <div class="container">
+      <div class="infos-pois">
+        <p> <%= @poi.category %></p>
+        <div class="favorite_pois">
+          <h1> <%= @poi.name %></h1>
+          <% if @favorite_poi %>
+            <i class="far fa-heart unlike"></i>
+          <% else %>
+            <%= link_to poi_favorite_pois_path(@poi), method: :post do %>
+            <i class="fas fa-heart like"></i>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="rating_poi">
+          <p> <%= @poi.price_range %> </p>
+          <p class="ml-4"> <%= @poi.address %></p>
+        </div>
+      </div>
     </div>
   </div>
-  <% end %>
+
+  <div class="container">
+
+    <div class="description_poi">
+      <p> <%= @poi.description %> </p>
+      <%= link_to 'Ajoute un commentaire', "#", class: "btn-primary"%>
+    </div>
+
+    <div class="cards_reviews">
+      <% @reviews.each do |review| %>
+        <div class="cards_review">
+            <div class="mt-2">
+            <%= cl_image_tag review.user.avatar.key, width: 40, height: 40, crop: :fill,  class: "avatar dropdown-toggle"%>
+            </div>
+          <h5 class="my-3"><%= review.title %></h5>
+            <% if review.rating == 5 %>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <% elsif review.rating == 4 %>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <% elsif review.rating == 3 %>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <% elsif review.rating == 2 %>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <% elsif review.rating == 1 %>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <% end %>
+          <p class="my-3"><%= review.description %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+

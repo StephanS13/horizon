@@ -1,54 +1,93 @@
 
-
-.card-title-city-show h1 {
-  font-size: 50px;
-}
-
-.icon-city-show {
-  margin-top: 10px;
-  margin-bottom: 25px;
-  border-radius: 10px;
-  height: 70px;
-  width: 200px;
-  border: solid 1px grey;
-  background-color: rgb(247, 244, 244);
-  justify-content: center;
-  align-items: center;
-}
-.photos-city-show {
-  display: flex;
-  height: 400px;
-  background-position: center;
-  object-fit: cover;
-  border-radius: 50px 20px;
-}
-
-.main-img-show {
-  background-position: center;
-  border-radius: 10px 0 0 10px;
-  width: 750px;
-}
-.photos-city-show2 {
+.parent-city-show {
+  display: grid;
+  grid-template-columns: 14% 17% 18% 18% 16% 12%;
+  grid-template-rows: repeat(5, 120px);
+  grid-column-gap: 1%;
+  grid-row-gap: 20px;
+  margin: 40px auto 64px;
+  width: 95%;
   
-  height: 400px;
-  width: 49%;
-}
-.img1 {
-  background-position: center;
-  height: 49%;
-  width: 100%;
-  border-radius: 0 10px 0 0;
-}
-.img2 {
-  background-position: center;
-  height: 49%;
-  width: 100%;
-  border-radius: 0 0 10px 0;
-}
-.city-show-btn {
-  display: block;
-  margin: 25px auto;
-}
-.city-show-btn :hover {
-  // color: red;
+  .photo1 { 
+    grid-area: 1 / 1 / 3 / 4; 
+    img {
+      height: 100%;
+      width: 100%;
+      background-position: center;
+    }
+  }
+  .picto-argent { grid-area: 1 / 4 / 3 / 5;
+    background-color: $blue;
+    color: white;
+  }
+  .picto-meteo { grid-area: 1 / 5 / 2 / 6;
+   }
+  .photo2 { grid-area: 2 / 5 / 4 / 6; 
+    img {
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      object-fit: fill;
+    }
+  }
+  .photo3 { grid-area: 1 / 6 / 6 / 7;
+    img {
+      height: 100%;
+      width: 100%;
+      background-position: center;
+    }
+  }
+  .pois { grid-area: 3 / 1 / 6 / 2; }
+
+  .picto-environement { grid-area: 3 / 2 / 4 / 3;
+    background-color: #99d5c9;
+    color: black;
+  }
+
+  .city-name { grid-area: 3 / 3 / 4 / 5;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: $blue;
+    color: white;
+  }
+  .photo4 { grid-area: 4 / 2 / 5 / 3;
+    img {
+      height: 206%;
+      width: 110%;
+      max-width: 100%;
+      max-height: 160%;
+      background-position: left center;
+      // object-fit: fill;
+      display: block;
+    }
+  }
+
+  .city-description { grid-area: 4 / 3 / 6 / 6;
+    font-size: 21px;
+  }
+  .my-poi-cards {
+    height: 122px;
+    object-fit: contain;
+    background-position: center;
+    color: white;
+
+  }
+  .city-show-btn { grid-area: 5 / 2 / 6 / 3;
+    font-size: 17.5px;
+    font-weight: bolder;
+    word-wrap: normal;
+    height: 50px;
+    width: 100%;
+    margin-top: 70px;
+  }
+  .favorite-city {
+    margin-left: 740px;
+    padding-left: 15px;
+    padding-top: 12px;
+    width: 120px;
+    height: 50px;
+  }
+  .no-hover {
+    pointer-events: none;
+  }
 }

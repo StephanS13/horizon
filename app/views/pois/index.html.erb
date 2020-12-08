@@ -2,7 +2,7 @@
 
   <div class="city-name">
     <h2><%= @city.name %></h2>
-    <%= link_to "Partage ton coup de coeur", root_path, class: "btn-primary" %>
+    <%= link_to "Partage ton coup de coeur", new_city_poi_path, class: "btn-primary" %>
   </div>
 
   <div class="unmissables">
@@ -18,11 +18,6 @@
         <% else %>
           <p>Pas encore de notes, à toi de jouer !</p>
         <% end %>
-        <% if unmissable.title %>
-          <p><%= unmissable.title %></p>
-        <% else %>
-          <p>Add pictures</p>
-        <% end %>
       </div>
     <% end %>
     </div>
@@ -33,7 +28,6 @@
             style="width: 100%; height: 780px"
             data-markers="<%= @markers.to_json %>"
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-  </div>
 
   <div class="restaurants">
     <h4>Restaurants / bars</h4>
