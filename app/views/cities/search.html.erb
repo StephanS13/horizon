@@ -5,14 +5,14 @@
     </div>
     <%= form_tag cities_path, method: :get do %>
       <div class="step-1 mt-5">
-        <h2> Coté météo t'es plutôt quoi? </h2>
+        <h2> Coté météo t'es plutôt quoi ? </h2>
           <div class="row">
             <div class="col-4">
               <label for="chaud">
                 <input type="radio" name="weather" class="card-input-element d-none" id="chaud" value="Chaud">
                   <div class="card card-body bg-light text-center">
                        <%= image_tag("icone/soleil.png", style: "height: 100px; width: 100px;") %>
-                      Je veux du soleil!
+                      Je veux du soleil !
                   </div>
               </label>
             </div>
@@ -32,7 +32,7 @@
                 <input type="radio" name="weather" class="card-input-element d-none" id="froid" value="Froid">
                   <div class="card card-body bg-light text-center">
                     <%= image_tag("icone/froid.png", style: "height: 100px; width: 100px;") %>
-                    Je suis pas frileux!
+                    Je suis pas frileux !
                   </div>
               </label>
             </div>
@@ -66,7 +66,7 @@
                 <input type="radio" name="distance" class="card-input-element d-none" id="Europe">
                   <div class="card card-body bg-light text-center">
                     <%= image_tag("icone/europe.png", style: "height: 100px; width: 100px;") %>
-                    Jusqu'à l'infini et l'au delà ou tout prés de chez moi, peu m'importe !
+                    Vers l'infini et au-delà, ou tout près de chez moi, peu m'importe !
                   </div>
               </label>
             </div>
@@ -90,7 +90,7 @@
                 <input type="radio" name="environment" class="card-input-element d-none" id="nature" value="Nature">
                   <div class="card card-body bg-light text-center">
                      <%= image_tag("icone/nature.png", style: "height: 100px; width: 100px;") %>
-                    Je veux aussi des grands espaces!
+                    Je veux aussi des grands espaces !
                   </div>
               </label>
             </div>
@@ -100,7 +100,7 @@
                 <input type="radio" name="environment" class="card-input-element d-none" id="ville" value="Ville">
                   <div class="card card-body bg-light text-center">
                      <%= image_tag("icone/ville.png", style: "height: 100px; width: 100px;") %>
-                    L'effervence des grandes mégalopoles!
+                    L'effervence des grandes villes !
                   </div>
               </label>
             </div>
@@ -138,7 +138,7 @@
                 <input type="radio" name="activity" class="card-input-element d-none" id="culture" value="Culture">
                   <div class="card card-body bg-light text-center">
                     <%= image_tag("icone/froid.png", style: "height: 100px; width: 100px;") %>
-                    faites moi découvrir une culture !
+                    Faites moi découvrir une culture !
                   </div>
               </label>
             </div>
@@ -163,7 +163,7 @@
                 <input type="radio" name="price_range" class="card-input-element d-none" id="economique" value= 1>
                   <div class="card card-body bg-light text-center">
                     <%= image_tag("icone/pauvre.png", style: "height: 100px; width: 100px;") %>
-                    Vive les minis prix!
+                    Vive les minis prix !
                   </div>
               </label>
             </div>
@@ -187,12 +187,12 @@
                     <div class="d-flex">
                       <%= image_tag("icone/riche.png", style: "height: 100px; width: 100px;") %>
                     </div>
-                    Je casse la tirelire!
+                    Je casse la tirelire !
                   </div>
               </label>
             </div>
           </div>
-          <%= submit_tag "On part où?", class: "btn btn-primary mt-5" %>
+          <%= submit_tag "On part où ?", class: "btn btn-primary mt-5" %>
         </div>
     <% end %>
   </div>
