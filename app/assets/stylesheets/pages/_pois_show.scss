@@ -105,16 +105,23 @@
     justify-content: center;
   }
 
-}
-
-  .favorite_pois .unlike {
+  .like {
     color: white;
   }
 
-  .favorite_pois .unlike:hover {
+  .like:hover {
     color: red;
   }
 
-  .favorite_pois a {
-    color: red !important;
-  }
+  // .unlike {
+  //   color: white;
+  // }
+
+  // .unlike:hover {
+  //   color: red;
+  // }
+
+}
+
+
+
