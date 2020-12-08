@@ -29,10 +29,12 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
 import {initModal} from '../components/open_modal';
+import {initSearchSteps} from '../components/search_steps';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initSearchSteps();
   initMapbox();
   initModal();
 })
