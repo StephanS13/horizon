@@ -29,7 +29,6 @@ class CitiesController < ApplicationController
       AS score
     SQL
     @cities = City.select(query_select).order('score DESC').limit(3)
-
   end
 
   def show

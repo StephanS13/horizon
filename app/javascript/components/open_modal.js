@@ -1,5 +1,8 @@
 const initModal = () => {
   const openModalBtn =  document.querySelector("#open-modal-btn");
+
+  if (!openModalBtn) {return}
+
   const poiModal = document.querySelector("#poi-modal");
   console.log("coucou")
 
