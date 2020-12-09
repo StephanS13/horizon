@@ -1,11 +1,13 @@
 .parent-profile {
-  height: 90vh;
   display: grid;
-  grid-template-columns: 14% 17% 18% 9% 16% 12%;;
+  grid-template-columns: 20% 15% 15% 15% 15% 20%;
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 15px;
   grid-row-gap: 15px;
-  padding: 40px;
+
+  margin-top: 40px;
+  margin-left: 25px;
+  margin-right: 25px;
 
   .my-favorite-city-photo { 
     grid-area: 1 / 1 / 3 / 4;
@@ -15,49 +17,108 @@
     background-size: cover;
     position: relative;
     border-radius: 10px;
-  }
-  .testh1 {
-    color: white !important;
-    position: absolute;
-    left: 30px;
-    bottom: 20px;
-    font-size: 60px;
-  }
-  .testh3 {
-    color: white !important;
-    position: absolute;
-    left: 30px;
-    bottom: 90px;
-    font-size: 20px;
+
+    .testh3 {
+      color: white;
+      position: absolute;
+      left: 30px;
+      bottom: 90px;
+      font-size: 20px;
+    }
+    .testh1 {
+      color: white;
+      position: absolute;
+      left: 30px;
+      bottom: 20px;
+      font-size: 60px;
+    }
   }
 
   .user-details {
-    grid-area: 1 / 4 / 3 / 6;
+    grid-area: 1 / 4 / 3 / 5;
+    border-radius: 10px;
+    background-color: white;
+    .his-username {
+      
+    }
   }
-  .avatar-image {
-  }
+  
+  .les-villes {
+    grid-area: 1 / 5 / 6 / 6;
+    color: black;
+    .profile-red-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #F1513E;
+      color: white;
+      border-radius: 6px;
+      width: 100%;
+      height: 100px;
+    }
+    .my-cities {
+      .bcg-img {
+        width: 100%;
+        height: 253px;
+        border-radius: 6px;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      } h4 {
+        color: white;
+        padding: 3rem;
+      }
+    }
+
   .illustration-memphis {
     grid-area: 1 / 6 / 6 / 7;
     border-radius: 10px;
+    background-repeat:no-repeat;
   }
-  .last-pois {
+
+  .last-activities {
     grid-area: 3 / 1 / 6 / 2;
-    border-radius: 10px;
+    color: black;
+    .my-poi-card {
+      border-radius: 6px;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 200px
+    }
   }
-  .statistic-1 {
-    grid-area: 3 / 2 / 4 / 4;
-    border-radius: 10px;
+  .all-pois {
+    color: white;
+  } 
+  .my-poi-image {
+    grid-area: 3 / 2 / 6 / 5;
+    border-radius: 6px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-  .favorites-cities-list {
-    grid-area: 3 / 4 / 5 / 6;
-    border-radius: 10px;
+  .my-poi-name {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
   }
-  .statistics-2 {
-    grid-area: 5 / 2 / 6 / 4;
-    border-radius: 10px;
+  .my-poi-category {
+    display: flex;
+    justify-content: center;
   }
-  .city-form {
-    grid-area: 5 / 4 / 6 / 6;
-    border-radius: 10px;
-  }
+  .map-profile { 
+    margin-top: 40px;
+    border-radius:10px;
+    grid-area: 3 / 2 / 6 / 5; 
+  } 
 }
+  

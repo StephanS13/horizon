@@ -6,5 +6,13 @@ class ProfilesController < ApplicationController
     @favorites_pois = current_user.favorite_pois
     @last_reviews = current_user.reviews.last(3)
     @my_pois = Poi.joins(:reviews).where(reviews: { user: current_user })
+
+    @markers = @my_pois.geocoded.map do |poi|
+      {
+        lat: poi.latitude,
+        lng: poi.longitude,
+        image_url: helpers.asset_url('paper-plane.png')
+      }
+    end
   end
 end
