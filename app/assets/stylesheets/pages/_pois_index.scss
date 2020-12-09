@@ -33,6 +33,7 @@
     }
     h5 {
       font-size:14px;
+      color:$blue;
     }
 }
 
@@ -185,7 +186,7 @@
   flex-grow: 1;
   background-size: cover;
   position: relative;
-  z-index: 9000;
+  // z-index: 9000;
     h4 {
       margin-bottom: 10px;
     }
