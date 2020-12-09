@@ -19,7 +19,6 @@ class FavoritePoisController < ApplicationController
     @favorite_poi = FavoritePoi.new
     @favorite_poi.user = current_user
     @favorite_poi.poi = @poi
-
     @favorite_poi.save
 
     if params[:source] == "pois_listing"
