@@ -1,11 +1,11 @@
 <div class="parent-profile">
   
-  <div class="background-light my-favorite-city-photo" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.50) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @favorite_cities.last.city.photos.last.key %>');"> 
+  <div class="background-light my-favorite-city-photo" style="background-image: linear-gradient(80.37deg, rgba(0, 41, 107, 0.46) 15.14%, rgba(255, 255, 255, 0) 94.67%), url('<%= cl_image_path @favorite_cities.last.city.photos.last.key %>');"> 
     <h3 class="testh3">VILLE PREFEREE</h3>
     <h1 class="testh1"><%= @favorite_cities.last.city.name %></h1> 
   </div>
 
-  <div class="background-light user-details card p-2">
+  <div class="background-light text-center user-details card p-2">
     <div class="his-username mx-auto">
       <h4> <%= @user.nickname %> l'aventurier! </h4>
     </div>
@@ -23,8 +23,8 @@
     <p><strong>LES VILLES</strong></p>
     <div class="all-cards">
       <div class="profile-red-card">
-        <h5> 3 villes visitées </h5>
-        <p>Le dernier à Lisbonne </p>
+        <h5> <%= @favorite_cities.count %> villes visitées </h5>
+        <p>Le dernier à <%= @favorite_cities.name %> </p>
       </div>
       <div class="my-cities d-flex align-items-center justify-content-around mt-3">
         <div class="bcg-img" style="background-image: url('<%= cl_image_path @favorite_cities.last.city.photos.second.key %>');">
@@ -40,21 +40,20 @@
     <p><strong>DERNIERES ACTIVITES</strong></p>
     <div class="all-pois">
       <% @my_pois.each do |poi| %>
-        <div class="my-image-poi mb-3" style="background-image: url('<%= cl_image_path poi.photos.last.key %>');">
-          <%= poi.title %>
+        <div class="my-poi-image mb-3" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.50) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path poi.photos.last.key %>');">
+          <div class="my-poi-name"><%= poi.name %></div> 
+          <div class="my-poi-category"><%= poi.category %></div> 
         </div>
       <% end %>
     </div>
-    <div class="card-product">
-          <div class="my-image-poi mb-3" style="background-image: url('<%= cl_image_path poi.photos.last.key %>');">
-          <div class="card-product-infos">
-            <h2>Product name</h2>
-            <p>Product description with <strong>relevant info</strong> only.</p>
-          </div>
-        </div>
   </div>
-
-  <div class="div6"> HELLO 6</div>
+ <div class="map-profile">
+    <div  id="map"
+      style="width: 100%; height: 360px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
+  
 </div>
 
 
@@ -64,7 +63,7 @@
 
 <!-- 
 
-
+ 
   <div class="background-light last-pois">
   
   </div>
