@@ -24,7 +24,7 @@
     <div class="all-cards">
       <div class="profile-red-card">
         <h5> <%= @favorite_cities.count %> villes visitées </h5>
-        <p>Le dernier à <%= @favorite_cities.name %> </p>
+        <p>Le dernier à <%= @favorite_cities.last.city.name %> </p>
       </div>
       <div class="my-cities d-flex align-items-center justify-content-around mt-3">
         <div class="bcg-img" style="background-image: url('<%= cl_image_path @favorite_cities.last.city.photos.second.key %>');">
