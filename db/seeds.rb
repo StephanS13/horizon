@@ -1240,17 +1240,17 @@ cities = FavoriteCity.create!(
   )
 
 pois = FavoritePoi.create!(
-  user: gab,
+  user: ophe,
   poi: rijksmuseum,
   )
 
 pois_1 = FavoritePoi.create!(
-  user: gab,
+  user: ophe,
   poi: moeders,
   )
 
 pois_2 = FavoritePoi.create!(
-  user: gab,
+  user: ophe,
   poi: jordaan,
   )
 
