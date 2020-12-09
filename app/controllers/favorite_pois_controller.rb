@@ -2,14 +2,15 @@ class FavoritePoisController < ApplicationController
   def index
     @city = City.find(params[:city_id])
     @favorite_pois = FavoritePoi.joins(:poi).where(pois: { city: @city }).where(user: current_user)
+    @pois = Poi.where(id: @favorite_pois.pluck(:poi_id))
 
-    # @markers = @pois.geocoded.map do |poi|
-    #   {
-    #     lat: poi.latitude,
-    #     lng: poi.longitude,
-    #     image_url: helpers.asset_url('paper-plane.png')
-    #   }
-    # end
+    @markers = @pois.geocoded.map do |poi|
+      {
+        lat: poi.latitude,
+        lng: poi.longitude,
+        image_url: helpers.asset_url('paper-plane.png')
+      }
+    end
   end
 
   def create
