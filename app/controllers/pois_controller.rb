@@ -6,7 +6,7 @@ class PoisController < ApplicationController
     @pois = @city.pois
     @restaurants = @pois.where(category: "Restaurants").or(@pois.where(category: "Bars/ Vie nocturne"))
     @activities = @pois.where(category: "Activités")
-    @unmissables = @pois.where(category: "Incontournables").first(3)
+    @unmissables = @pois.where(category: "Incontournables")
 
     # if params[:category].present?
     #   @pois = @pois.where(category: params[:category])
@@ -24,6 +24,10 @@ class PoisController < ApplicationController
   def show
     @poi = Poi.find(params[:id])
     @reviews = @poi.reviews
+
+    if user_signed_in?
+      @favorite_poi = current_user.favorite_pois.find_by(poi_id: @poi.id)
+    end
   end
 
   def new
