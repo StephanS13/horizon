@@ -11,12 +11,19 @@
   const step4inputs = document.querySelector('.step-4').getElementsByTagName('input');
   const step5 = document.querySelector('.step-5');
   const step5inputs = document.querySelector('.step-5').getElementsByTagName('input');
+  const progBar = document.querySelector('.progress-bar');
+  const suitcasesIcon = document.querySelector('.suitcases');
+  const passportIcon = document.querySelector('.passport');
+  const trainIcon = document.querySelector('.train');
+  const touristIcon = document.querySelector('.tourist');
 
   for (const input of step1inputs) {
     input.addEventListener('click', function(event) {
       setTimeout(function() {
         step1.classList.add("hidden");
         step2.classList.remove("hidden");
+        progBar.style. width = "12.5%";
+        suitcasesIcon.classList.add("form--pictogram--active");
       }, 300);
     });
   };
@@ -26,6 +33,8 @@
       setTimeout(function() {
         step2.classList.add("hidden");
         step3.classList.remove("hidden");
+        progBar.style. width = "38%";
+        passportIcon.classList.add("form--pictogram--active");
       }, 300);
     });
   };
@@ -35,6 +44,8 @@
       setTimeout(function() {
         step3.classList.add("hidden");
         step4.classList.remove("hidden");
+        progBar.style. width = "64%";
+        trainIcon.classList.add("form--pictogram--active");
       }, 300);
     });
   };
@@ -44,6 +55,17 @@
       setTimeout(function() {
         step4.classList.add("hidden");
         step5.classList.remove("hidden");
+        progBar.style. width = "87.5%";
+        touristIcon.classList.add("form--pictogram--active");
+      }, 300);
+    });
+  };
+
+
+for (const input of step5inputs) {
+    input.addEventListener('click', function(event) {
+      setTimeout(function() {
+        progBar.style. width = "100%";
       }, 300);
     });
   };

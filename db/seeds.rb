@@ -1202,7 +1202,7 @@ jordaan_3 =Review.create!(
     title: "Apaisant",
     description: "Quartier où il est très agréable de flaner sans but....beaucoup plus agréable que les rues touristiques de la ville. De très belles ruelles qui feront la joie des adeptes de photographie.",
     poi: jordaan,
-    user: gab,
+    user: steph,
   )
 
 
@@ -1221,7 +1221,7 @@ rijksmuseum_2 =Review.create!(
     title: "Immanquable !",
     description: "Il y a des audio guides mais on (le site) vous conseille de télécharger l'appli (gratuite) du musée qui en contient un. Donc pensez à apporter vos écouteurs. Vous pouvez choisir différents parcours de visite en fonction de vos préférences. L'appli vous dirige vers certaines œuvres et propose des commentaires efficaces. ",
     poi: rijksmuseum,
-    user: gab,
+    user: david,
   )
 
 rijksmuseum_3 =Review.create!(
