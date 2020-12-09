@@ -42,10 +42,6 @@
   z-index: 9000;
 }
 
-.restaurant a:hover {
-  text-decoration: none;
-}
-
 .restaurant-title {
   display: flex;
   justify-content: space-between;
@@ -70,10 +66,6 @@
   background-size: cover;
   position: relative;
   z-index: 9000;
-}
-
-.activity a:hover {
-  text-decoration: none;
 }
 
 .activity-title {
@@ -151,10 +143,6 @@
       color: white;
     }
   }
-
-.unmissable a:hover {
-  text-decoration: none;
-}
 
 .unmissable-title {
   display: flex;
