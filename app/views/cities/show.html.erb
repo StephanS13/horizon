@@ -1,4 +1,70 @@
+<div class="background-page background-light">
+  <div class="city-show-grid">
+    <div class="image-1" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.25) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.last.key %>')">
+    </div>
 
+
+
+    <div class="vertical-image" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.4) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.first.key %>')">
+    </div>
+
+
+
+    <div class="cta d-flex align-items-center justify-content-between">
+        <%= link_to "Découvre les secrets", city_pois_path(@city), class: "btn-primary" %>
+    </div>
+
+    <div class="image-2" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.second.key %>')">
+    </div>
+
+    <div class="hero-banner" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.50) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.second.key %>');">
+      <h1><%= @city.name %></h1>
+    </div>
+    <div class="unmissable unmissable-city">
+      <h4>Incontournables</h4>
+      <div class="pois">
+        <%# <h6>Les incontourbales</h6> %>
+        <% @pois.sample(3).each do |poi| %>
+          <%= link_to poi_path(poi) do %>
+            <div class="restaurant d-flex align-items-center">
+             <%= cl_image_tag poi.photos.first.key, crop: :scale %>
+             <div class="restaurant-content">
+                <div class="restaurant-title d-flex justify-content-between">
+                  <h5><%= poi.name %></h5>
+                </div>
+                <p><%= poi.category %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="desc">
+      <div class="city-description card text-justify p-4">
+        <%= @city.description %>
+        <div class="favorite-city card p-3 mt-4">
+          <% if @favorite_city %>
+            <% if @city.name = "Lisbonne" %>
+              <h5><i class="fas fa-heart" font-size="20px"></i> <%= 392 %> </h5>
+            <% else %>
+              <%= 420 %> </h5>
+            <% end %>
+          <% else %>
+            <%= link_to city_favorite_cities_path(@city), method: :post do %>
+              <% if @city.name = "Lisbonne" %>
+                <h5><i class="fas fa-heart" font-size="20px"></i> <%= 392 %> </h5>
+              <% else %>
+                <%= 421 %> </h5>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
 <div class="background-light">
   <div class="parent-city-show">
     <div class="photo1"> <img style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.25) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path @city.photos.last.key %>')"> </div>
@@ -91,4 +157,4 @@
     <%= button_to "Explore la ville !", city_pois_path(@city), class: "city-show-btn btn-primary", method: :get %>
   </div>
 </div>
-
+ -->
