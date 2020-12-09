@@ -8,10 +8,6 @@ class PoisController < ApplicationController
     @activities = @pois.where(category: "Activités")
     @unmissables = @pois.where(category: "Incontournables").first(3)
 
-    # if params[:category].present?
-    #   @pois = @pois.where(category: params[:category])
-    # end
-
     @markers = @pois.geocoded.map do |poi|
       {
         lat: poi.latitude,
