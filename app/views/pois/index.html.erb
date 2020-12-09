@@ -4,6 +4,7 @@
     <p>47 commentaires</p>
     <h2><%= @city.name %></h2>
     <div class="dynamic-pictos">
+
       <div class="meteo">
         <% if @city.weather == "Chaud" %>
         <%= image_tag("icone/soleil.png", style: "height: 30px;") %>
@@ -13,6 +14,7 @@
         <%= image_tag("icone/modere.png", style: "height: 30px;") %>
         <% end %>
       </div>
+
       <div class="environment">
         <% if @city.environment == "Ville" %>
         <%= image_tag("icone/ville.png", style: "height: 30px;") %>
@@ -22,6 +24,7 @@
         <%= image_tag("icone/plage.png", style: "height: 30px;") %>
         <% end %>
       </div>
+
       <div class="activite">
         <% if @city.activity == "Detendre" %>
         <%= image_tag("icone/detente.png", style: "height: 30px;") %>
@@ -33,6 +36,7 @@
         <%= image_tag("icone/defouler.png", style: "height: 30px;") %>
         <% end %>
       </div>
+
       <div class="price_range">
         <% if @city.price_range == 1 %>
         <%= image_tag("icone/pauvre.png", style: "height: 30px;") %>
@@ -42,6 +46,7 @@
         <%= image_tag("icone/riche.png", style: "height: 30px;") %>
         <% end %>
       </div>
+
     </div>
   </div>
 
