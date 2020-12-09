@@ -1,17 +1,17 @@
 <div class="homepage_show" >
-  <div class="banner card-image-poi-show" style="background-image: url('<%= cl_image_path(@poi.photos.first.key) %>')">
+  <div class="banner card-image-poi-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path(@poi.photos.first.key) %>')">
     <div class="container">
       <div class="infos-pois">
         <p> <%= @poi.category %></p>
         <div class="favorite_pois">
           <h1> <%= @poi.name %></h1>
-          <% if @favorite_poi %>
-            <i class="far fa-heart unlike"></i>
-          <% else %>
-            <%= link_to poi_favorite_pois_path(@poi), method: :post do %>
-            <i class="fas fa-heart like"></i>
+            <% if @favorite_poi %>
+              <i class="fas fa-heart fa-lg like"></i>
+            <% else %>
+              <%= link_to poi_favorite_pois_path(@poi), method: :post do %>
+              <i class="fa fa-heart fa-lg  unlike"></i>
+              <% end %>
             <% end %>
-          <% end %>
         </div>
         <div class="rating_poi">
           <p> <%= @poi.price_range %> </p>
@@ -31,7 +31,7 @@
     <div class="cards_reviews">
       <% @reviews.each do |review| %>
         <div class="cards_review">
-            <div class="mt-2">
+            <div class="mt-5">
             <%= cl_image_tag review.user.avatar.key, width: 40, height: 40, crop: :fill,  class: "avatar dropdown-toggle"%>
             </div>
           <h5 class="my-3"><%= review.title %></h5>
@@ -82,6 +82,7 @@
           </button>
         </div>
 
+       <form>
         <div class="modal-body ml-2">
           <div>
             <label for="name"> Titre </label>
@@ -99,11 +100,12 @@
 
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-          <button type="button" class="btn btn-primary">Sauvagarder</button>
+          <button type="submit" class="btn btn-primary">Sauvegarder</button>
         </div>
+      </form>
+
       </div>
     </div>
   </div>
-
 </div>
 

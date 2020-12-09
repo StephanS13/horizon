@@ -4,18 +4,15 @@ class PoisController < ApplicationController
   def index
     @city = City.find(params[:city_id])
     @pois = @city.pois
-    @restaurants = @pois.where(category: "Restaurants").or(@pois.where(category: "Bars/ Vie nocturne")).first(3)
-    @activities = @pois.where(category: "Activités").first(3)
-    @unmissables = @pois.where(category: "Incontournables").first(3)
-
-    # if params[:category].present?
-    #   @pois = @pois.where(category: params[:category])
-    # end
+    @restaurants = @pois.where(category: "Restaurants").or(@pois.where(category: "Bars/ Vie nocturne"))
+    @activities = @pois.where(category: "Activités")
+    @unmissables = @pois.where(category: "Incontournables")
 
     @markers = @pois.geocoded.map do |poi|
       {
         lat: poi.latitude,
         lng: poi.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { poi: poi }),
         image_url: helpers.asset_url('paper-plane.png')
       }
     end
@@ -24,6 +21,10 @@ class PoisController < ApplicationController
   def show
     @poi = Poi.find(params[:id])
     @reviews = @poi.reviews
+
+    if user_signed_in?
+      @favorite_poi = current_user.favorite_pois.find_by(poi_id: @poi.id)
+    end
   end
 
   def new

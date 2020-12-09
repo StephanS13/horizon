@@ -3,8 +3,9 @@ body {
 }
 
 .navbar-lewagon {
-  justify-content: space-between;
+  // justify-content: space-between;
   background: white;
+  z-index: 100;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -27,33 +28,61 @@ body {
   object-fit: cover;
 }
 
-// .btn-secondary {
-//   width: 150px;
-//   height: 30px;
-//   font-size: 10px;
-//   align-content:center;
-//   text-align: center;
+#navbarSupportedContent {
+  justify-content: right;
+}
+// Search bar
+
+.left-navbar {
+  display:flex;
+  justify-content: left;
+}
+
+.mr-auto{
+  padding-left: 720px
+}
+
+body{
+  background: #f2f2f2;
+}
+
+.search {
+  width: 118%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 1px solid gray;
+  border-right: none;
+  padding: 10px;
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: $blue;
+}
+
+.searchButton {
+  width: 37px;
+  height: 30px;
+  border: 1px solid $blue;
+  background: #6AC05B;
+  display: flex;
+  align-content: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+// .fa .fa-search {
+// padding-top: 5px;
 // }
 
-// navbar de Musicall, à retravailler (Ophé)
 
-// .search {
-//   width: 118%;
-//   position: relative;
-//   display: flex;
-// }
-
-// .searchTerm {
-//   width: 100%;
-//   border: 1px solid gray;
-//   border-right: none;
-//   padding: 10px;
-//   height: 30px;
-//   border-radius: 5px 0 0 5px;
-//   outline: none;
-//   color: #9DBFAF;
-// }
-
-// .searchTerm:focus{
-//   color: $blue;
-// }

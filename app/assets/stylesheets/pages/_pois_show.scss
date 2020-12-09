@@ -66,14 +66,17 @@
     height: 330px;
     width: 400px;
     text-align: center;
-    border-style: groove;
+    border-style: thin;
     border-radius: 6px;
     opacity: 100%;
     box-shadow: 10px 5px 5px #f0efeb;
+    background-color: white;
   }
 
   .cards_review p {
     font-size: 15px;
+    padding: 10px;
+    padding-top: 4px;
   }
 
   .btn-heart {
@@ -105,16 +108,22 @@
     justify-content: center;
   }
 
-}
-
-  .favorite_pois .unlike {
-    color: white;
-  }
-
-  .favorite_pois .unlike:hover {
+  .like {
     color: red;
   }
 
-  .favorite_pois a {
-    color: red !important;
+  .like:hover {
+    color: red;
   }
+
+  .unlike {
+    color: white;
+  }
+  .unlike:hover {
+    color: red;
+  }
+
+}
+
+
+

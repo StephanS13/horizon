@@ -2,7 +2,7 @@
   
   <div class="background-light my-favorite-city-photo" style="background-image: linear-gradient(80.37deg, rgba(0, 41, 107, 0.46) 15.14%, rgba(255, 255, 255, 0) 94.67%), url('<%= cl_image_path @favorite_cities.last.city.photos.last.key %>');"> 
     <h3 class="testh3">VILLE PREFEREE</h3>
-    <h1 class="testh1"><%= @favorite_cities.last.city.name %></h1> 
+    <h1 class="testh1"><%= @favorite_cities.last.city.name %></h1>
   </div>
 
   <div class="background-light text-center user-details card p-2">
@@ -55,41 +55,3 @@
   </div>
   
 </div>
-
-
-
-
-
-
-<!-- 
-
- 
-  <div class="background-light last-pois">
-  
-  </div>
-
-  <div class="background-light statistic-1 d-flex align-items-center justify-content-center">
-    
-    <h3> Plus de <%= @favorites_pois.count %> endroits te font rever! </h3>
-  </div>
-
-  <div class="background-light favorites-cities-list">
-    Viens voir les coups de coeurs de tes villes préférées!
-    <% @user.favorite_cities.each do |favorite_city| %>
-      <%= link_to favorite_city.city.name, city_path(favorite_city.city) %>
-    <% end %>
-  </div>
-
-  <div class="background-light statistics-2 d-flex align-items-center justify-content-center">
-    
-    <div class="mx-auto my-auto">
-      <h3> Déjà <%= @user.reviews.count %> reviews laissés! </h3>
-    </div>
-  </div>
-
-  <div class="background-light city-form">
-    Ajoute ... à tes favoris
-    
-  </div>
-
-</div> -->
