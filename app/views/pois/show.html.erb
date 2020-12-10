@@ -2,6 +2,9 @@
   <div class="banner card-image-poi-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path(@poi.photos.first.key) %>')">
     <div class="container">
       <div class="infos-pois">
+        <div class="btn-back-pois">
+          <%= link_to 'Retour aux bons plans', city_pois_path(@poi.city), class: "btn-secondary"%>
+        </div>
         <p> <%= @poi.category %></p>
         <div class="favorite_pois">
           <h1> <%= @poi.name %></h1>
@@ -31,7 +34,7 @@
     <div class="cards_reviews">
       <% @reviews.each do |review| %>
         <div class="cards_review">
-            <div class="mt-5">
+            <div class="mt-3">
             <%= cl_image_tag review.user.avatar.key, width: 40, height: 40, crop: :fill,  class: "avatar dropdown-toggle"%>
             </div>
           <h5 class="my-3"><%= review.title %></h5>
