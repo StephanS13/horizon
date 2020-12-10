@@ -13,7 +13,7 @@ class PoisController < ApplicationController
         lat: poi.latitude,
         lng: poi.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { poi: poi }),
-        image_url: helpers.asset_url('paper-plane.png')
+        image_url: helpers.asset_url('logo.png')
       }
     end
   end
