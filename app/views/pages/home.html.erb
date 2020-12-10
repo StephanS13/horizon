@@ -14,46 +14,89 @@
   </div>
 
   <!-- TEXT -->
-  <div class="city-home-page pb-5">
+  <div class="city-home-page pb-4">
     <h2> Les dernières idées de voyages </h2>
   </div>
 
   <!-- CARD CONTAINER -->
 
 
-  <div class="cards-city-home">
+  <div class="cards-city-home d-flex justify-content-evenly">
     <!-- CARD -->
     <div class="card-city-home">
-      <div class="card-image-homepage" style="background-image: url(https://images.unsplash.com/photo-1534351590666-13e3e96b5017?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3300&q=80)">
+      <div class="card-image-homepage" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url(https://images.unsplash.com/photo-1507373577388-308acd187487?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODh8fGJ1ZGFwZXN0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60)">
         <div class="card-infos">
-          <h5>Budapest</h5>
+          <h3>Budapest</h3>
           <p>La perle du Danube</p>
         </div>
-      </div>
-    </div>
-
-    <!-- CARD -->
-    <div class="card-city-home">
-      <div class="card-image-homepage" style="background-image: url(https://images.unsplash.com/photo-1576244348464-c7d393b6dfc0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzB8fG1hcnNlaWxsZXxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=800&q=60)">
-        <div class="card-infos">
-          <h5>Marseille</h5>
-          <p>La citée phocéenne</p>
+        <div class="pictos">
+          <div class="meteo ">
+            <%= image_tag("icone/modere.png", style: "height: 30px;") %>
+          </div>
+          <div class="environment ">
+            <%= image_tag("icone/ville.png", style: "height: 30px;") %>
+          </div>
+          <div class="activite  ">
+            <%= image_tag("icone/culture.png", style: "height: 30px;") %>
+          </div>
+          <div class="price_range ">
+            <%= image_tag("icone/aise.png", style: "height: 30px;") %>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- CARD -->
     <div class="card-city-home">
-      <div class="card-image-homepage" style="background-image: url(https://images.unsplash.com/photo-1501927023255-9063be98970c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bGlzYm9ufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60)">
+      <div class="card-image-homepage" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url(https://images.unsplash.com/photo-1514857887101-a6796efc65da?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fG1hcnNlaWxsZSUyMHBvcnR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60)">
         <div class="card-infos">
-          <h5>Lisbonne</h5>
-          <p>La cité aux milles couleurs</p>
+          <h3>Marseille</h3>
+          <p>La cité phocéenne</p>
+        </div>
+        <div class="pictos">
+          <div class="meteo ">
+            <%= image_tag("icone/soleil.png", style: "height: 30px;") %>
+          </div>
+          <div class="environment ">
+            <%= image_tag("icone/ville.png", style: "height: 30px;") %>
+          </div>
+          <div class="activite  ">
+            <%= image_tag("icone/detente.png", style: "height: 30px;") %>
+          </div>
+          <div class="price_range ">
+            <%= image_tag("icone/pauvre.png", style: "height: 30px;") %>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CARD -->
+    <div class="card-city-home">
+      <div class="card-image-homepage" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url(https://images.unsplash.com/photo-1591169419703-4f1d74b3f3cd?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODR8fGxpc2JvYSUyMHNpZ2h0c2VlaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60)">
+        <div class="card-infos">
+          <h3>Lisbonne</h3>
+          <p>La capitale aux mille couleurs</p>
+        </div>
+        <div class="pictos">
+          <div class="meteo ">
+            <%= image_tag("icone/soleil.png", style: "height: 30px;") %>
+          </div>
+          <div class="environment ">
+            <%= image_tag("icone/ville.png", style: "height: 30px;") %>
+          </div>
+          <div class="activite  ">
+            <%= image_tag("icone/divertir.png", style: "height: 30px;") %>
+          </div>
+          <div class="price_range ">
+            <%= image_tag("icone/pauvre.png", style: "height: 30px;") %>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="comments pb-4">
+  <div class="comments pb-3">
     <div class="comment">
         <p>“Grâce à horizon, j’ai trouvé à la dernière minute la destination idéale pour mes vacances. Je recommande  à 100% !”</p>
         <i class="fas fa-circle fa-2x"></i>
