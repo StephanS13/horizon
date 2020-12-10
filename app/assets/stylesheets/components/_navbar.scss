@@ -72,8 +72,10 @@ body{
   margin-right: 36px;
 }
 
-.search-bar input {
-  border: 1px solid transparent !important;
+.search-bar #search-input {
+  border: 1px solid #6AC05B;
+  border-right: none;
+  padding: 1em;
 }
 
 .searchButton {
@@ -88,6 +90,15 @@ body{
   cursor: pointer;
   border: 1px solid transparent !important;
   font-size: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.1em;
+
+  i {
+    font-size: 0.7em;
+  }
 }
 .container-search {
   width:100%;
