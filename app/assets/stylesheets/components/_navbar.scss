@@ -6,6 +6,7 @@ body {
   // justify-content: space-between;
   background: white;
   z-index: 100;
+  padding: 0 40px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -54,17 +55,25 @@ body{
 
 .searchTerm {
   width: 100%;
-  border: 1px solid gray;
   border-right: none;
   padding: 10px;
   height: 30px;
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9DBFAF;
+  font-size: 13px !important; border: 1px solid #B3BFD3 !important;
 }
 
 .searchTerm:focus{
   color: $blue;
+}
+
+.search-bar {
+  margin-right: 36px;
+}
+
+.search-bar input {
+  border: 1px solid transparent !important;
 }
 
 .searchButton {
@@ -77,9 +86,12 @@ body{
   color: #fff;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
+  border: 1px solid transparent !important;
   font-size: 18px;
 }
-
+.container-search {
+  width:100%;
+}
 
 // .fa .fa-search {
 // padding-top: 5px;
