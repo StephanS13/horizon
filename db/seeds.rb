@@ -1239,6 +1239,11 @@ cities = FavoriteCity.create!(
   city: amsterdam,
   )
 
+cities_1 = FavoriteCity.create!(
+  user: gab,
+  city: lisbonne,
+  )
+
 pois = FavoritePoi.create!(
   user: ophe,
   poi: rijksmuseum,
