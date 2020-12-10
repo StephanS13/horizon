@@ -91,7 +91,6 @@
     }
   }
   .all-pois {
-    color: white;
   } 
   .my-poi-image {
     grid-area: 3 / 2 / 6 / 5;
@@ -110,10 +109,12 @@
     display: flex;
     justify-content: center;
     padding-top: 3rem;
+    color: white;
   }
   .my-poi-category {
     display: flex;
     justify-content: center;
+    color: white;
   }
   .map-profile { 
     margin-top: 40px;
