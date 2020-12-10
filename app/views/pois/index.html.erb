@@ -59,11 +59,8 @@
               <div class="unmissable-title"><h5><%= unmissable.name %></h5>
                 <% if current_user && current_user.favorite_poi?(unmissable) %>
                   <i class="fas fa-heart btn-heart"></i>
-                <% else %>
-                  <%= link_to poi_favorite_pois_path(unmissable, source: "pois_listing"), method: :post do %>
-                    <i class="far fa-heart btn-heart"></i>
-                  <% end %>
                 <% end %>
+
               </div>
               <% if unmissable.reviews.average(:rating) %>
                 <% unmissable.reviews.average(:rating).floor.times do %>
@@ -74,6 +71,11 @@
             </div>
           <% end %>
         <% end %>
+      <%# if !current_user && !current_user.favorite_poi?(unmissable) %>
+          <%#= link_to poi_favorite_pois_path(unmissable, source: "pois_listing"), method: :post do %>
+              <!--><i class="far fa-heart btn-heart"></i><-->
+          <%# end %>
+        <%# end %>
       </div>
   </div>
 

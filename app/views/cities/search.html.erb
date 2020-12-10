@@ -1,11 +1,6 @@
 <div class="backgroud-page background-light background-search">
   <div class="search-container text-center mt-5">
-    <div class="progress-icon">
-        <%= image_tag("icone/suitcases.png", style: "height: 50px; width: 50px;", class:"form--pictogram--progress suitcases") %>
-        <%= image_tag("icone/passport.png", style: "height: 50px; width: 50px;", class:"form--pictogram--progress passport") %>
-        <%= image_tag("icone/train.png", style: "height: 50px; width: 50px;", class:"form--pictogram--progress train") %>
-        <%= image_tag("icone/tourist.png", style: "height: 50px; width: 50px;", class:"form--pictogram--progress tourist") %>
-      </div>
+
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
@@ -19,7 +14,7 @@
 
                   <div class="card card-body text-center">
                         <%= image_tag("icone/soleil.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
-                        <p>Je veux du soleil !</p>
+                        <p class="card-body-content">Je veux du soleil !</p>
                   </div>
               </label>
             </div>
@@ -150,7 +145,7 @@
                 <input type="radio" name="activity" class="card-input-element d-none" id="culture" value="Culture">
                   <div class="card card-body text-center">
                     <%= image_tag("icone/culture.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
-                  <p> Faites moi découvrir une nouvelle culture ! </p>
+                  <p> Faites moi découvrir une nouvelle culture&nbsp;! </p>
                   </div>
               </label>
             </div>
@@ -160,7 +155,7 @@
                 <input type="radio" name="activity" class="card-input-element d-none" id="divertir" value="divertir">
                   <div class="card card-body text-center">
                     <%= image_tag("icone/divertir.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
-                  <p> Je veux m'amuser jusqu'aux aurores ! </p>
+                  <p> Je veux m'amuser jusqu'aux aurores&nbsp;! </p>
                   </div>
               </label>
             </div>
@@ -175,7 +170,7 @@
                 <input type="radio" name="price_range" class="card-input-element d-none" id="economique" value= 1>
                   <div class="card card-body text-center">
                     <%= image_tag("icone/pauvre.png", style: "height: 100px; width: 100px;", class:"form--pictogram") %>
-                  <p> Vive les minis prix !</p>
+                  <p> Vive les minis prix&nbsp;!</p>
                   </div>
               </label>
             </div>
@@ -204,11 +199,13 @@
               </label>
             </div>
           </div>
-          <%= submit_tag "On part où ?", class: "btn btn-primary mt-5" %>
+          <%= submit_tag "On part où ?", class: "btn btn-primary" %>
         </div>
     <% end %>
   </div>
 </div>
+
+<script> </script>
 
 
 
