@@ -91,7 +91,7 @@
         <%= @city.description %>
         <div class="favorite-city card p-3 mt-4">
           <% if @favorite_city %>
-              <h5><i class="far fa-heart" font-size="20px"></i> <%= 392 %> </h5>
+              <h5><i class="fas fa-heart" font-size="20px"></i> <%= 392 %> personnes aiment <%= @city.name %></h5>
           <% else %>
             <%= link_to city_favorite_cities_path(@city), method: :post do %>
                 <h5><i class="fas fa-heart" font-size="20px"></i> <%= 392 %> personnes aiment <%= @city.name %></h5>
