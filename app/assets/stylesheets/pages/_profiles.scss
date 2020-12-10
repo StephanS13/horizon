@@ -5,9 +5,9 @@
   grid-column-gap: 15px;
   grid-row-gap: 15px;
 
-  margin-top: 40px;
-  margin-left: 25px;
-  margin-right: 25px;
+  padding-top:65px;
+  margin-left: 40px;
+  margin-right: 40px;
 
   .my-favorite-city-photo {
     grid-area: 1 / 1 / 3 / 4;
@@ -19,11 +19,19 @@
     border-radius: 10px;
 
     .testh3 {
-      color: white;
+      font-family: Inter;
+      font-size: 13px;
+     line-height: 16px;
+      letter-spacing: 0.15em;
+     color: #FFFFFF;
+     margin-top: 12px;
+     margin-bottom: 6px;
+     opacity: 1;
+      text-transform: uppercase;
       position: absolute;
       left: 30px;
       bottom: 90px;
-      font-size: 20px;
+      
     }
     .testh1 {
       color: white;
@@ -56,8 +64,20 @@
       border-radius: 6px;
       width: 100%;
       height: 100px;
+      h5 {
+        font-family: Inter;
+        font-size: 13px;
+        line-height: 16px;
+        text-transform:uppercase;
+        letter-spacing: 0.15em;
+        color: #FFFFFF;
+        margin-top: 12px;
+        margin-bottom: 6px;
+        opacity: 1;
+      }
     }
     .my-cities {
+      flex-direction: column;
       .bcg-img {
         width: 100%;
         height: 253px;
@@ -72,13 +92,20 @@
         padding: 3rem;
       }
     }
+    p {
+      font-family: 'Lora';
+      font-size: 20px;
+      color: white;
+     
+    }
   }
   .illustration-memphis {
     grid-area: 1 / 6 / 6 / 7;
     border-radius: 10px;
     background-repeat:no-repeat;
     position: sticky;
-  
+    background-size:cover;
+    background-position:center;
     bottom: 0;
   }
 
@@ -91,6 +118,14 @@
       background-size: cover;
       width: 100%;
       height: 200px
+    }
+    p {
+      font-family: Inter;
+      font-size: 16px;
+      
+ 
+      color: white;
+      opacity: 0.7;
     }
   }
 
@@ -110,7 +145,6 @@
     font-weight: bold;
     display: flex;
     justify-content: center;
-    padding-top: 3rem;
     color: white;
   }
   .my-poi-category {
@@ -125,4 +159,14 @@
     height: 447px;
   } 
 
+}
+
+
+.headline-profile {
+  font-family: Inter !important;
+    font-size: 16px !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase;
+    color: #010101 !important;
+    opacity: 0.7 !important;
 }

@@ -20,12 +20,11 @@
   </div>
 
   <div class="les-villes">
-    <p><strong>LES VILLES</strong></p>
+    <p class="headline-profile">LES VILLES</p>
     <div class="all-cards">
-      <div class="profile-red-card">
-        <h5><%= pluralize @favorite_cities.count, "ville visitée" %></h5>
+      <div class="profile-red-card text-center">
+        <h4>Mes villes coup de coeur</h4>
         
-        <p>La dernière : <%= @favorite_cities.last.city.name %></p>
       </div>
       <div class="my-cities d-flex align-items-center justify-content-around mt-3">
         <% @favorite_cities.each do |favorite_city| %>
@@ -42,13 +41,14 @@
   <div class="illustration-memphis" style="background-image: url('<%= image_path("profile-banner.png") %>');"> </div>
 
   <div class="last-activities">
-    <p><strong>DERNIERES ACTIVITES</strong></p>
+    <p class="headline-profile">DERNIERES ACTIVITES</p>
     <div class="all-pois">
       <% @favorites_pois.each do |favorite_poi| %>
         <%= link_to poi_path(favorite_poi) do %>
           <div class="my-poi-image mb-3" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.50) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path favorite_poi.photos.last.key %>');">
-            <div class="my-poi-name"><%= favorite_poi.name %></div> 
             <div class="my-poi-category"><%= favorite_poi.category %></div> 
+            <div class="my-poi-name"><%= favorite_poi.name %></div> 
+            
           </div>
         <% end %>
       <% end %>
