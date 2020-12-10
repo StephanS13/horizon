@@ -22,7 +22,7 @@
       setTimeout(function() {
         step1.classList.add("hidden");
         step2.classList.remove("hidden");
-        progBar.style. width = "12.5%";
+        progBar.style. width = "15%";
         suitcasesIcon.classList.add("form--pictogram--active");
       }, 300);
     });
@@ -33,7 +33,7 @@
       setTimeout(function() {
         step2.classList.add("hidden");
         step3.classList.remove("hidden");
-        progBar.style. width = "38%";
+        progBar.style. width = "35%";
         passportIcon.classList.add("form--pictogram--active");
       }, 300);
     });
@@ -44,7 +44,7 @@
       setTimeout(function() {
         step3.classList.add("hidden");
         step4.classList.remove("hidden");
-        progBar.style. width = "64%";
+        progBar.style. width = "65%";
         trainIcon.classList.add("form--pictogram--active");
       }, 300);
     });
@@ -55,7 +55,7 @@
       setTimeout(function() {
         step4.classList.add("hidden");
         step5.classList.remove("hidden");
-        progBar.style. width = "87.5%";
+        progBar.style. width = "85%";
         touristIcon.classList.add("form--pictogram--active");
       }, 300);
     });
