@@ -952,18 +952,6 @@ file = File.open(Rails.root.join('db/seeds/images/pois/dam/rembrandt.jpg'))
 rembrandt.photos.attach(io: file, filename: 'rembrandt.jpg', content_type: 'image/jpg')
 rembrandt.save!
 
-schans =Poi.new(
-    name: "Zaanse Schans",
-    category:"Incontournables",
-    title: "Musées",
-    description: "Dépaysant, reposant, situé au bord de l'eau avec, aux alentours, des petites maisons magnifiques, un musée, des boutiques, des restaurants, une boutique qui débute par la démonstration de la fabrication des sabots en bois.",
-    address:"Zaanse Schans, Schansend 1, 1509 AW Zaandam Pays-Bas",
-    price_range:"€",
-    city: amsterdam,
-  )
-file = File.open(Rails.root.join('db/seeds/images/pois/dam/schans.jpg'))
-schans.photos.attach(io: file, filename: 'schans.jpg', content_type: 'image/jpg')
-schans.save!
 
 royal =Poi.new(
     name: "Palais Royal",
