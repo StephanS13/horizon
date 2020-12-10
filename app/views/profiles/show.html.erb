@@ -1,6 +1,6 @@
 <div class="parent-profile">
-  
-  <div class="background-light my-favorite-city-photo" style="background-image: linear-gradient(80.37deg, rgba(0, 41, 107, 0.35) 15.14%, rgba(255, 255, 255, 0) 94.67%), url('<%= cl_image_path @favorite_cities.last.city.photos.last.key %>');"> 
+
+  <div class="background-light my-favorite-city-photo" style="background-image: linear-gradient(80.37deg, rgba(0, 41, 107, 0.35) 15.14%, rgba(255, 255, 255, 0) 94.67%), url('<%= cl_image_path @favorite_cities.last.city.photos.last.key %>');">
     <h3 class="testh3">VILLE PREFEREE</h3>
     <h1 class="testh1"><%= @favorite_cities.last.city.name %></h1>
   </div>
@@ -20,16 +20,16 @@
   </div>
 
   <div class="les-villes">
-    <p class="headline-profile">LES VILLES</p>
+
     <div class="all-cards">
       <div class="profile-red-card text-center">
-        <h4>Mes villes coup de coeur</h4>
-        
+        <h4>Tes coups de coeur</h4>
+
       </div>
       <div class="my-cities d-flex align-items-center justify-content-around mt-3">
         <% @favorite_cities.each do |favorite_city| %>
           <%= link_to city_pois_path(favorite_city.city) do %>
-            <div class="bcg-img" style="background-image: url('<%= cl_image_path favorite_city.city.photos.second.key %>');">
+            <div class="bcg-img" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.50) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path favorite_city.city.photos.second.key %>');">
               <h4 class="mx-auto"><%= favorite_city.city.name %></h4>
             </div>
           <% end %>
@@ -46,9 +46,9 @@
       <% @favorites_pois.each do |favorite_poi| %>
         <%= link_to poi_path(favorite_poi) do %>
           <div class="my-poi-image mb-3" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.50) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path favorite_poi.photos.last.key %>');">
-            <div class="my-poi-category"><%= favorite_poi.category %></div> 
-            <div class="my-poi-name"><%= favorite_poi.name %></div> 
-            
+            <div class="my-poi-category"><%= favorite_poi.category %></div>
+            <div class="my-poi-name"><%= favorite_poi.name %></div>
+
           </div>
         <% end %>
       <% end %>
@@ -61,5 +61,5 @@
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
-  
+
 </div>
