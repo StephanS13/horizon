@@ -27,7 +27,6 @@
 
       <div class="cards d-flex justify-content-around pt-4">
         <% @cities.each do |city| %>
-        <!-- est ce que j'aurais du faire un if plusieurs photos alors .first.key si y'ena qu'1 seulement .key? -->
           <%= link_to city_path(city) do %>
             <div class="card-large text-center p-4" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path city.photos.first.key, height: 440, width: 280, crop: :fill %>')">
               <div class="content">
