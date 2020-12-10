@@ -1,8 +1,8 @@
 <div class="parent-city-pois">
 
-  <div class="city-name">
+  <div class="city-name text-center">
     <p>47 commentaires</p>
-    <h2><%= @city.name %></h2>
+    <h2><%= @city.name %><br> et ses secrets</h2>
     <div class="dynamic-pictos">
 
       <div class="meteo">
@@ -59,11 +59,8 @@
               <div class="unmissable-title"><h5><%= unmissable.name %></h5>
                 <% if current_user && current_user.favorite_poi?(unmissable) %>
                   <i class="fas fa-heart btn-heart"></i>
-                <% else %>
-                  <%= link_to poi_favorite_pois_path(unmissable, source: "pois_listing"), method: :post do %>
-                    <i class="far fa-heart btn-heart"></i>
-                  <% end %>
                 <% end %>
+
               </div>
               <% if unmissable.reviews.average(:rating) %>
                 <% unmissable.reviews.average(:rating).floor.times do %>
@@ -74,6 +71,11 @@
             </div>
           <% end %>
         <% end %>
+      <%# if !current_user && !current_user.favorite_poi?(unmissable) %>
+          <%#= link_to poi_favorite_pois_path(unmissable, source: "pois_listing"), method: :post do %>
+              <!--><i class="far fa-heart btn-heart"></i><-->
+          <%# end %>
+        <%# end %>
       </div>
   </div>
 
@@ -93,22 +95,26 @@
     <h4>Restaurants / bars</h4>
     <% @restaurants.each do |restaurant| %>
       <%= link_to poi_path(restaurant) do %>
-        <div class="restaurant" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path restaurant.photos.first.key, crop: :scale %>');">
-          <div class="restaurant-title"><h5><%= restaurant.name %></h5>
-            <% if current_user && current_user.favorite_poi?(restaurant) %>
-              <i class="fas fa-heart btn-heart"></i>
-            <% else %>
-              <%= link_to poi_favorite_pois_path(restaurant, source: "pois_listing"), method: :post do %>
-                <i class="far fa-heart btn-heart"></i>
+        <div class="restaurant d-flex align-items-center">
+          <%= cl_image_tag restaurant.photos.first.key, crop: :scale %>
+          <div class="restaurant-content">
+            <div class="restaurant-title d-flex justify-content-between">
+              <h5><%= restaurant.name %></h5>
+              <% if current_user && current_user.favorite_poi?(restaurant) %>
+                <i class="fas fa-heart btn-heart"></i>
+              <% else %>
+                <%= link_to poi_favorite_pois_path(restaurant, source: "pois_listing"), method: :post do %>
+                  <i class="far fa-heart btn-heart"></i>
+                <% end %>
+              <% end %>
+            </div>
+            <% if restaurant.reviews.average(:rating) %>
+              <% restaurant.reviews.average(:rating).floor.times do %>
+                <i class="fas fa-star"></i>
               <% end %>
             <% end %>
+            <p><%= restaurant.title %></p>
           </div>
-          <% if restaurant.reviews.average(:rating) %>
-            <% restaurant.reviews.average(:rating).floor.times do %>
-              <i class="fas fa-star"></i>
-            <% end %>
-          <% end %>
-          <p><%= restaurant.title %></p>
         </div>
       <% end %>
     <% end %>
@@ -116,26 +122,30 @@
 
   <div class="activities">
     <h4>Activités</h4>
+    <div class="activities-container d-flex">
+
     <% @activities.each do |activity| %>
       <%= link_to poi_path(activity) do %>
         <div class="activity" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path activity.photos.first.key, crop: :scale %>');">
-          <div class="activity-title"><h5><%= activity.name %></h5>
-            <% if current_user && current_user.favorite_poi?(activity) %>
-              <i class="fas fa-heart btn-heart"></i>
-            <% else %>
-              <%= link_to poi_favorite_pois_path(activity, source: "pois_listing"), method: :post do %>
-                <i class="far fa-heart btn-heart"></i>
+          <div class="activity-content text-center">
+            <% if activity.reviews.average(:rating) %>
+              <% activity.reviews.average(:rating).floor.times do %>
+                <i class="fas fa-star"></i>
               <% end %>
             <% end %>
+            <h5><%= activity.name %></h5>
+              <% if current_user && current_user.favorite_poi?(activity) %>
+                <i class="fas fa-heart btn-heart"></i>
+              <% else %>
+                <%= link_to poi_favorite_pois_path(activity, source: "pois_listing"), method: :post do %>
+                  <i class="far fa-heart btn-heart"></i>
+                <% end %>
+              <% end %>
+            <p><%= activity.title %></p>
           </div>
-          <% if activity.reviews.average(:rating) %>
-            <% activity.reviews.average(:rating).floor.times do %>
-              <i class="fas fa-star"></i>
-            <% end %>
-          <% end %>
-          <p><%= activity.title %></p>
         </div>
       <% end %>
     <% end %>
+    </div>
   <div>
 </div>

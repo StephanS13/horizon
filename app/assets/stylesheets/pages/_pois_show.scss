@@ -3,7 +3,7 @@
   padding-bottom: 30px;
 
   .banner {
-    height: 200px;
+    height: 250px;
     background-size: cover;
     background-position: center;
     margin-top: 80px;
@@ -21,6 +21,7 @@
     font-size: 17px;
     text-align: left;
     color: #FFFFFF;
+    margin-top: 18px;
   }
 
   .banner h1 {
@@ -34,6 +35,9 @@
     color: #FFFAFA;
   }
 
+  .container {
+    min-height: 30vh;
+  }
   .description_poi {
     margin-top: 30px;
     display: flex;
@@ -63,7 +67,7 @@
   }
 
   .cards_review {
-    height: 330px;
+    height: 370px;
     width: 400px;
     text-align: center;
     border-style: thin;
@@ -121,6 +125,12 @@
   }
   .unlike:hover {
     color: red;
+  }
+
+
+  .btn-back-pois {
+    padding-bottom: 20px;
+
   }
 
 }

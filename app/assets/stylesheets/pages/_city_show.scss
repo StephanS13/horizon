@@ -1,149 +1,247 @@
-.parent-city-show {
-  display: grid;
-  grid-template-columns: 14% 17% 18% 18% 16% 12%;
-  grid-template-rows: repeat(5, 120px);
-  grid-column-gap: 1%;
-  grid-row-gap: 25px;
-  margin: 40px auto 64px;
-  width: 95%;
-  margin-top: 110px;
-
-  .photo1 {
-    grid-area: 1 / 1 / 3 / 4;
-    img {
-      height: 100%;
-      width: 100%;
-      background-position: center;
-      background-size: cover;
-      border-radius: 6px;
-    }
-  }
-  .picto-argent {
-    grid-area: 3 / 2 / 4 / 3;
-    background-color: #FFF8E8;
-    // background-color: $blue;
-    color: white;
-    border-radius: 6px;
-  }
-  .picto-meteo {
-    grid-area: 1 / 5 / 2 / 6;
-    font-size: 30px;
-    border-radius: 6px;
-  }
-  .photo2 { grid-area: 2 / 5 / 4 / 6;
-    img {
-      height: 100%;
-      width: 100%;
-      background-position: center;
-      background-size: cover;
-      border-radius: 6px;
-    }
-  }
-  .photo3 { grid-area: 1 / 6 / 6 / 7;
-    img {
-      height: 100%;
-      width: 100%;
-      background-position: center;
-      background-size: cover;
-      border-radius: 6px;
-    }
-  }
-
-  .picto-environement {
-    grid-area: 1 / 4 / 3 / 5;
-    // background-color: #99d5c9;
-    background-color: #7EB2DD;
-    color: black;
-    border-radius: 6px;
-  }
-
-  .city-name {
-    grid-area: 3 / 3 / 4 / 5;
+.city-show-grid {
+  padding-top:65px;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 15px;
+grid-row-gap: 15px;
+    margin: 0 40px;
+}
+.image-1 {
+  background-size:cover;
+  background-position:center;
+  border-radius:10px;
+  grid-area: 1 / 4 / 3 / 5;
+}
+.vertical-image {
+  background-size:cover;
+  background-position:center;
+  border-radius:10px;
+  grid-area: 1 / 5 / 6 / 6;
+}
+.cta {
+  background-color:$green;
+  grid-area: 3 / 4 / 4 / 5;
+  border-radius:10px;
+  .btn-primary {
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: #F1513E;
-    color: white;
-    border-radius: 6px;
+    justify-content: center;
+    width: 100%;
 
-    :hover {
-      text-decoration: none;
-      // text-transform: full-width;
-    }
-    h1 {
-      color: white;
-      font-size: 50px;
-      margin-left: 220px;
+    &:hover, &:active {
+      border-radius: 12px;
+      background-color:$green;
     }
   }
-  .photo4 { grid-area: 4 / 2 / 5 / 3;
-    img {
-      height: 163%;
-      width: 100%;
-      display: block;
-      background-size: cover;
-      border-radius: 6px;
-    }
-  }
+}
+.image-2 {
+  background-size:cover;
+  background-position:center;
+  border-radius:10px;
+  grid-area: 4 / 4 / 6 / 5;
+}
+.hero-banner {
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  grid-area: 1 / 1 / 3 / 4;
+  border-radius:10px;
+  .banner-content {
 
-  .city-description { grid-area: 4 / 3 / 6 / 6;
-    font-size: 18px;
-    line-height: 1.5;
-    padding: 50px;
-  }
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
 
-  .pois {
-    grid-area: 3 / 1 / 6 / 2;
-    background-size: cover;
-    a:hover {
-      text-decoration: none;
-    }
   }
-  .my-poi-cards {
-    height: 122px;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    border-radius: 6px;
-    // display: flex;
-    // align-items: flex-end;
-    transition: transform 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
+  h1 {
+    font-size: 60px;
+    color: white !important;
+  }
+}
+.unmissable {
 
-
-    h4 {
-      margin: 0;
-      font-size: 1.1rem;
-    }
-
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow:lightgrey 0px 0px 8px 0px, lightgrey 0px 20px 30px 0px;
-      transition: transform 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
-    }
-  }
-  .my-poi-info {
-    padding-top: 2rem;
-    padding-left: auto
-  }
-  .city-show-btn { grid-area: 5 / 2 / 6 / 3;
-    font-size: 17.5px;
-    font-weight: bolder;
-    word-wrap: normal;
-    height: 50px;
-    width: 70%;
-    margin-top: 70px;
-    margin-left: 40px;
-  }
-  .favorite-city {
-    margin-left: 740px;
-    padding-left: 15px;
-    padding-top: 12px;
-    width: 120px;
-    height: 50px;
-
-    a:hover {
-      text-decoration: none;
-    }
-  }
+  grid-area: 3 / 1 / 6 / 2;
 
 }
+
+.unmissable-city h4 {
+
+  font-family: Inter;
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #010101;
+  opacity: 0.7;
+
+}
+
+.unmissable-city {
+  padding-left:0 !important;
+  padding-right: 0 !important;
+}
+
+.unmissable-city  h5 {
+   font-size: 14px;
+    color: #00296B !important;
+}
+.desc {
+  grid-area: 3 / 2 / 6 / 4;
+  font-size:14px;
+  line-height: 24px;
+  opacity:.8;
+      margin-top: 40px;
+      .card {
+        border-radius:10px !important;
+      }
+
+}
+// .parent-city-show {
+//   display: grid;
+//   grid-template-columns: 14% 17% 18% 18% 16% 12%;
+//   grid-template-rows: repeat(5, 120px);
+//   grid-column-gap: 1%;
+//   grid-row-gap: 25px;
+//   margin: 40px auto 64px;
+//   width: 95%;
+//   margin-top: 110px;
+
+//   .photo1 {
+//     grid-area: 1 / 1 / 3 / 4;
+//     img {
+//       height: 100%;
+//       width: 100%;
+//       background-position: center;
+//       background-size: cover;
+//       border-radius: 6px;
+//     }
+//   }
+//   .picto-argent {
+//     grid-area: 3 / 2 / 4 / 3;
+//     background-color: #FFF8E8;
+//     // background-color: $blue;
+//     color: white;
+//     border-radius: 6px;
+//   }
+//   .picto-meteo {
+//     grid-area: 1 / 5 / 2 / 6;
+//     font-size: 30px;
+//     border-radius: 6px;
+//   }
+//   .photo2 { grid-area: 2 / 5 / 4 / 6;
+//     img {
+//       height: 100%;
+//       width: 100%;
+//       background-position: center;
+//       background-size: cover;
+//       border-radius: 6px;
+//     }
+//   }
+//   .photo3 { grid-area: 1 / 6 / 6 / 7;
+//     img {
+//       height: 100%;
+//       width: 100%;
+//       background-position: center;
+//       background-size: cover;
+//       border-radius: 6px;
+//     }
+//   }
+
+//   .picto-environement {
+//     grid-area: 1 / 4 / 3 / 5;
+//     // background-color: #99d5c9;
+//     background-color: #7EB2DD;
+//     color: black;
+//     border-radius: 6px;
+//   }
+
+//   .city-name {
+//     grid-area: 3 / 3 / 4 / 5;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: #F1513E;
+//     color: white;
+//     border-radius: 6px;
+
+//     :hover {
+//       text-decoration: none;
+//       // text-transform: full-width;
+//     }
+//     h1 {
+//       color: white;
+//       font-size: 50px;
+//       margin-left: 220px;
+//     }
+//   }
+//   .photo4 { grid-area: 4 / 2 / 5 / 3;
+//     img {
+//       height: 163%;
+//       width: 100%;
+//       display: block;
+//       background-size: cover;
+//       border-radius: 6px;
+//     }
+//   }
+
+//   .city-description { grid-area: 4 / 3 / 6 / 6;
+//     font-size: 18px;
+//     line-height: 1.5;
+//     padding: 50px;
+//   }
+
+//   .pois {
+//     grid-area: 3 / 1 / 6 / 2;
+//     background-size: cover;
+//     a:hover {
+//       text-decoration: none;
+//     }
+//   }
+//   .my-poi-cards {
+//     height: 122px;
+//     background-size: cover;
+//     background-position: center;
+//     color: white;
+//     border-radius: 6px;
+//     // display: flex;
+//     // align-items: flex-end;
+//     transition: transform 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
+
+
+//     h4 {
+//       margin: 0;
+//       font-size: 1.1rem;
+//     }
+
+//     &:hover {
+//       transform: translateY(-2px);
+//       box-shadow:lightgrey 0px 0px 8px 0px, lightgrey 0px 20px 30px 0px;
+//       transition: transform 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
+//     }
+//   }
+//   .my-poi-info {
+//     padding-top: 2rem;
+//     padding-left: auto
+//   }
+//   .city-show-btn { grid-area: 5 / 2 / 6 / 3;
+//     font-size: 17.5px;
+//     font-weight: bolder;
+//     word-wrap: normal;
+//     height: 50px;
+//     width: 70%;
+//     margin-top: 70px;
+//     margin-left: 40px;
+//   }
+//   .favorite-city {
+//     margin-left: 740px;
+//     padding-left: 15px;
+//     padding-top: 12px;
+//     width: 120px;
+//     height: 50px;
+
+//     a:hover {
+//       text-decoration: none;
+//     }
+//   }
+
+// }

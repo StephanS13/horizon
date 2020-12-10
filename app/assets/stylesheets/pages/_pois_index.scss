@@ -8,49 +8,74 @@
   width:100%;
   padding:40px;
   background-color: $light-blue;
-  padding-top: 90px;
+  padding-top: 65px;
 }
 
 .map {
   grid-area: 3 / 3 / 7 / 6;
   margin-top: 50px;
 
-    border-radius: 10px;
+
     position: sticky;
     top: 150px;
+    #map {
+      border-radius: 10px;
+    }
 
 }
 
 .restaurants {
   grid-area: 3 / 1 / 7 / 3;
   margin-top: 20px;
-  height: 120px;
-  color: white;
+  // height: 120px;
+  // color: white;
   z-index: 0;
   // overflow-y: scroll;
     h4 {
       margin-bottom: 10px;
     }
     h5 {
-      color: white;
+      font-size:14px;
+      color:$blue;
     }
 }
 
 .restaurant {
-  color: white;
-  padding: 30px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  background-size: cover;
-  position: relative;
-  z-index: 9000;
+  // color: white;
+  // padding: 30px;
+  margin-bottom: 12px;
+  // border-radius: 10px;
+  // background-size: cover;
+  // position: relative;
+  // z-index: 9000;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05);
+  border-radius:10px;
+  background-color:white;
+  padding:12px;
+  img {
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    background-radius:10px 0px 0px 10px;
+  }
+  .restaurant-content {
+    margin-left:16px;
+    width: 100%;
+  }
+  p {
+  font-size: 13px;
+  opacity:.6;
+  }
 }
 
 .restaurant-title {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  z-index: 10000;
+  // display: flex;
+  // justify-content: space-between;
+  // position: relative;
+  // z-index: 10000;
+  // margin-left:16px;
+  font-size:12px;
+
 
 }
 
@@ -63,17 +88,33 @@
     color: white;
   }
 }
+.activities-container {
+  flex-wrap:wrap;
+}
 
 .activity {
-  overflow-y: scroll;
-  height: 200px;
-  color: white;
-  padding: 30px;
-  margin-bottom: 20px;
-  border-radius: 10px;
+  // overflow-y: scroll;
+  // height: 200px;
+  // color: white;
+  // padding: 30px;
+  // margin-bottom: 20px;
+  // border-radius: 10px;
   background-size: cover;
-  position: relative;
-  z-index: 9000;
+  // position: relative;
+  // z-index: 9000;
+  margin-right: 12px;
+  width: calc(50% - 12px);
+  margin-bottom:12px;
+  height:200px;
+  h5 { font-size:16px; }
+  p { font-size: 13px;}
+  color:white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05);
+  .activity-content {
+    margin: 0 20px;
+    margin-top: 35%;
+  }
 }
 
 .activity-title {
@@ -107,12 +148,17 @@
   background-color: #F1513E;
   color: white;
   border-radius: 6px;
+  h2 {
+    font-size:1.25rem;
+  }
     p {
     font-family: Inter;
     font-size: 13px;
     line-height: 16px;
     letter-spacing: 0.15em;
     color: #FFFFFF;
+    margin-top: 12px;
+    margin-bottom: 6px;
     opacity: 0.5;
     text-transform: uppercase;
   }
@@ -121,8 +167,8 @@
 .dynamic-pictos {
   display: flex;
   justify-content: space-between;
-  width: 70%;
-  margin-top: 15px;
+  width: 90%;
+  margin-top: 0px;
 }
 
 .unmissables {
@@ -136,12 +182,12 @@
   overflow-y: scroll;
   display: flex;
   justify-content: space-between;
-  height: 86%;
+  height: calc(100% - 27px);
 }
 
 .unmissable {
   min-width: 310px;
-  height: 150px;
+  height: 100%;
   margin-right: 16px;
   color: white;
   padding: 20px;
@@ -149,12 +195,17 @@
   flex-grow: 1;
   background-size: cover;
   position: relative;
-  z-index: 9000;
+  // z-index: 9000;
     h4 {
       margin-bottom: 10px;
     }
     h5 {
       color: white;
+      margin-bottom:3px;
+    }
+    p {
+      opacity:.6;
+      font-size:13px;
     }
   }
 
