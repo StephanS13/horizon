@@ -1,82 +1,102 @@
-<div class="background-page p-5 background-light">
 
-  <div class="py-4 px-4">
-
+  <div class="loading_screen d-flex justify-content-center align-items-center">
+    <div class="loading_screen_center">
+      <div class="loading-phrases-container">
+        <div class="loading-phrases">
+          <div class="loading-phrase">🧳 En train de préparer tes bagages...</div>
+          <div class="loading-phrase">🍹A la recherche des meilleurs mojitos...</div>
+          <div class="loading-phrase">🦸‍♂️ Selection de tes compagnons de voyage...</div>
+          <div class="loading-phrase"> ⛩️ Etude de la comptabilité entre ton signe astro et nos destinations...</div>
+          <div class="loading-phrase">🤯 L'algo méga compliqué a trouvé tes vacances idéales...</div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="container text-center">
 
-    <h2 class="my-3">Voici tes 3 destinations idéales !</h2>
+<div class="city-content">
+  <div class="background-page p-5 background-light">
 
-    <div class="cards d-flex justify-content-around pt-4">
-      <% @cities.each do |city| %>
-      <!-- est ce que j'aurais du faire un if plusieurs photos alors .first.key si y'ena qu'1 seulement .key? -->
-        <%= link_to city_path(city) do %>
-          <div class="card-large text-center p-4" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path city.photos.first.key, height: 440, width: 280, crop: :fill %>')">
-            <div class="content">
-              <h3><%= city.name %></h3>
-              <p>245 bons plans</p>
-          <div class="details_city my-1">
+    <div class="py-4 px-4">
 
-            <div class="meteo ">
-              <% if city.weather == "Chaud" %>
-              <%= image_tag("icone/soleil.png", style: "height: 30px;") %>
-              <% elsif city.weather == "Froid" %>
-              <%= image_tag("icone/froid.png" , style: "height: 30px;") %>
-              <% elsif city.weather == "Modéré" %>
-              <%= image_tag("icone/modere.png", style: "height: 30px;") %>
-              <% end %>
-            </div>
-
-            <div class="environment ">
-              <% if city.environment == "Ville" %>
-              <%= image_tag("icone/ville.png", style: "height: 30px;") %>
-              <% elsif city.environment == "Nature" %>
-              <%= image_tag("icone/nature.png", style: "height: 30px;") %>
-              <% elsif city.environment == "Plage" %>
-              <%= image_tag("icone/plage.png", style: "height: 30px;") %>
-              <% end %>
-            </div>
-
-            <div class="activite  ">
-              <% if city.activity == "Detendre" %>
-              <%= image_tag("icone/detente.png", style: "height: 30px;") %>
-              <% elsif city.activity == "Divertir" %>
-              <%= image_tag("icone/divertir.png", style: "height: 30px;") %>
-              <% elsif city.activity == "Culture" %>
-              <%= image_tag("icone/culture.png", style: "height: 30px;") %>
-              <% elsif city.activity == "Defouler" %>
-              <%= image_tag("icone/defouler.png", style: "height: 30px;") %>
-              <% end %>
-            </div>
-
-            <div class="price_range ">
-              <% if city.price_range == 1 %>
-              <%= image_tag("icone/pauvre.png", style: "height: 30px;") %>
-              <% elsif city.price_range == 2 %>
-              <%= image_tag("icone/aise.png", style: "height: 30px;") %>
-              <% elsif city.price_range == 3 %>
-              <%= image_tag("icone/riche.png", style: "height: 30px;") %>
-              <% end %>
-            </div>
-
-          </div>
-             <!--  <h1><%= city.title %></h1> -->
-            <!--   <p><%= city.title %></p> -->
-            </div>
-          </div>
-
-
-        <% end %>
-      <% end %>
     </div>
 
-    <p class="mt-5 mb-4">Tu n'as pas trouvé ton bonheur ?</p>
-    <%= link_to "C'est reparti pour un tour", search_cities_path, class: "btn-primary" %>
+    <div class="container text-center">
+
+      <h2 class="my-3">Voici tes 3 destinations idéales !</h2>
+
+      <div class="cards d-flex justify-content-around pt-4">
+        <% @cities.each do |city| %>
+        <!-- est ce que j'aurais du faire un if plusieurs photos alors .first.key si y'ena qu'1 seulement .key? -->
+          <%= link_to city_path(city) do %>
+            <div class="card-large text-center p-4" style="background-image: linear-gradient(360deg, rgba(39, 76, 119, 0.74) -0.45%, rgba(255, 255, 255, 0) 97.73%), url('<%= cl_image_path city.photos.first.key, height: 440, width: 280, crop: :fill %>')">
+              <div class="content">
+                <h3><%= city.name %></h3>
+                <p>245 bons plans</p>
+            <div class="details_city my-1">
+
+              <div class="meteo ">
+                <% if city.weather == "Chaud" %>
+                <%= image_tag("icone/soleil.png", style: "height: 30px;") %>
+                <% elsif city.weather == "Froid" %>
+                <%= image_tag("icone/froid.png" , style: "height: 30px;") %>
+                <% elsif city.weather == "Modéré" %>
+                <%= image_tag("icone/modere.png", style: "height: 30px;") %>
+                <% end %>
+              </div>
+
+              <div class="environment ">
+                <% if city.environment == "Ville" %>
+                <%= image_tag("icone/ville.png", style: "height: 30px;") %>
+                <% elsif city.environment == "Nature" %>
+                <%= image_tag("icone/nature.png", style: "height: 30px;") %>
+                <% elsif city.environment == "Plage" %>
+                <%= image_tag("icone/plage.png", style: "height: 30px;") %>
+                <% end %>
+              </div>
+
+              <div class="activite  ">
+                <% if city.activity == "Detendre" %>
+                <%= image_tag("icone/detente.png", style: "height: 30px;") %>
+                <% elsif city.activity == "Divertir" %>
+                <%= image_tag("icone/divertir.png", style: "height: 30px;") %>
+                <% elsif city.activity == "Culture" %>
+                <%= image_tag("icone/culture.png", style: "height: 30px;") %>
+                <% elsif city.activity == "Defouler" %>
+                <%= image_tag("icone/defouler.png", style: "height: 30px;") %>
+                <% end %>
+              </div>
+
+              <div class="price_range ">
+                <% if city.price_range == 1 %>
+                <%= image_tag("icone/pauvre.png", style: "height: 30px;") %>
+                <% elsif city.price_range == 2 %>
+                <%= image_tag("icone/aise.png", style: "height: 30px;") %>
+                <% elsif city.price_range == 3 %>
+                <%= image_tag("icone/riche.png", style: "height: 30px;") %>
+                <% end %>
+              </div>
+
+            </div>
+               <!--  <h1><%= city.title %></h1> -->
+              <!--   <p><%= city.title %></p> -->
+              </div>
+            </div>
+
+
+          <% end %>
+        <% end %>
+      </div>
+
+      <p class="mt-5 mb-4">Tu n'as pas trouvé ton bonheur ?</p>
+      <%= link_to "C'est reparti pour un tour", search_cities_path, class: "btn-primary" %>
+    </div>
   </div>
+
 </div>
 
 <script> </script>
+
 
 
 

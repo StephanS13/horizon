@@ -24,10 +24,15 @@ grid-row-gap: 15px;
   grid-area: 3 / 4 / 4 / 5;
   border-radius:10px;
   .btn-primary {
-  display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+
+    &:hover, &:active {
+      border-radius: 12px;
+      background-color:$green;
+    }
   }
 }
 .image-2 {
