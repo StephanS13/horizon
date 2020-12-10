@@ -8,16 +8,19 @@
   width:100%;
   padding:40px;
   background-color: $light-blue;
-  padding-top: 90px;
+  padding-top: 65px;
 }
 
 .map {
   grid-area: 3 / 3 / 7 / 6;
   margin-top: 50px;
 
-    border-radius: 10px;
+
     position: sticky;
     top: 150px;
+    #map {
+      border-radius: 10px;
+    }
 
 }
 
@@ -61,6 +64,7 @@
   }
   p {
   font-size: 13px;
+  opacity:.6;
   }
 }
 
@@ -144,12 +148,17 @@
   background-color: #F1513E;
   color: white;
   border-radius: 6px;
+  h2 {
+    font-size:1.25rem;
+  }
     p {
     font-family: Inter;
     font-size: 13px;
     line-height: 16px;
     letter-spacing: 0.15em;
     color: #FFFFFF;
+    margin-top: 12px;
+    margin-bottom: 6px;
     opacity: 0.5;
     text-transform: uppercase;
   }
@@ -158,8 +167,8 @@
 .dynamic-pictos {
   display: flex;
   justify-content: space-between;
-  width: 70%;
-  margin-top: 15px;
+  width: 90%;
+  margin-top: 0px;
 }
 
 .unmissables {
@@ -173,12 +182,12 @@
   overflow-y: scroll;
   display: flex;
   justify-content: space-between;
-  height: 86%;
+  height: calc(100% - 27px);
 }
 
 .unmissable {
   min-width: 310px;
-  height: 150px;
+  height: 100%;
   margin-right: 16px;
   color: white;
   padding: 20px;
@@ -192,6 +201,11 @@
     }
     h5 {
       color: white;
+      margin-bottom:3px;
+    }
+    p {
+      opacity:.6;
+      font-size:13px;
     }
   }
 
