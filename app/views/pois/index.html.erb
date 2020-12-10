@@ -55,12 +55,12 @@
       <div class="unmissables-container">
         <% @unmissables.each do |unmissable| %>
           <%= link_to poi_path(unmissable) do %>
-            <div class="unmissable" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path unmissable.photos.first.key, crop: :scale %>');">
+            <div class="unmissable" id="poi-<%= unmissable.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path unmissable.photos.first.key, crop: :scale %>');">
               <div class="unmissable-title"><h5><%= unmissable.name %></h5>
                 <% if current_user && current_user.favorite_poi?(unmissable) %>
                   <i class="fas fa-heart btn-heart"></i>
                 <% else %>
-                  <%= link_to poi_favorite_pois_path(unmissable, source: "pois_listing"), method: :post do %>
+                  <%= link_to poi_favorite_pois_path(unmissable, source: "pois_listing"), method: :post, remote: true do %>
                     <i class="far fa-heart btn-heart"></i>
                   <% end %>
                 <% end %>
@@ -93,7 +93,7 @@
     <h4>Restaurants / bars</h4>
     <% @restaurants.each do |restaurant| %>
       <%= link_to poi_path(restaurant) do %>
-        <div class="restaurant d-flex align-items-center">
+        <div class="restaurant d-flex align-items-center" id="poi-<%= restaurant.id %>">
           <%= cl_image_tag restaurant.photos.first.key, crop: :scale %>
           <div class="restaurant-content">
             <div class="restaurant-title d-flex justify-content-between">
@@ -101,7 +101,7 @@
               <% if current_user && current_user.favorite_poi?(restaurant) %>
                 <i class="fas fa-heart btn-heart"></i>
               <% else %>
-                <%= link_to poi_favorite_pois_path(restaurant, source: "pois_listing"), method: :post do %>
+                <%= link_to poi_favorite_pois_path(restaurant, source: "pois_listing"), method: :post, remote: true do %>
                   <i class="far fa-heart btn-heart"></i>
                 <% end %>
               <% end %>
@@ -122,7 +122,7 @@
     <h4>Activités</h4>
     <div class="activities-container d-flex">
       <% @activities.each do |activity| %>
-        <div class="activity" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path activity.photos.first.key, crop: :scale %>');">
+        <div class="activity" id="poi-<%= activity.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path activity.photos.first.key, crop: :scale %>');">
           <div class="activity-content text-center">
             <% if activity.reviews.average(:rating) %>
               <% activity.reviews.average(:rating).floor.times do %>
@@ -134,7 +134,7 @@
               <% if current_user && current_user.favorite_poi?(activity) %>
                 <i class="fas fa-heart btn-heart"></i>
               <% else %>
-                <%= link_to poi_favorite_pois_path(activity, source: "pois_listing"), method: :post do %>
+                <%= link_to poi_favorite_pois_path(activity, source: "pois_listing"), method: :post, remote: true do %>
                   <i class="far fa-heart btn-heart"></i>
                 <% end %>
               <% end %>

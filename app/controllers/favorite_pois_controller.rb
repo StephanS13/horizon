@@ -22,7 +22,7 @@ class FavoritePoisController < ApplicationController
     @favorite_poi.save
 
     if params[:source] == "pois_listing"
-      redirect_to city_pois_path(@poi.city)
+      redirect_to city_pois_path(@poi.city, anchor: "poi-#{@poi.id}")
     else
       redirect_to poi_path(@poi)
     end
