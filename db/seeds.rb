@@ -347,19 +347,6 @@ file = File.open(Rails.root.join('db/seeds/images/pois/alma.jpg'))
 alma.photos.attach(io: file, filename: 'alma.jpg', content_type: 'image/jpg')
 alma.save!
 
-alma =Poi.new(
-    name:"Alma",
-    category:"Restaurants",
-    title: "Portugais, Cuisine de chef",
-    description:"",
-    address:"R. Anchieta, 15, 1200-023 Lisbonne, Portugal",
-    price_range:"€€€",
-    city: lisbonne,
-  )
-file = File.open(Rails.root.join('db/seeds/images/pois/alma.jpg'))
-alma.photos.attach(io: file, filename: 'alma.jpg', content_type: 'image/jpg')
-alma.save!
-
 forno =Poi.new(
     name:"Forno d'Oro",
     category:"Restaurants",

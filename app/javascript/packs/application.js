@@ -26,14 +26,17 @@ require("channels")
 import "bootstrap";
 
 // Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
-import { initMapbox } from '../plugins/init_mapbox';
-import {initModal} from '../components/open_modal';
-import {initSearchSteps} from '../components/search_steps';
+
+import { initMapbox }      from '../plugins/init_mapbox';
+import { initModal }       from '../components/open_modal';
+import { initSearchSteps } from '../components/search_steps';
+import { initTurbolinksScrollPersistence } from '../plugins/initTurbolinksScrollPersistence'
+
+Turbolinks.scroll = {};
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+  initTurbolinksScrollPersistence()
+
   initSearchSteps();
   initMapbox();
   initModal();
