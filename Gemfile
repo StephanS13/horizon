@@ -30,8 +30,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
 
-gem 'simple_form'
-
 gem 'geocoder'
 
 gem 'autoprefixer-rails'
